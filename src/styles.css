@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', 'Montserrat', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ded2 100%);
+  color: #3e2723;a
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to bottom, #8d6e63, #a1887f);
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hero-section.collapsed {
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.section-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.section-title-collapsed {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff3e0;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-top: 5px;
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 20px 40px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.timeline-section.collapsed {
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-section .section-toggle {
+  background: rgba(141, 110, 99, 0.1);
+  border: 2px solid rgba(141, 110, 99, 0.3);
+  color: #5d4037;
+}
+
+.timeline-section .section-toggle:hover {
+  background: rgba(141, 110, 99, 0.2);
+}
+
+.timeline-section .section-title-collapsed {
+  color: #5d4037;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #5d4037;
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #6d4c41;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tree Section - Takes remaining space */
+.tree-section {
+  padding: 15px 20px;
+  background: linear-gradient(to bottom, #f5f1ed, #fff);
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Important for flex children */
+}
+
+.tree-section .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  flex-shrink: 0;
+}
+
+.tree-section .section-intro {
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+/* Tree container takes remaining space in tree-section */
+.tree-section > div:last-child {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Enhanced Popover */
+.enhanced-popover {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(62, 39, 35, 0.25);
+  padding: 24px;
+  min-width: 320px;
+  max-width: 500px;
+  pointer-events: auto;
+  position: fixed;
+  z-index: 1000;
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popover-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3e2723;
+  border-bottom: 2px solid #d7ccc8;
+  padding-bottom: 12px;
+}
+
+.popover-detail {
+  font-size: 0.95rem;
+  color: #5d4037;
+  line-height: 1.6;
+}
+
+.popover-viz {
+  margin-top: 12px;
+}
+
+/* Root node pulse animation */
+@keyframes pulse-ring {
+  0% {
+    r: 30;
+    opacity: 0.8;
+  }
+  100% {
+    r: 50;
+    opacity: 0;
+  }
+}
+
+/* Click here hint blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.click-here-hint {
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    gap: 15px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .section-toggle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tree-section {
+    padding: 10px 15px;
+  }
+}

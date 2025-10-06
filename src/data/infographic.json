@@ -1,0 +1,281 @@
+{
+  "infographic_title": "The Cost of Gridlock",
+  "subtitle": "Federal government spending equals ~22\u201323% of GDP. Shutdown halts ~6% discretionary spending.",
+  "sections": {
+    "economic_loss": {
+      "banner": "Each week of shutdown costs $7\u201315B GDP"
+    },
+    "header": {
+      "title": "The Slice of GDP That Stops",
+      "chart_type": "pie"
+    },
+    "trust_confidence": {
+      "title": "Trust & Confidence",
+      "chart_type": "thermometer"
+    },
+    "direct_effects": {
+      "title": "Direct Effects",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Federal workers unpaid",
+          "detail": "~750\u2013800k employees furloughed or working without pay.",
+          "icon": "UserX"
+        },
+        {
+          "title": "Contractors miss payments",
+          "detail": "Most contractors do not receive back pay.",
+          "icon": "Briefcase"
+        },
+        {
+          "title": "Services halted",
+          "detail": "Passports, permits, IRS audits, parks slowed or paused.",
+          "icon": "Clock"
+        }
+      ]
+    },
+    "indirect_effects": {
+      "title": "Indirect Effects",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Families cut spending",
+          "detail": "Retail, dining, travel demand dips.",
+          "icon": "ShoppingCart"
+        },
+        {
+          "title": "Businesses pause hiring",
+          "detail": "Hiring & projects deferred.",
+          "icon": "UserMinus"
+        },
+        {
+          "title": "Markets volatile",
+          "detail": "IPOs/ETFs delayed, volatility rises.",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "timeline_2025": {
+      "title": "Political Timeline: 2025 Shutdown",
+      "events": [
+        {
+          "date": "2025-09-19",
+          "label": "Sep 19, 2025",
+          "type": "political",
+          "note": "House passes clean Continuing Resolution (CR) funding bill; Senate rejects it.",
+          "key_names": ["House", "Senate"]
+        },
+        {
+          "date": "2025-09-30",
+          "label": "Sep 30, 2025",
+          "type": "political",
+          "note": "Senate votes fail again on both Democratic and Republican funding plans; shutdown imminent.",
+          "key_names": ["Senate"]
+        },
+        {
+          "date": "2025-09-30",
+          "label": "Sep 30, 2025",
+          "type": "political",
+          "note": "President Trump meets with Senate Minority Leader Schumer and House Minority Leader Jeffries; no agreement.",
+          "key_names": ["President", "Schumer", "Jeffries"]
+        },
+        {
+          "date": "2025-10-01",
+          "label": "Oct 1, 2025",
+          "type": "shutdown",
+          "note": "Government funding lapses at 12:01 a.m. EDT; partial government shutdown begins, furloughing ~800,000 employees and leaving ~700,000 employed without pay.",
+          "cost": "$7–15B per week",
+          "key_names": ["All"]
+        },
+        {
+          "date": "2025-10-01",
+          "label": "Oct 1, 2025",
+          "type": "political",
+          "note": "Preliminary Senate negotiations on shortening CR timeline; called 'productive discussion' but no agreement reached.",
+          "key_names": ["Senate"]
+        },
+        {
+          "date": "2025-10-02",
+          "label": "Oct 2, 2025",
+          "type": "shutdown",
+          "note": "Senate fails fourth time to pass funding legislation; shutdown continues without resolution.",
+          "key_names": ["Senate"]
+        },
+        {
+          "date": "2025-10-02",
+          "label": "Oct 2, 2025",
+          "type": "political",
+          "note": "Dept. of Education staff report manipulated out-of-office messages blaming Democrats; alleged Hatch Act violation.",
+          "key_names": ["Department of Education"]
+        },
+        {
+          "date": "2025-10-03",
+          "label": "Oct 3, 2025",
+          "type": "shutdown",
+          "note": "Speaker Johnson extends House recess for another week amid prolonged shutdown.",
+          "key_names": ["House", "Speaker Johnson"]
+        },
+        {
+          "date": "2025-10-05",
+          "label": "Oct 5, 2025",
+          "type": "shutdown",
+          "note": "Shutdown enters fifth day; government still partially closed as negotiations stall.",
+          "key_names": ["All"]
+        },
+        {
+          "date": "2025-10-06",
+          "label": "Oct 6, 2025",
+          "type": "shutdown",
+          "note": "Day 6: Senate votes at 5:30 PM ET on stopgap funding bill; lacks 60 votes needed to advance. White House press conference at 1 PM ET.",
+          "key_names": ["Senate", "White House"]
+        },
+        {
+          "date": "2025-10-06",
+          "label": "Oct 6, 2025",
+          "type": "economic",
+          "note": "Trump announces federal worker layoffs 'underway right now'; ~2M employees without pay, including military and air traffic controllers.",
+          "cost": "Ongoing",
+          "key_names": ["President", "All"]
+        }
+      ]
+    },
+    "consumer_confidence": {
+      "title": "Consumer Confidence Index (CCI): 2025 Shutdown",
+      "note": "Estimates subject to revision. Source: Conference Board",
+      "chartData": [
+        {
+          "month": "Jul 2025",
+          "cci": 97.2,
+          "label": "Pre-Shutdown"
+        },
+        {
+          "month": "Aug 2025",
+          "cci": 97.4,
+          "label": "Pre-Shutdown"
+        },
+        {
+          "month": "Sep 2025",
+          "cci": 94.2,
+          "label": "Shutdown Begins"
+        },
+        {
+          "month": "Oct 2025",
+          "cci": 92,
+          "label": "Shutdown Effect (est.)",
+          "projected": true
+        },
+        {
+          "month": "Nov 2025",
+          "cci": 89,
+          "label": "Continued Impact (proj.)",
+          "projected": true
+        }
+      ]
+    },
+    "tourism_culture": {
+      "title": "Tourism & Cultural Impacts",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Closures hit tourism",
+          "detail": "Parks, museums & monuments reduce operations.",
+          "icon": "Landmark"
+        }
+      ]
+    },
+    "data_reporting": {
+      "title": "Data & Reporting Delays",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Economic releases suspended",
+          "detail": "Jobs, GDP, inflation reports delayed.",
+          "icon": "BarChart3"
+        }
+      ]
+    },
+    "financial_risks": {
+      "title": "Financial Market Risks",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Downgrades possible",
+          "detail": "Extended shutdown increases downgrade risk.",
+          "icon": "TrendingDown"
+        },
+        {
+          "title": "Debt ceiling overlap",
+          "detail": "Trust could erode if disputes overlap.",
+          "icon": "AlertTriangle"
+        }
+      ]
+    },
+    "vulnerable_populations": {
+      "title": "Vulnerable Populations",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Aid disruptions",
+          "detail": "Housing, childcare, nutrition at risk.",
+          "icon": "LifeBuoy"
+        }
+      ]
+    },
+    "employment_risks": {
+      "title": "Employment Risks",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Temporary \u2192 permanent job losses",
+          "detail": "Private-sector layoffs if cuts persist.",
+          "icon": "UserMinus"
+        }
+      ]
+    },
+    "small_business": {
+      "title": "Small Business Stress",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Contractor Cash Crunch",
+          "detail": "Halted payments force cuts or closures.",
+          "icon": "Store"
+        },
+        {
+          "title": "Community Ripple",
+          "detail": "Local shops near federal hubs lose revenue.",
+          "icon": "Building2"
+        },
+        {
+          "title": "No Safety Net",
+          "detail": "No back pay for most small firms.",
+          "icon": "ShieldAlert"
+        }
+      ]
+    },
+    "global_perception": {
+      "title": "Global Perception",
+      "chart_type": "list",
+      "items": [
+        {
+          "title": "Market Watchers",
+          "detail": "Investors abroad eye instability.",
+          "icon": "Globe"
+        },
+        {
+          "title": "Trade Partners",
+          "detail": "Allies delay agreements when unsure.",
+          "icon": "Handshake"
+        },
+        {
+          "title": "Geopolitical Leverage",
+          "detail": "Rivals cite dysfunction to gain edge.",
+          "icon": "Megaphone"
+        }
+      ]
+    },
+    "footer": {
+      "sources": "CBO, BEA, GAO, White House, Reuters/AP, S&P Global"
+    }
+  }
+}

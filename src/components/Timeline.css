@@ -1,0 +1,50 @@
+/* Shared Timeline Styles - Timeline.css */
+
+/* Timeline wrapper - centers content */
+.timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Timeline header */
+.timeline-header {
+  font-family: Merriweather, serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+/* Timeline content container - centers the timeline */
+.timeline-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+}
+
+/* Timeline note/caption */
+.timeline-note {
+  fontSize: 0.875rem;
+  color: var(--muted);
+  marginTop: 1rem;
+  fontStyle: italic;
+  textAlign: center;
+}
+
+/* Hide all chrono controls and menu bars */
+.timeline-wrapper button,
+.timeline-wrapper input[type="text"],
+.timeline-wrapper [role="toolbar"],
+.timeline-wrapper [class*="outline-controls"],
+.timeline-wrapper [class*="toolbar"],
+.timeline-wrapper [class*="controls"],
+.timeline-wrapper [class*="menu"] {
+  display: none !important;
+  visibility: hidden !important;
+}

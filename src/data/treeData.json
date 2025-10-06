@@ -1,0 +1,249 @@
+{
+  "title": "2025 Government Shutdown Impact Analysis",
+  "detail": "Explore the cascading effects across economy, society, and politics",
+  "children": [
+    {
+      "title": "Economic Impact",
+      "detail": "GDP losses, contractor effects, and market disruption",
+      "children": [
+        {
+          "title": "Economic Loss",
+          "detail": "Each week of shutdown costs $7-15B GDP",
+          "visualization": {
+            "type": "text",
+            "data": {
+              "content": "The 2025 shutdown halts ~6% of discretionary federal spending, creating ripple effects throughout the economy. Each week costs approximately $7-15 billion in GDP loss."
+            }
+          }
+        },
+        {
+          "title": "GDP Breakdown",
+          "detail": "Discretionary spending represents 5-6% of GDP",
+          "visualization": {
+            "type": "pie",
+            "data": {
+              "affected": 6,
+              "unaffected": 94,
+              "label": "% of GDP Affected by Shutdown"
+            }
+          }
+        },
+        {
+          "title": "Consumer Confidence",
+          "detail": "CCI dropped from 98 (Sept) to 92 (Oct est.)",
+          "visualization": {
+            "type": "lineChart",
+            "data": [
+              {
+                "month": "Aug",
+                "cci": 101
+              },
+              {
+                "month": "Sep",
+                "cci": 98
+              },
+              {
+                "month": "Oct",
+                "cci": 92
+              }
+            ]
+          }
+        },
+        {
+          "title": "Financial Market Risks",
+          "detail": "Market volatility, potential downgrades, delayed IPOs/ETFs",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Stock volatility",
+                "detail": "S&P 500 uncertainty increases 15-20%",
+                "icon": "TrendingDown"
+              },
+              {
+                "title": "Credit rating risk",
+                "detail": "Moody's warns of potential downgrade",
+                "icon": "AlertTriangle"
+              },
+              {
+                "title": "IPO delays",
+                "detail": "$5B+ in planned offerings postponed",
+                "icon": "Clock"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Direct and Indirect Effects",
+      "detail": "Federal workers, families, and businesses impacted",
+      "children": [
+        {
+          "title": "Direct Effects",
+          "detail": "Immediate impacts on workers, contractors, and services",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Federal workers unpaid",
+                "detail": "~750-800k employees furloughed or working without pay",
+                "icon": "UserX"
+              },
+              {
+                "title": "Contractors miss payments",
+                "detail": "Most contractors do not receive back pay",
+                "icon": "Briefcase"
+              },
+              {
+                "title": "Services halted",
+                "detail": "Passports, permits, IRS audits, national parks closed",
+                "icon": "XCircle"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Indirect Effects",
+          "detail": "Ripple effects through households and businesses",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Household spending cuts",
+                "detail": "Families reduce discretionary purchases",
+                "icon": "DollarSign"
+              },
+              {
+                "title": "Business uncertainty",
+                "detail": "Companies delay hiring and investment",
+                "icon": "Building"
+              },
+              {
+                "title": "Tourism losses",
+                "detail": "National parks closed, local economies suffer",
+                "icon": "MapPin"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Political Context",
+      "detail": "Congressional gridlock and negotiation breakdown",
+      "children": [
+        {
+          "title": "Negotiation Timeline",
+          "detail": "From CR rejection to shutdown",
+          "visualization": {
+            "type": "text",
+            "data": {
+              "content": "Sep 19: House passes CR, Senate rejects. Sep 30: Final negotiations fail. Oct 1: Shutdown begins."
+            }
+          }
+        },
+        {
+          "title": "Key Players",
+          "detail": "President Trump, Congressional leaders",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "President Trump",
+                "detail": "Demands border security funding",
+                "icon": "User"
+              },
+              {
+                "title": "Senate Leaders",
+                "detail": "Schumer (D) vs McConnell (R) divisions",
+                "icon": "Users"
+              },
+              {
+                "title": "House Leadership",
+                "detail": "Speaker Johnson navigates slim majority",
+                "icon": "Users"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Social Effects",
+      "detail": "Vulnerable populations and community services disrupted",
+      "children": [
+        {
+          "title": "Vulnerable Populations",
+          "detail": "Low-income families, seniors, disabled communities at risk",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "WIC program delays",
+                "detail": "Nutrition assistance for mothers and children",
+                "icon": "Heart"
+              },
+              {
+                "title": "Housing assistance",
+                "detail": "Section 8 vouchers and rental aid delayed",
+                "icon": "Home"
+              },
+              {
+                "title": "Disability services",
+                "detail": "SSI processing slowed",
+                "icon": "Shield"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Trust Erosion",
+          "detail": "Public confidence in government institutions declines",
+          "visualization": {
+            "type": "thermometer",
+            "data": {
+              "value": 35,
+              "label": "Government Trust Index"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Global Perception",
+      "detail": "International allies and markets react to U.S. dysfunction",
+      "children": [
+        {
+          "title": "International Reaction",
+          "detail": "Allies express concern over U.S. reliability",
+          "visualization": {
+            "type": "text",
+            "data": {
+              "content": "European and Asian allies question U.S. stability. IMF warns of spillover effects to global economy."
+            }
+          }
+        },
+        {
+          "title": "Currency Impact",
+          "detail": "Dollar weakens amid uncertainty",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Dollar index falls",
+                "detail": "2.5% decline vs major currencies",
+                "icon": "TrendingDown"
+              },
+              {
+                "title": "Treasury yields spike",
+                "detail": "10-year yields up 15 basis points",
+                "icon": "ArrowUp"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

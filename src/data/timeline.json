@@ -1,0 +1,111 @@
+{
+  "events": [
+    {
+      "date": "2025-09-19",
+      "label": "Sep 19, 2025",
+      "type": "political",
+      "note": "House passes clean Continuing Resolution (CR) funding bill; Senate rejects it.",
+      "key_names": [
+        "House",
+        "Senate"
+      ]
+    },
+    {
+      "date": "2025-09-30",
+      "label": "Sep 30, 2025",
+      "type": "political",
+      "note": "Senate votes fail again on both Democratic and Republican funding plans; shutdown imminent.",
+      "key_names": [
+        "Senate"
+      ]
+    },
+    {
+      "date": "2025-09-30",
+      "label": "Sep 30, 2025",
+      "type": "political",
+      "note": "President Trump meets with Senate Minority Leader Schumer and House Minority Leader Jeffries; no agreement.",
+      "key_names": [
+        "President",
+        "Schumer",
+        "Jeffries"
+      ]
+    },
+    {
+      "date": "2025-10-01",
+      "label": "Oct 1, 2025",
+      "type": "shutdown",
+      "note": "Government funding lapses at 12:01 a.m. EDT; partial government shutdown begins, furloughing ~800,000 employees and leaving ~700,000 employed without pay.",
+      "cost": "$7\u201315B per week",
+      "key_names": [
+        "All"
+      ]
+    },
+    {
+      "date": "2025-10-01",
+      "label": "Oct 1, 2025",
+      "type": "political",
+      "note": "Preliminary Senate negotiations on shortening CR timeline; called 'productive discussion' but no agreement reached.",
+      "key_names": [
+        "Senate"
+      ]
+    },
+    {
+      "date": "2025-10-02",
+      "label": "Oct 2, 2025",
+      "type": "shutdown",
+      "note": "Senate fails fourth time to pass funding legislation; shutdown continues without resolution.",
+      "key_names": [
+        "Senate"
+      ]
+    },
+    {
+      "date": "2025-10-02",
+      "label": "Oct 2, 2025",
+      "type": "political",
+      "note": "Dept. of Education staff report manipulated out-of-office messages blaming Democrats; alleged Hatch Act violation.",
+      "key_names": [
+        "Department of Education"
+      ]
+    },
+    {
+      "date": "2025-10-03",
+      "label": "Oct 3, 2025",
+      "type": "shutdown",
+      "note": "Speaker Johnson extends House recess for another week amid prolonged shutdown.",
+      "key_names": [
+        "House",
+        "Speaker Johnson"
+      ]
+    },
+    {
+      "date": "2025-10-05",
+      "label": "Oct 5, 2025",
+      "type": "shutdown",
+      "note": "Shutdown enters fifth day; government still partially closed as negotiations stall.",
+      "key_names": [
+        "All"
+      ]
+    },
+    {
+      "date": "2025-10-06",
+      "label": "Oct 6, 2025",
+      "type": "shutdown",
+      "note": "Day 6: Senate votes at 5:30 PM ET on stopgap funding bill; lacks 60 votes needed to advance. White House press conference at 1 PM ET.",
+      "key_names": [
+        "Senate",
+        "White House"
+      ]
+    },
+    {
+      "date": "2025-10-06",
+      "label": "Oct 6, 2025",
+      "type": "economic",
+      "note": "Trump announces federal worker layoffs 'underway right now'; ~2M employees without pay, including military and air traffic controllers.",
+      "cost": "Ongoing",
+      "key_names": [
+        "President",
+        "All"
+      ]
+    }
+  ]
+}
