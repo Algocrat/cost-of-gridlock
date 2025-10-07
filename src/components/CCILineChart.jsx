@@ -1,179 +1,145 @@
 import React from 'react'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts'
 
-export default function CCILineChart({ config = {} }) {
-  const data = config.chartData || []
-
-  if (data.length === 0) return null
-
-  // Calculate chart dimensions
-  const width = 100
-  const height = 60
-  const padding = 5
-
-  // Get min and max values for scaling
-  const values = data.map(d => d.cci)
-  const minVal = Math.min(...values) - 5
-  const maxVal = Math.max(...values) + 5
-
-  // Create points for the line
-  const points = data.map((d, i) => {
-    const x = padding + (i / (data.length - 1)) * (width - 2 * padding)
-    const y = height - padding - ((d.cci - minVal) / (maxVal - minVal)) * (height - 2 * padding)
-    return { x, y, ...d }
-  })
-
-  // Split into green (pre-shutdown) and red (shutdown) segments
-  const greenPoints = points.slice(0, 3) // Jul, Aug, Sep
-  const redPoints = points.slice(2) // Sep, Oct, Nov (overlap at Sep)
-
-  return (
-    <div style={{ 
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '100%',
-      minHeight: '300px'
-    }}>
-      {/* Title matching other sections */}
-      <div className="title" style={{ marginBottom: '1rem', textAlign: 'center' }}>
-        {config.title || 'Consumer Confidence Index'}
-      </div>
-
+export default function CCILineChart({ data = [] }) {
+  if (!data || data.length === 0) {
+    return (
       <div style={{ 
-        width: '100%', 
-        maxWidth: '600px',
-        padding: '20px',
-        background: 'var(--bg)'
+        padding: '20px', 
+        textAlign: 'center',
+        color: '#64748B',
+        fontStyle: 'italic'
       }}>
-        <svg viewBox={`0 0 ${width} ${height}`} style={{ width: '100%', height: 'auto' }}>
-          {/* Grid lines */}
-          {[0, 25, 50, 75, 100].map(percent => {
-            const y = height - padding - (percent / 100) * (height - 2 * padding)
-            const value = minVal + (percent / 100) * (maxVal - minVal)
-            return (
-              <g key={percent}>
-                <line
-                  x1={padding}
-                  y1={y}
-                  x2={width - padding}
-                  y2={y}
-                  stroke="var(--muted)"
-                  strokeWidth="0.1"
-                  opacity="0.3"
-                />
-                <text
-                  x={padding - 1}
-                  y={y}
-                  fill="var(--muted)"
-                  fontSize="2"
-                  textAnchor="end"
-                  dominantBaseline="middle"
-                >
-                  {value.toFixed(0)}
-                </text>
-              </g>
-            )
-          })}
+        No data available
+      </div>
+    )
+  }
 
-          {/* Green line (Jul-Sep) - solid */}
-          <path
-            d={greenPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ')}
-            fill="none"
-            stroke="#a6b985"
-            strokeWidth="0.5"
-          />
+  // Split data into pre-shutdown and shutdown periods
+  const preShutdownData = data.slice(0, 3) // Jul, Aug, Sep
+  const shutdownData = data.slice(2) // Sep, Oct, Nov (overlap at Sep)
 
-          {/* Red line (Sep-Nov) - dotted */}
-          <path
-            d={redPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ')}
-            fill="none"
-            stroke="#dc2626"
-            strokeWidth="0.5"
-            strokeDasharray="1,1"
-          />
-
-          {/* Data points */}
-          {points.map((p, i) => {
-            const isRed = i >= 2 // Sep, Oct, Nov are red
-            return (
-              <g key={i}>
-                <circle
-                  cx={p.x}
-                  cy={p.y}
-                  r="0.8"
-                  fill={p.projected ? 'var(--bg)' : (isRed ? '#dc2626' : '#a6b985')}
-                  stroke={isRed ? '#dc2626' : '#a6b985'}
-                  strokeWidth="0.3"
-                />
-                {/* Month labels */}
-                <text
-                  x={p.x}
-                  y={height - 1}
-                  fill="var(--text)"
-                  fontSize="2.5"
-                  textAnchor="middle"
-                >
-                  {p.month.split(' ')[0]}
-                </text>
-                {/* Value labels */}
-                <text
-                  x={p.x}
-                  y={p.y - 2}
-                  fill="var(--text)"
-                  fontSize="2.5"
-                  textAnchor="middle"
-                  fontWeight="600"
-                >
-                  {p.cci}
-                </text>
-              </g>
-            )
-          })}
-        </svg>
-
-        {/* Legend */}
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      const isShutdown = payload[0].payload.month === 'Oct 2025' || payload[0].payload.month === 'Nov 2025'
+      return (
         <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '20px',
-          marginTop: '15px',
-          fontSize: '0.75rem',
-          color: 'var(--muted)'
+          backgroundColor: 'rgba(30, 41, 59, 0.98)',
+          border: `2px solid ${isShutdown ? '#F97316' : '#06B6D4'}`,
+          borderRadius: '12px',
+          padding: '12px 16px',
+          color: 'white',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25)'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-            <div style={{ 
-              width: '20px', 
-              height: '2px', 
-              background: '#a6b985' 
-            }}></div>
-            <span>Actual</span>
+          <div style={{ fontWeight: '700', fontSize: '16px', marginBottom: '4px' }}>
+            {payload[0].payload.month}
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-            <div style={{ 
-              width: '20px', 
-              height: '2px', 
-              background: '#dc2626',
-              backgroundImage: 'linear-gradient(90deg, #dc2626 50%, transparent 50%)',
-              backgroundSize: '4px 2px'
-            }}></div>
-            <span>Projected</span>
+          <div style={{ fontSize: '14px', opacity: 0.9 }}>
+            CCI: {payload[0].value}
           </div>
         </div>
-      </div>
+      )
+    }
+    return null
+  }
 
-      {config.note && (
-        <p style={{ 
-          fontSize: '0.75rem', 
-          color: 'var(--muted)', 
-          marginTop: '1rem', 
-          fontStyle: 'italic',
-          textAlign: 'center',
-          maxWidth: '600px'
-        }}>
-          {config.note}
-        </p>
-      )}
-    </div>
+  return (
+    <ResponsiveContainer width="100%" height={280}>
+      <AreaChart 
+        data={data}
+        margin={{ top: 20, right: 30, left: 0, bottom: 10 }}
+      >
+        <defs>
+          {/* Vibrant Cyan gradient for pre-shutdown */}
+          <linearGradient id="colorPre" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#06B6D4" stopOpacity={0.4}/>
+            <stop offset="95%" stopColor="#06B6D4" stopOpacity={0.05}/>
+          </linearGradient>
+
+          {/* Vibrant Orange gradient for shutdown */}
+          <linearGradient id="colorShutdown" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#F97316" stopOpacity={0.4}/>
+            <stop offset="95%" stopColor="#F97316" stopOpacity={0.05}/>
+          </linearGradient>
+
+          {/* Glow filters */}
+          <filter id="glow-cyan">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="glow-orange">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <CartesianGrid 
+          strokeDasharray="3 3" 
+          stroke="#E2E8F0" 
+          strokeOpacity={0.5}
+        />
+
+        <XAxis 
+          dataKey="month" 
+          stroke="#64748B"
+          tick={{ fontSize: 12, fontWeight: 600 }}
+        />
+
+        {/* FIXED: Accurate Y-axis domain for data values 89-97.4 */}
+        <YAxis 
+          domain={[88, 98]}
+          ticks={[88, 90, 92, 94, 96, 98]}
+          stroke="#64748B"
+          tick={{ fontSize: 13, fontWeight: 600 }}
+        />
+
+        <Tooltip content={<CustomTooltip />} />
+
+        {/* Single area with conditional coloring */}
+        <Area
+          type="monotone"
+          dataKey="cci"
+          stroke="#06B6D4"
+          strokeWidth={3}
+          fill="url(#colorPre)"
+          dot={(props) => {
+            const { cx, cy, index } = props
+            const isShutdown = index >= 2 // Sep (index 2) and beyond
+            const color = isShutdown ? '#F97316' : '#06B6D4'
+            return (
+              <circle
+                cx={cx}
+                cy={cy}
+                r={6}
+                fill={color}
+                stroke="#fff"
+                strokeWidth={3}
+              />
+            )
+          }}
+          activeDot={(props) => {
+            const { cx, cy, index } = props
+            const isShutdown = index >= 2
+            const color = isShutdown ? '#F97316' : '#06B6D4'
+            return (
+              <circle
+                cx={cx}
+                cy={cy}
+                r={8}
+                fill={color}
+                stroke="#fff"
+                strokeWidth={3}
+              />
+            )
+          }}
+        />
+      </AreaChart>
+    </ResponsiveContainer>
   )
 }

@@ -12,13 +12,14 @@
           "visualization": {
             "type": "text",
             "data": {
-              "content": "The 2025 shutdown halts ~6% of discretionary federal spending, creating ripple effects throughout the economy. Each week costs approximately $7-15 billion in GDP loss."
+              "content": "The 2025 shutdown halts ~6% of discretionary federal spending, creating ripple effects throughout the economy. Each week costs approximately $7-15 billion in GDP loss, with $50B+ if exceeding 4 weeks.",
+              "icon": "DollarSign"
             }
           }
         },
         {
           "title": "GDP Breakdown",
-          "detail": "Discretionary spending represents 5-6% of GDP",
+          "detail": "Discretionary spending represents 5-6% of GDP, creating ripple effects throughout the economy.",
           "visualization": {
             "type": "pie",
             "data": {
@@ -30,21 +31,41 @@
         },
         {
           "title": "Consumer Confidence",
-          "detail": "CCI dropped from 98 (Sept) to 92 (Oct est.)",
+          "detail": "CCI dropped from 97.8 (Aug) to 94.2 (Sept), with 92 estimated for Oct. Low consumer confidence leads families and businesses to postpone major spending decisions.",
           "visualization": {
             "type": "lineChart",
             "data": [
               {
+                "month": "May",
+                "cci": 96.8
+              },
+              {
+                "month": "Jun",
+                "cci": 97.1
+              },
+              {
+                "month": "Jul",
+                "cci": 97.2
+              },
+              {
                 "month": "Aug",
-                "cci": 101
+                "cci": 97.8
               },
               {
                 "month": "Sep",
-                "cci": 98
+                "cci": 94.2
               },
               {
                 "month": "Oct",
                 "cci": 92
+              },
+              {
+                "month": "Nov",
+                "cci": 89
+              },
+              {
+                "month": "Dec",
+                "cci": 85
               }
             ]
           }
@@ -69,6 +90,30 @@
                 "title": "IPO delays",
                 "detail": "$5B+ in planned offerings postponed",
                 "icon": "Clock"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Data & Reporting Delays",
+          "detail": "Critical economic indicators suspended",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Economic releases suspended",
+                "detail": "Jobs, GDP, inflation reports delayed",
+                "icon": "BarChart"
+              },
+              {
+                "title": "Census operations halted",
+                "detail": "Population surveys, economic census suspended",
+                "icon": "Users"
+              },
+              {
+                "title": "Trade data missing",
+                "detail": "Import/export statistics delayed, affecting policy",
+                "icon": "TrendingUp"
               }
             ]
           }
@@ -112,7 +157,7 @@
               {
                 "title": "Household spending cuts",
                 "detail": "Families reduce discretionary purchases",
-                "icon": "DollarSign"
+                "icon": "ShoppingCart"
               },
               {
                 "title": "Business uncertainty",
@@ -126,6 +171,30 @@
               }
             ]
           }
+        },
+        {
+          "title": "Small Business Stress",
+          "detail": "Contractors and local businesses hit hardest",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Contractor cash crunch",
+                "detail": "Halted payments force cuts or closures",
+                "icon": "Store"
+              },
+              {
+                "title": "Community ripple effects",
+                "detail": "Local shops near federal hubs lose revenue",
+                "icon": "Building"
+              },
+              {
+                "title": "No safety net",
+                "detail": "No back pay for most small firms",
+                "icon": "Shield"
+              }
+            ]
+          }
         }
       ]
     },
@@ -135,11 +204,120 @@
       "children": [
         {
           "title": "Negotiation Timeline",
-          "detail": "From CR rejection to shutdown",
+          "detail": "Complete chronology of shutdown events",
           "visualization": {
-            "type": "text",
+            "type": "table",
+            "component": "EventsTable",
             "data": {
-              "content": "Sep 19: House passes CR, Senate rejects. Sep 30: Final negotiations fail. Oct 1: Shutdown begins."
+              "events": [
+                {
+                  "date": "2025-09-19",
+                  "label": "Sep 19, 2025",
+                  "type": "political",
+                  "note": "The House passes a short-term Continuing Resolution (CR) aimed at averting a government shutdown. The Senate does not take up the measure amid ongoing partisan divisions over spending priorities.",
+                  "key_names": [
+                    "House",
+                    "Senate"
+                  ]
+                },
+                {
+                  "date": "2025-09-30",
+                  "label": "Sep 30, 2025",
+                  "type": "political",
+                  "note": "The Senate fails to advance both Democratic and Republican funding proposals, setting the stage for a lapse in federal funding at midnight.",
+                  "key_names": [
+                    "Senate"
+                  ]
+                },
+                {
+                  "date": "2025-10-01",
+                  "label": "Oct 1, 2025",
+                  "type": "shutdown",
+                  "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. Approximately 900,000 employees are furloughed, and about 700,000 continue working without pay.",
+                  "cost": "$7\u201315B per week",
+                  "key_names": [
+                    "Federal Workforce"
+                  ]
+                },
+                {
+                  "date": "2025-10-01",
+                  "label": "Oct 1, 2025",
+                  "type": "political",
+                  "note": "Senate leaders hold preliminary discussions on a shorter-term funding extension described as 'productive,' though no agreement is reached.",
+                  "key_names": [
+                    "Senate"
+                  ]
+                },
+                {
+                  "date": "2025-10-01",
+                  "label": "Oct 1, 2025",
+                  "type": "economic",
+                  "note": "Financial markets show mixed reactions to the shutdown. Stock futures fluctuate and gold prices reach record levels as investors weigh potential economic impacts.",
+                  "key_names": [
+                    "Markets",
+                    "Investors"
+                  ]
+                },
+                {
+                  "date": "2025-10-01",
+                  "label": "Oct 1, 2025",
+                  "type": "political",
+                  "note": "The administration announces a temporary freeze of approximately $26 billion in previously approved federal funds, including allocations for transit and clean-energy projects in several states, pending budget resolution.",
+                  "key_names": [
+                    "White House",
+                    "Federal Agencies",
+                    "States"
+                  ]
+                },
+                {
+                  "date": "2025-10-02",
+                  "label": "Oct 2, 2025",
+                  "type": "shutdown",
+                  "note": "The Senate again fails to pass funding legislation. The partial government shutdown continues with no bipartisan deal in place.",
+                  "key_names": [
+                    "Senate"
+                  ]
+                },
+                {
+                  "date": "2025-10-02",
+                  "label": "Oct 2, 2025",
+                  "type": "political",
+                  "note": "Department of Education employees report that automated out-of-office messages were modified to include political statements. The department initiates an internal review.",
+                  "key_names": [
+                    "Department of Education"
+                  ]
+                },
+                {
+                  "date": "2025-10-03",
+                  "label": "Oct 3, 2025",
+                  "type": "shutdown",
+                  "note": "Speaker Mike Johnson extends the House recess into the following week as negotiations between congressional leaders remain at an impasse.",
+                  "key_names": [
+                    "House",
+                    "Speaker Mike Johnson"
+                  ]
+                },
+                {
+                  "date": "2025-10-05",
+                  "label": "Oct 5, 2025",
+                  "type": "shutdown",
+                  "note": "The federal government remains partially closed for a fifth day. Agencies continue limited operations while essential services remain active.",
+                  "key_names": [
+                    "Federal Government"
+                  ]
+                },
+                {
+                  "date": "2025-10-06",
+                  "label": "Oct 6, 2025",
+                  "type": "shutdown",
+                  "note": "The Senate fails to advance another stopgap funding bill requiring 60 votes. The President and White House renew calls for a bipartisan agreement to restore federal operations.",
+                  "key_names": [
+                    "Senate",
+                    "President",
+                    "White House"
+                  ]
+                }
+              ]
             }
           }
         },
@@ -151,17 +329,17 @@
             "data": [
               {
                 "title": "President Trump",
-                "detail": "Demands border security funding",
+                "detail": "Directs executive priorities, negotiates funding, and drives immigration and budget policy.",
                 "icon": "User"
               },
               {
-                "title": "Senate Leaders",
-                "detail": "Schumer (D) vs McConnell (R) divisions",
+                "title": "Senate Leadership",
+                "detail": "Majority Leader John Thune (R-SD) and Minority Leader Chuck Schumer (D-NY) steer Senate negotiations, debate, and major policy divisions.",
                 "icon": "Users"
               },
               {
                 "title": "House Leadership",
-                "detail": "Speaker Johnson navigates slim majority",
+                "detail": "Speaker Mike Johnson (R-LA), along with House Majority Leader Steve Scalise (R-LA), manage a narrow Republican majority and navigate spending disputes, legislative scheduling, and internal party cohesion.",
                 "icon": "Users"
               }
             ]
@@ -180,19 +358,29 @@
             "type": "list",
             "data": [
               {
-                "title": "WIC program delays",
-                "detail": "Nutrition assistance for mothers and children",
+                "title": "WIC program suspended",
+                "detail": "9M mothers/children lose nutrition benefits within weeks",
                 "icon": "Heart"
               },
               {
-                "title": "Housing assistance",
+                "title": "Housing assistance delayed",
                 "detail": "Section 8 vouchers and rental aid delayed",
                 "icon": "Home"
               },
               {
-                "title": "Disability services",
-                "detail": "SSI processing slowed",
+                "title": "Disability services slowed",
+                "detail": "SSI processing delayed",
                 "icon": "Shield"
+              },
+              {
+                "title": "SNAP benefits at risk",
+                "detail": "42M Americans could lose food assistance after 30 days",
+                "icon": "ShoppingCart"
+              },
+              {
+                "title": "Head Start programs threatened",
+                "detail": "Early childhood education for 1M children at risk",
+                "icon": "GraduationCap"
               }
             ]
           }
@@ -203,9 +391,117 @@
           "visualization": {
             "type": "thermometer",
             "data": {
-              "value": 35,
+              "value": 23,
               "label": "Government Trust Index"
             }
+          }
+        },
+        {
+          "title": "Healthcare & Social Services",
+          "detail": "Medical and public health services disrupted",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "CDC monitoring halted",
+                "detail": "Disease surveillance, food safety inspections stopped",
+                "icon": "Shield"
+              },
+              {
+                "title": "NIH research paused",
+                "detail": "Clinical trials delayed, patient enrollment suspended",
+                "icon": "Microscope"
+              },
+              {
+                "title": "Medicare delays",
+                "detail": "50% of CMS personnel furloughed, longer wait times",
+                "icon": "Clock"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Tourism & Cultural Impacts",
+          "detail": "Parks, museums, and cultural sites affected",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "National parks closed",
+                "detail": "Parks, museums & monuments reduce operations",
+                "icon": "Mountain"
+              },
+              {
+                "title": "Smithsonian closures",
+                "detail": "Museums, zoo closed during peak tourist season",
+                "icon": "Building"
+              },
+              {
+                "title": "Weather warnings reduced",
+                "detail": "NWS staffing reduced during severe weather season",
+                "icon": "Cloud"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Military & Security",
+      "detail": "Defense and homeland security operations strained",
+      "children": [
+        {
+          "title": "Military Personnel",
+          "detail": "Active duty and security forces work unpaid",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Active duty unpaid",
+                "detail": "1.3M military personnel work without paychecks",
+                "icon": "Shield"
+              },
+              {
+                "title": "Air traffic control stress",
+                "detail": "Controllers work mandatory overtime unpaid",
+                "icon": "Plane"
+              },
+              {
+                "title": "Border security gaps",
+                "detail": "CBP agents, Coast Guard operate at reduced capacity",
+                "icon": "AlertTriangle"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Employment Risks",
+      "detail": "Job market disruptions and unemployment concerns",
+      "children": [
+        {
+          "title": "Job Market Impact",
+          "detail": "Shutdown effects on employment nationwide",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Temporary \u2192 permanent job losses",
+                "detail": "Private-sector layoffs if cuts persist, 43,000 additional unemployed",
+                "icon": "UserMinus"
+              },
+              {
+                "title": "Federal contractor layoffs",
+                "detail": "No back pay eligibility creates lasting income losses",
+                "icon": "Briefcase"
+              },
+              {
+                "title": "Consumer spending drops",
+                "detail": "$30B reduction in monthly consumer spending nationwide",
+                "icon": "DollarSign"
+              }
+            ]
           }
         }
       ]
@@ -220,7 +516,8 @@
           "visualization": {
             "type": "text",
             "data": {
-              "content": "European and Asian allies question U.S. stability. IMF warns of spillover effects to global economy."
+              "content": "European and Asian allies question U.S. stability. IMF warns of spillover effects to global economy.",
+              "icon": "Globe"
             }
           }
         },
@@ -239,6 +536,25 @@
                 "title": "Treasury yields spike",
                 "detail": "10-year yields up 15 basis points",
                 "icon": "ArrowUp"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Geopolitical Effects",
+          "detail": "International standing and diplomatic impacts",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Trade negotiations stalled",
+                "detail": "Allies delay agreements amid uncertainty",
+                "icon": "Handshake"
+              },
+              {
+                "title": "Market confidence shaken",
+                "detail": "International investors eye U.S. instability",
+                "icon": "Globe"
               }
             ]
           }

@@ -9,6 +9,19 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
   const [popover, setPopover] = useState({ visible: false, node: null, x: 0, y: 0 })
   const [firstTime, setFirstTime] = useState(true)
   const hoverTimeoutRef = useRef(null)
+  const isMouseOverPopoverRef = useRef(false)
+  const currentNodeRef = useRef(null)
+
+  // ✅ NEW: Function to scroll tree section to top
+  const scrollToTree = () => {
+    const treeSection = document.querySelector('.tree-section')
+    if (treeSection) {
+      treeSection.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      })
+    }
+  }
 
   useEffect(() => {
     const hasInteracted = localStorage.getItem('treeInteracted')
@@ -30,7 +43,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
 
     const container = containerRef.current
     const width = container.clientWidth
-    const height = container.clientHeight
+    const height = container.clientHeight || 600
 
     const svg = d3.select(svgRef.current)
     svg.selectAll("*").remove()
@@ -39,6 +52,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       .attr("width", width)
       .attr("height", height)
       .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("preserveAspectRatio", "xMidYMid meet")
       .append("g")
       .attr("transform", `translate(${width / 2}, 100)`)
 
@@ -57,7 +71,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
 
     if (root.children) root.children.forEach(collapse)
 
-    const treeLayout = d3.tree().nodeSize([240, 300])
+    const treeLayout = d3.tree().nodeSize([180, 250])
 
     function update(source) {
       const duration = 750
@@ -65,9 +79,10 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       const nodes = treeData.descendants()
       const links = treeData.links()
 
-      nodes.forEach((d) => (d.y = d.depth * 340))
+      nodes.forEach((d) => (d.y = d.depth * 250))
 
       const link = g.selectAll(".link").data(links, (d) => d.target.data.title)
+
       const linkEnter = link.enter().insert("g", "g").attr("class", "link")
 
       linkEnter.append("path")
@@ -91,9 +106,11 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       const linkUpdate = linkEnter.merge(link)
       linkUpdate.select(".link-base").transition().duration(duration).attr("d", diagonal)
       linkUpdate.select(".link-overlay").transition().duration(duration).attr("d", diagonal)
+
       link.exit().remove()
 
       const node = g.selectAll(".node").data(nodes, (d) => d.data.title)
+
       const nodeEnter = node.enter()
         .append("g")
         .attr("class", "node")
@@ -103,41 +120,81 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         .on("click", (event, d) => {
           event.stopPropagation()
 
+          // ✅ NEW: Scroll to tree section on ANY click
+          scrollToTree()
+
           if (hoverTimeoutRef.current) {
             clearTimeout(hoverTimeoutRef.current)
             hoverTimeoutRef.current = null
           }
 
-          setPopover({ visible: false, node: null, x: 0, y: 0 })
+          if (d.data.visualization) {
+            const circle = d3.select(event.currentTarget).select("circle").node()
+            const rect = circle.getBoundingClientRect()
+            
+            if (popover.visible && popover.node?.title === d.data.title) {
+              setPopover({ visible: false, node: null, x: 0, y: 0 })
+              currentNodeRef.current = null
+              
+              if (d.parent) {
+                d.parent.children?.forEach((child) => {
+                  if (child !== d) collapse(child)
+                })
+              }
+
+              if (d.children) {
+                d._children = d.children
+                d.children = null
+              } else {
+                d.children = d._children
+                d._children = null
+              }
+
+              update(d)
+            } else {
+              currentNodeRef.current = d.data.title
+              setPopover({
+                visible: true,
+                node: d.data,
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2
+              })
+            }
+          } else {
+            setPopover({ visible: false, node: null, x: 0, y: 0 })
+            currentNodeRef.current = null
+            
+            if (d.parent) {
+              d.parent.children?.forEach((child) => {
+                if (child !== d) collapse(child)
+              })
+            }
+
+            if (d.children) {
+              d._children = d.children
+              d.children = null
+            } else {
+              d.children = d._children
+              d._children = null
+            }
+
+            update(d)
+          }
 
           if (firstTime) {
             setFirstTime(false)
             localStorage.setItem('treeInteracted', 'true')
             if (onInteraction) onInteraction()
           }
-
-          if (d.parent) {
-            d.parent.children?.forEach((child) => {
-              if (child !== d) collapse(child)
-            })
-          }
-
-          if (d.children) {
-            d._children = d.children
-            d.children = null
-          } else {
-            d.children = d._children
-            d._children = null
-          }
-
-          update(d)
         })
         .on("mouseenter", function(event, d) {
           if (hoverTimeoutRef.current) {
             clearTimeout(hoverTimeoutRef.current)
+            hoverTimeoutRef.current = null
           }
 
           if (d.data.visualization) {
+            currentNodeRef.current = d.data.title
             const circle = d3.select(this).select("circle").node()
             const rect = circle.getBoundingClientRect()
 
@@ -149,12 +206,16 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
             })
           }
         })
-        .on("mouseleave", () => {
+        .on("mouseleave", (event, d) => {
           if (hoverTimeoutRef.current) {
             clearTimeout(hoverTimeoutRef.current)
           }
+
           hoverTimeoutRef.current = setTimeout(() => {
-            setPopover({ visible: false, node: null, x: 0, y: 0 })
+            if (!isMouseOverPopoverRef.current && currentNodeRef.current === d.data.title) {
+              setPopover({ visible: false, node: null, x: 0, y: 0 })
+              currentNodeRef.current = null
+            }
           }, 300)
         })
 
@@ -184,6 +245,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
               .attr("opacity", 0)
               .on("end", pulse)
           }
+
           pulse()
         }
       })
@@ -200,6 +262,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         if (d._children) {
           const nodeGroup = d3.select(this)
           const radius = 20 + Math.max(0, 3 - d.depth) * 4
+
           nodeGroup.append("text")
             .attr("class", "expand-indicator")
             .attr("text-anchor", "middle")
@@ -217,6 +280,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         const radius = 20 + Math.max(0, 3 - d.depth) * 4
         const labelY = radius + 40
         const maxWidth = d.depth === 0 ? 200 : 160
+
         const words = d.data.title.split(/\s+/)
         const lines = []
         let currentLine = words[0]
@@ -231,6 +295,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           const testLine = currentLine + " " + words[i]
           tempText.text(testLine)
           const testWidth = tempText.node().getComputedTextLength()
+
           if (testWidth > maxWidth) {
             lines.push(currentLine)
             currentLine = words[i]
@@ -262,6 +327,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
             .style("stroke", "#ffffff")
             .style("stroke-width", "4px")
             .style("stroke-linecap", "round")
+            .style("stroke-linejoin", "round")
         })
 
         if (d.depth === 0 && firstTime) {
@@ -275,7 +341,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
             .attr("font-weight", "700")
             .attr("fill", "#ff6b6b")
             .style("pointer-events", "none")
-            .text("👆 Click here to explore")
+            .text("↑ Click here to explore")
 
           function blink() {
             clickHereText
@@ -287,24 +353,29 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
               .attr("opacity", 1)
               .on("end", blink)
           }
+
           blink()
         }
       })
 
       const nodeUpdate = nodeEnter.merge(node)
+
       nodeUpdate.transition().duration(duration).attr("transform", (d) => {
         return `translate(${d.x},${d.y})`
       })
+
       nodeUpdate.select("circle")
         .attr("fill", (d) => d._children ? "#2e7d32" : "#388e3c")
         .attr("stroke", (d) => d.depth === 0 && firstTime ? "#ff6b6b" : "#14532d")
         .attr("stroke-width", (d) => d.depth === 0 && firstTime ? 5 : 3)
 
       nodeUpdate.select(".expand-indicator").remove()
+
       nodeUpdate.each(function(d) {
         if (d._children) {
           const nodeGroup = d3.select(this)
           const radius = 20 + Math.max(0, 3 - d.depth) * 4
+
           nodeGroup.append("text")
             .attr("class", "expand-indicator")
             .attr("text-anchor", "middle")
@@ -318,6 +389,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       })
 
       node.exit().remove()
+
       nodes.forEach((d) => {
         d.x0 = d.x
         d.y0 = d.y
@@ -343,11 +415,12 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         clearTimeout(hoverTimeoutRef.current)
       }
       setPopover({ visible: false, node: null, x: 0, y: 0 })
+      currentNodeRef.current = null
     })
-
   }, [firstTime, onInteraction])
 
   const handlePopoverMouseEnter = () => {
+    isMouseOverPopoverRef.current = true
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current)
       hoverTimeoutRef.current = null
@@ -355,36 +428,30 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
   }
 
   const handlePopoverMouseLeave = () => {
-    setPopover({ visible: false, node: null, x: 0, y: 0 })
+    isMouseOverPopoverRef.current = false
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current)
+    }
+    hoverTimeoutRef.current = setTimeout(() => {
+      setPopover({ visible: false, node: null, x: 0, y: 0 })
+      currentNodeRef.current = null
+    }, 300)
   }
 
   return (
     <>
-      <div 
-        ref={containerRef}
-        style={{ 
-          width: '100%', 
-          height: '100%', 
-          position: 'relative',
-          overflow: 'hidden'
-        }}
-      >
-        <svg 
-          ref={svgRef} 
-          style={{ 
-            display: 'block',
-            width: '100%',
-            height: '100%'
-          }}
-        />
+      <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
+        <svg ref={svgRef} style={{ width: "100%", height: "100%" }}></svg>
       </div>
-      {popover.visible && (
-        <div
+
+      {popover.visible && popover.node && (
+        <EnhancedPopover
+          node={popover.node}
+          x={popover.x}
+          y={popover.y}
           onMouseEnter={handlePopoverMouseEnter}
           onMouseLeave={handlePopoverMouseLeave}
-        >
-          <EnhancedPopover node={popover.node} x={popover.x} y={popover.y} />
-        </div>
+        />
       )}
     </>
   )

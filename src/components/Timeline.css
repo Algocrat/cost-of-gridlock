@@ -1,50 +1,379 @@
-/* Shared Timeline Styles - Timeline.css */
+/* Beautiful Timeline - All Lucide Icons */
 
-/* Timeline wrapper - centers content */
-.timeline-wrapper {
+/* ✅ FIXED: Removed height constraint, overflow controlled */
+
+.beautiful-timeline-container {
+  position: relative;
+  padding: 8px 50px 8px 50px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  align-items: center;
+  gap: 10px;
+  overflow: visible; /* Allow card to expand beyond container */
+  height: auto; /* ✅ CHANGED: Let content determine height */
+  max-height: none; /* ✅ CHANGED: Remove height restriction */
 }
 
-/* Timeline header */
-.timeline-header {
-  font-family: Merriweather, serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--text);
-  margin: 0 0 1rem 0;
-  text-align: left;
-}
-
-/* Timeline content container - centers the timeline */
-.timeline-content {
+/* Navigation Arrows */
+.timeline-nav {
+  position: absolute;
+  top: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 71, 171, 0.1);
+  border: 2px solid #0047AB;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: #0047AB;
+}
+
+.timeline-nav:hover:not(:disabled) {
+  background: rgba(0, 71, 171, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.timeline-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.timeline-nav-left {
+  left: 10px;
+}
+
+.timeline-nav-right {
+  right: 10px;
+}
+
+/* ✅ Timeline Line - at 50px from top */
+.timeline-line {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  right: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #0047AB 0%, #4A90E2 50%, #0047AB 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 71, 171, 0.2);
+  z-index: 1;
+}
+
+/* ✅ Timeline Events - FINE-TUNED positioning */
+.timeline-events {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  z-index: 5;
+  padding-top: 33px;
+  margin-bottom: 6px;
   width: 100%;
-  min-height: 300px;
 }
 
-/* Timeline note/caption */
-.timeline-note {
-  fontSize: 0.875rem;
-  color: var(--muted);
-  marginTop: 1rem;
-  fontStyle: italic;
-  textAlign: center;
+.timeline-event {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 150px;
 }
 
-/* Hide all chrono controls and menu bars */
-.timeline-wrapper button,
-.timeline-wrapper input[type="text"],
-.timeline-wrapper [role="toolbar"],
-.timeline-wrapper [class*="outline-controls"],
-.timeline-wrapper [class*="toolbar"],
-.timeline-wrapper [class*="controls"],
-.timeline-wrapper [class*="menu"] {
-  display: none !important;
-  visibility: hidden !important;
+.timeline-event.current .timeline-node {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.timeline-date-top {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #002868;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ✅ Node Circle - FIXED alignment */
+.timeline-node {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 3px solid;
+  transition: all 0.3s ease;
+  position: relative;
+  top: -3px; /* ✅ FIXED: Align center with line */
+  z-index: 6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.timeline-node-center {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  animation: centerDotAppear 0.3s ease-out;
+}
+
+@keyframes centerDotAppear {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.timeline-type-bottom {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Description Card */
+.timeline-description-card {
+  background: white;
+  border: 3px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.4s ease-out;
+  width: 100%;
+  max-width: 600px;
+  margin: 6px auto 20px auto; /* ✅ INCREASED bottom margin from 0 to 20px */
+  position: relative; /* ✅ ADDED: For z-index to work */
+  z-index: 50; /* ✅ ADDED: Ensure card appears above everything */
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  gap: 10px;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.card-type-badge {
+  padding: 4px 12px;
+  border-radius: 18px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.card-description {
+  font-family: 'Georgia', 'Merriweather', serif;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.card-cost {
+  background: rgba(255, 87, 34, 0.08);
+  color: #FF5722;
+  border: 1px solid rgba(255, 87, 34, 0.3);
+}
+
+.card-players {
+  background: rgba(0, 71, 171, 0.08);
+  color: #002868;
+  border: 1px solid rgba(0, 71, 171, 0.3);
+}
+
+.card-meta-header {
+  border-radius: 18px;
+}
+
+.meta-icon-lucide {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.political-color {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+  color: #002868;
+}
+
+.political-node {
+  background: white;
+  border-color: #3B82F6;
+}
+
+.political-center {
+  background: #3B82F6;
+}
+
+.political-type {
+  color: #3B82F6;
+}
+
+.shutdown-color {
+  background: #FEF3F2;
+  border-color: #F97316;
+  color: #EA580C;
+}
+
+.shutdown-node {
+  background: white;
+  border-color: #F97316;
+}
+
+.shutdown-center {
+  background: #F97316;
+}
+
+.shutdown-type {
+  color: #F97316;
+}
+
+.economic-color {
+  background: #FEF9C3;
+  border-color: #EAB308;
+  color: #CA8A04;
+}
+
+.economic-node {
+  background: white;
+  border-color: #EAB308;
+}
+
+.economic-center {
+  background: #EAB308;
+}
+
+.economic-type {
+  color: #EAB308;
+}
+
+@media (max-width: 768px) {
+  .beautiful-timeline-container {
+    padding: 8px 40px;
+    max-height: none; /* ✅ FIXED: Removed constraint */
+  }
+
+  .timeline-nav {
+    width: 30px;
+    height: 30px;
+    top: 45px;
+  }
+
+  .timeline-line {
+    top: 45px;
+  }
+
+  .timeline-events {
+    padding-top: 32px;
+    margin-bottom: 5px;
+  }
+
+  .timeline-node {
+    width: 22px;
+    height: 22px;
+    top: -6px; /* ✅ FIXED: Adjusted for smaller node */
+  }
+
+  .timeline-date-top {
+    font-size: 0.65rem;
+    top: -28px;
+  }
+
+  .timeline-type-bottom {
+    font-size: 0.55rem;
+    top: 18px;
+  }
+
+  .timeline-description-card {
+    max-width: 100%;
+  }
+
+  .card-header {
+    padding: 8px 12px;
+    flex-wrap: wrap;
+  }
+
+  .card-header-badges {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .card-description {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
 }

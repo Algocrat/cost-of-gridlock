@@ -1,126 +1,54 @@
 import React, { useState, useEffect } from 'react'
-import ShutdownChrono from './components/ShutdownChrono'
+import BeautifulTimeline from './components/BeautifulTimeline'
 import TreeChartWithPopovers from './components/TreeChartWithPopovers'
 import timelineData from './data/timeline.json'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import heroStats from './data/heroStats.json'
 
 export default function App() {
-  const [heroExpanded, setHeroExpanded] = useState(true)
-  const [timelineExpanded, setTimelineExpanded] = useState(true)
-  const [treeInteracted, setTreeInteracted] = useState(false)
-
-  // Auto-collapse sections when tree is first interacted with
   const handleTreeInteraction = () => {
-    if (!treeInteracted) {
-      setTreeInteracted(true)
-      setHeroExpanded(false)
-      setTimelineExpanded(false)
-      // Save to localStorage so it persists
-      localStorage.setItem('treeInteracted', 'true')
+    // Just scroll to tree section smoothly
+    const treeSection = document.querySelector('.tree-section')
+    if (treeSection) {
+      treeSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
-  // Check if user has interacted before
-  useEffect(() => {
-    const hasInteracted = localStorage.getItem('treeInteracted')
-    if (hasInteracted === 'true') {
-      setTreeInteracted(true)
-      setHeroExpanded(false)
-      setTimelineExpanded(false)
-    }
-  }, [])
-
   return (
     <div className="app-container">
-      {/* Hero Section - 20% initially, collapsible */}
-      <section 
-        className={`hero-section ${heroExpanded ? 'expanded' : 'collapsed'}`}
-        style={{ 
-          height: heroExpanded ? '20vh' : '60px',
-          transition: 'height 0.4s ease-in-out'
-        }}
-      >
-        <button 
-          className="section-toggle"
-          onClick={() => setHeroExpanded(!heroExpanded)}
-          aria-label={heroExpanded ? "Collapse hero" : "Expand hero"}
-        >
-          {heroExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-        </button>
+      {/* Hero Section */}
+      <section className="hero-section">
+        <h1 className="hero-title">The Cost of Gridlock</h1>
+        <p className="hero-subtitle">
+          When Washington stalls, America pays. The 2025 government shutdown halts approximately 6% of GDP in discretionary spending, affecting hundreds of thousands of federal workers, contractors, and families, while its effects ripple through confidence, markets, and essential services.
+        </p>
 
-        {heroExpanded ? (
-          <>
-            <h1 className="hero-title">The Cost of Gridlock</h1>
-            <p className="hero-subtitle">
-              When Washington stalls, America pays. The 2025 government shutdown 
-              halts ~6% of GDP in discretionary spending, affecting 750,000+ federal workers, 
-              contractors, and millions of families—while ripple effects spread across consumer 
-              confidence, financial markets, and vulnerable communities nationwide.
-            </p>
-            <div className="hero-stats">
-              <div className="stat-box">
-                <span className="stat-value">$7-15B</span>
-                <span className="stat-label">GDP Loss Per Week</span>
+        {/* ✅ ADD THIS SECTION - This was completely missing! */}
+        <div className="hero-stats">
+          {heroStats.map((stat, index) => (
+            <div key={index} className="stat-box">
+              <div className="stat-value" style={{ color: stat.color }}>
+                {stat.value}
               </div>
-              <div className="stat-box">
-                <span className="stat-value">750K+</span>
-                <span className="stat-label">Federal Workers Affected</span>
-              </div>
-              <div className="stat-box">
-                <span className="stat-value">22-23%</span>
-                <span className="stat-label">Federal Spending of GDP</span>
-              </div>
+              <div className="stat-label">{stat.label}</div>
             </div>
-          </>
-        ) : (
-          <h2 className="section-title-collapsed">The Cost of Gridlock</h2>
-        )}
+          ))}
+        </div>
       </section>
 
-      {/* Timeline Section - 30% initially, collapsible */}
-      <section 
-        className={`timeline-section ${timelineExpanded ? 'expanded' : 'collapsed'}`}
-        style={{ 
-          height: timelineExpanded ? '30vh' : '60px',
-          transition: 'height 0.4s ease-in-out'
-        }}
-      >
-        <button 
-          className="section-toggle"
-          onClick={() => setTimelineExpanded(!timelineExpanded)}
-          aria-label={timelineExpanded ? "Collapse timeline" : "Expand timeline"}
-        >
-          {timelineExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-        </button>
-
-        {timelineExpanded ? (
-          <>
-            <h2 className="section-title">Shutdown Timeline</h2>
-            <p className="section-intro">
-              Track the critical events from political negotiations to economic impacts
-            </p>
-            <div style={{ height: 'calc(100% - 80px)', overflow: 'auto' }}>
-              <ShutdownChrono config={timelineData} />
-            </div>
-          </>
-        ) : (
-          <h2 className="section-title-collapsed">Shutdown Timeline</h2>
-        )}
-      </section>
-
-      {/* Tree Visualization Section - Takes remaining space (50% initially) */}
-      <section 
-        className="tree-section"
-        style={{ 
-          height: treeInteracted 
-            ? `calc(100vh - ${heroExpanded ? '20vh' : '60px'} - ${timelineExpanded ? '30vh' : '60px'})` 
-            : '50vh',
-          transition: 'height 0.4s ease-in-out'
-        }}
-      >
-        <h2 className="section-title">Explore Impact Categories</h2>
+      {/* Timeline Section */}
+      <section className="timeline-section">
+        <h2 className="section-title">Timeline of Events</h2>
         <p className="section-intro">
-          Click on any node to expand categories and view detailed visualizations
+          Track the critical events from political negotiations to economic impacts.
+        </p>
+        <BeautifulTimeline config={timelineData} />
+      </section>
+
+      {/* Tree Visualization Section */}
+      <section className="tree-section">
+        <h2 className="section-title">Impact Breakdown</h2>
+        <p className="section-intro">
+          Click on any node to expand categories and view detailed visualizations.
         </p>
         <TreeChartWithPopovers onInteraction={handleTreeInteraction} />
       </section>

@@ -1,9 +1,9 @@
 {
   "infographic_title": "The Cost of Gridlock",
-  "subtitle": "Federal government spending equals ~22\u201323% of GDP. Shutdown halts ~6% discretionary spending.",
+  "subtitle": "Federal government spending equals approximately 22–23% of GDP. Shutdown halts approximately 6% of discretionary spending.",
   "sections": {
     "economic_loss": {
-      "banner": "Each week of shutdown costs $7\u201315B GDP"
+      "banner": "Each week of shutdown costs $7–15B in economic activity"
     },
     "header": {
       "title": "The Slice of GDP That Stops",
@@ -19,7 +19,7 @@
       "items": [
         {
           "title": "Federal workers unpaid",
-          "detail": "~750\u2013800k employees furloughed or working without pay.",
+          "detail": "Approximately 900,000 employees furloughed; approximately 700,000 working without pay.",
           "icon": "UserX"
         },
         {
@@ -29,7 +29,7 @@
         },
         {
           "title": "Services halted",
-          "detail": "Passports, permits, IRS audits, parks slowed or paused.",
+          "detail": "Passports, permits, IRS processing, national parks operations slowed or paused.",
           "icon": "Clock"
         }
       ]
@@ -39,105 +39,25 @@
       "chart_type": "list",
       "items": [
         {
-          "title": "Families cut spending",
-          "detail": "Retail, dining, travel demand dips.",
+          "title": "Household spending declines",
+          "detail": "Retail, dining, and travel demand decreases.",
           "icon": "ShoppingCart"
         },
         {
-          "title": "Businesses pause hiring",
-          "detail": "Hiring & projects deferred.",
+          "title": "Business activity deferred",
+          "detail": "Hiring and capital projects postponed.",
           "icon": "UserMinus"
         },
         {
-          "title": "Markets volatile",
-          "detail": "IPOs/ETFs delayed, volatility rises.",
+          "title": "Market volatility increases",
+          "detail": "IPOs and ETF launches delayed; volatility rises.",
           "icon": "Activity"
         }
       ]
     },
     "timeline_2025": {
       "title": "Political Timeline: 2025 Shutdown",
-      "events": [
-        {
-          "date": "2025-09-19",
-          "label": "Sep 19, 2025",
-          "type": "political",
-          "note": "House passes clean Continuing Resolution (CR) funding bill; Senate rejects it.",
-          "key_names": ["House", "Senate"]
-        },
-        {
-          "date": "2025-09-30",
-          "label": "Sep 30, 2025",
-          "type": "political",
-          "note": "Senate votes fail again on both Democratic and Republican funding plans; shutdown imminent.",
-          "key_names": ["Senate"]
-        },
-        {
-          "date": "2025-09-30",
-          "label": "Sep 30, 2025",
-          "type": "political",
-          "note": "President Trump meets with Senate Minority Leader Schumer and House Minority Leader Jeffries; no agreement.",
-          "key_names": ["President", "Schumer", "Jeffries"]
-        },
-        {
-          "date": "2025-10-01",
-          "label": "Oct 1, 2025",
-          "type": "shutdown",
-          "note": "Government funding lapses at 12:01 a.m. EDT; partial government shutdown begins, furloughing ~800,000 employees and leaving ~700,000 employed without pay.",
-          "cost": "$7–15B per week",
-          "key_names": ["All"]
-        },
-        {
-          "date": "2025-10-01",
-          "label": "Oct 1, 2025",
-          "type": "political",
-          "note": "Preliminary Senate negotiations on shortening CR timeline; called 'productive discussion' but no agreement reached.",
-          "key_names": ["Senate"]
-        },
-        {
-          "date": "2025-10-02",
-          "label": "Oct 2, 2025",
-          "type": "shutdown",
-          "note": "Senate fails fourth time to pass funding legislation; shutdown continues without resolution.",
-          "key_names": ["Senate"]
-        },
-        {
-          "date": "2025-10-02",
-          "label": "Oct 2, 2025",
-          "type": "political",
-          "note": "Dept. of Education staff report manipulated out-of-office messages blaming Democrats; alleged Hatch Act violation.",
-          "key_names": ["Department of Education"]
-        },
-        {
-          "date": "2025-10-03",
-          "label": "Oct 3, 2025",
-          "type": "shutdown",
-          "note": "Speaker Johnson extends House recess for another week amid prolonged shutdown.",
-          "key_names": ["House", "Speaker Johnson"]
-        },
-        {
-          "date": "2025-10-05",
-          "label": "Oct 5, 2025",
-          "type": "shutdown",
-          "note": "Shutdown enters fifth day; government still partially closed as negotiations stall.",
-          "key_names": ["All"]
-        },
-        {
-          "date": "2025-10-06",
-          "label": "Oct 6, 2025",
-          "type": "shutdown",
-          "note": "Day 6: Senate votes at 5:30 PM ET on stopgap funding bill; lacks 60 votes needed to advance. White House press conference at 1 PM ET.",
-          "key_names": ["Senate", "White House"]
-        },
-        {
-          "date": "2025-10-06",
-          "label": "Oct 6, 2025",
-          "type": "economic",
-          "note": "Trump announces federal worker layoffs 'underway right now'; ~2M employees without pay, including military and air traffic controllers.",
-          "cost": "Ongoing",
-          "key_names": ["President", "All"]
-        }
-      ]
+      "events": "[Use corrected timeline.json above]"
     },
     "consumer_confidence": {
       "title": "Consumer Confidence Index (CCI): 2025 Shutdown",
@@ -150,7 +70,7 @@
         },
         {
           "month": "Aug 2025",
-          "cci": 97.4,
+          "cci": 97.8,
           "label": "Pre-Shutdown"
         },
         {
@@ -177,8 +97,8 @@
       "chart_type": "list",
       "items": [
         {
-          "title": "Closures hit tourism",
-          "detail": "Parks, museums & monuments reduce operations.",
+          "title": "Tourism operations reduced",
+          "detail": "National parks, museums, and monuments reduce operations.",
           "icon": "Landmark"
         }
       ]
@@ -189,7 +109,7 @@
       "items": [
         {
           "title": "Economic releases suspended",
-          "detail": "Jobs, GDP, inflation reports delayed.",
+          "detail": "Jobs reports, GDP data, and inflation statistics delayed.",
           "icon": "BarChart3"
         }
       ]
@@ -199,13 +119,13 @@
       "chart_type": "list",
       "items": [
         {
-          "title": "Downgrades possible",
-          "detail": "Extended shutdown increases downgrade risk.",
+          "title": "Credit rating review possible",
+          "detail": "Extended shutdown increases sovereign credit review risk.",
           "icon": "TrendingDown"
         },
         {
-          "title": "Debt ceiling overlap",
-          "detail": "Trust could erode if disputes overlap.",
+          "title": "Debt ceiling considerations",
+          "detail": "Concurrent fiscal policy disputes could compound uncertainty.",
           "icon": "AlertTriangle"
         }
       ]
@@ -215,8 +135,8 @@
       "chart_type": "list",
       "items": [
         {
-          "title": "Aid disruptions",
-          "detail": "Housing, childcare, nutrition at risk.",
+          "title": "Assistance program disruptions",
+          "detail": "Housing, childcare, and nutrition programs face delays or suspensions.",
           "icon": "LifeBuoy"
         }
       ]
@@ -226,56 +146,56 @@
       "chart_type": "list",
       "items": [
         {
-          "title": "Temporary \u2192 permanent job losses",
-          "detail": "Private-sector layoffs if cuts persist.",
+          "title": "Private sector employment effects",
+          "detail": "Extended shutdown could result in private-sector workforce reductions.",
           "icon": "UserMinus"
         }
       ]
     },
     "small_business": {
-      "title": "Small Business Stress",
+      "title": "Small Business Impacts",
       "chart_type": "list",
       "items": [
         {
-          "title": "Contractor Cash Crunch",
-          "detail": "Halted payments force cuts or closures.",
+          "title": "Contractor payment delays",
+          "detail": "Halted payments create cash flow challenges.",
           "icon": "Store"
         },
         {
-          "title": "Community Ripple",
-          "detail": "Local shops near federal hubs lose revenue.",
+          "title": "Regional economic effects",
+          "detail": "Local businesses near federal facilities experience revenue declines.",
           "icon": "Building2"
         },
         {
-          "title": "No Safety Net",
-          "detail": "No back pay for most small firms.",
+          "title": "Limited compensation options",
+          "detail": "Most small contractors ineligible for back pay.",
           "icon": "ShieldAlert"
         }
       ]
     },
     "global_perception": {
-      "title": "Global Perception",
+      "title": "International Perspectives",
       "chart_type": "list",
       "items": [
         {
-          "title": "Market Watchers",
-          "detail": "Investors abroad eye instability.",
+          "title": "Investor monitoring",
+          "detail": "International investors observe U.S. fiscal policy developments.",
           "icon": "Globe"
         },
         {
-          "title": "Trade Partners",
-          "detail": "Allies delay agreements when unsure.",
+          "title": "Trade negotiations",
+          "detail": "International partners may defer agreements during uncertainty.",
           "icon": "Handshake"
         },
         {
-          "title": "Geopolitical Leverage",
-          "detail": "Rivals cite dysfunction to gain edge.",
+          "title": "Geopolitical observations",
+          "detail": "Competing nations reference governance challenges in diplomatic contexts.",
           "icon": "Megaphone"
         }
       ]
     },
     "footer": {
-      "sources": "CBO, BEA, GAO, White House, Reuters/AP, S&P Global"
+      "sources": "Congressional Budget Office, Bureau of Economic Analysis, Government Accountability Office, White House Council of Economic Advisers, Reuters, Associated Press, S&P Global, EY-Parthenon, Conference Board"
     }
   }
 }
