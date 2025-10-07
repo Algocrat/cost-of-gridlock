@@ -22,7 +22,7 @@ export default function App() {
           When Washington stalls, America pays. The 2025 government shutdown halts approximately 6% of GDP in discretionary spending, affecting hundreds of thousands of federal workers, contractors, and families, while its effects ripple through confidence, markets, and essential services.
         </p>
 
-        {/* ✅ ADD THIS SECTION - This was completely missing! */}
+        {/*  ADD THIS SECTION - This was completely missing! */}
         <div className="hero-stats">
           {heroStats.map((stat, index) => (
             <div key={index} className="stat-box">

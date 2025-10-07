@@ -110,7 +110,7 @@ export default function CCILineChart({ data = [] }) {
           fill="url(#colorPre)"
           dot={(props) => {
             const { cx, cy, index } = props
-            const isShutdown = index >= 2 // Sep (index 2) and beyond
+            const isShutdown = index >= 5 // Sep (index 2) and beyond
             const color = isShutdown ? '#F97316' : '#06B6D4'
             return (
               <circle
@@ -125,7 +125,7 @@ export default function CCILineChart({ data = [] }) {
           }}
           activeDot={(props) => {
             const { cx, cy, index } = props
-            const isShutdown = index >= 2
+            const isShutdown = index >= 5
             const color = isShutdown ? '#F97316' : '#06B6D4'
             return (
               <circle

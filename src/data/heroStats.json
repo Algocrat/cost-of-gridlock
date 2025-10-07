@@ -1,38 +1,38 @@
 [
   {
     "icon": "DollarSign",
-    "value": "0.1–0.2%",
-    "label": "GDP Loss per Week (annualized growth)",
-    "source": "White House CEA, EY-Parthenon, Oct 2025"
+    "value": "0.1\u20130.2%",
+    "label": "GDP loss per week (annualized growth, est., as of Oct 2025)",
+    "source": "S&P Global; Goldman Sachs Research, Oct 2025"
   },
   {
     "icon": "Users",
     "value": "620K+",
-    "label": "Federal Employees Currently Furloughed",
+    "label": "Federal employees currently furloughed (as of Oct 7, 2025)",
     "source": "Government Executive, Oct 7 2025"
   },
   {
     "icon": "TrendingDown",
     "value": "94.2",
-    "label": "Consumer Confidence Index (Sept 2025)",
+    "label": "Consumer Confidence Index (Sep 2025)",
     "source": "The Conference Board, Sept 2025"
   },
   {
     "icon": "Clock",
     "value": "6 Days",
-    "label": "Shutdown Duration (as of Oct 6)",
-    "source": "Multiple sources, Oct 6 2025"
+    "label": "Shutdown duration (as of Oct 6, 2025)",
+    "source": "Major outlets and congressional coverage, Oct 6, 2025"
   },
   {
     "icon": "Shield",
     "value": "1.3M",
-    "label": "Active-Duty Military Working Unpaid",
-    "source": "Department of Defense, Oct 2025"
+    "label": "Active-duty military pay delayed during lapse (as of Oct 2025)",
+    "source": "Department of Defense guidance; major outlets, Oct 2025"
   },
   {
     "icon": "AlertTriangle",
     "value": "33%",
-    "label": "Public Trust in Federal Government (2025)",
-    "source": "Partnership for Public Service, Oct 2025"
+    "label": "Public trust in federal government (as of Oct 2025)",
+    "source": "Partnership for Public Service, 2025 Trust Dashboard"
   }
 ]

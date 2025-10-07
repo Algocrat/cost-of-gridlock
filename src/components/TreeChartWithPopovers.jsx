@@ -12,7 +12,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
   const isMouseOverPopoverRef = useRef(false)
   const currentNodeRef = useRef(null)
 
-  // ✅ NEW: Function to scroll tree section to top
+  //  NEW: Function to scroll tree section to top
   const scrollToTree = () => {
     const treeSection = document.querySelector('.tree-section')
     if (treeSection) {
@@ -37,6 +37,14 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       }
     }
   }, [])
+
+  const handleClosePopover = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current)
+    }
+    setPopover({ visible: false, node: null, x: 0, y: 0 })
+    currentNodeRef.current = null
+  }
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -120,7 +128,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         .on("click", (event, d) => {
           event.stopPropagation()
 
-          // ✅ NEW: Scroll to tree section on ANY click
+          //  NEW: Scroll to tree section on ANY click
           scrollToTree()
 
           if (hoverTimeoutRef.current) {
@@ -439,11 +447,8 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
   }
 
   return (
-    <>
-      <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
-        <svg ref={svgRef} style={{ width: "100%", height: "100%" }}></svg>
-      </div>
-
+    <div ref={containerRef} style={{ width: '100%', height: '100%', position: 'relative' }}>
+      <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>
       {popover.visible && popover.node && (
         <EnhancedPopover
           node={popover.node}
@@ -451,9 +456,10 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           y={popover.y}
           onMouseEnter={handlePopoverMouseEnter}
           onMouseLeave={handlePopoverMouseLeave}
+          onClose={handleClosePopover}  // ADD THIS LINE
         />
       )}
-    </>
+    </div>
   )
 }
 

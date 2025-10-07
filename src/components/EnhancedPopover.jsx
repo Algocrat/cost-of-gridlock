@@ -6,7 +6,7 @@ import Thermometer from './Thermometer'
 import CCILineChart from './CCILineChart'
 import EventsTable from './EventsTable'
 
-export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave }) {
+export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave, onClose }) {
   const [isDragging, setIsDragging] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
@@ -110,7 +110,7 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
     }
   }
 
-  // ✅ Mouse drag handlers
+  // Mouse drag handlers
   const handleMouseDown = (e) => {
     setIsDragging(true)
     setDragStart({
@@ -131,7 +131,7 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
     setIsDragging(false)
   }
 
-  // ✅ NEW: Touch drag handlers for mobile
+  // Touch drag handlers for mobile
   const handleTouchStart = (e) => {
     const touch = e.touches[0]
     setIsDragging(true)
@@ -155,7 +155,7 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
     setIsDragging(false)
   }
 
-  // ✅ UPDATED: Add touch event listeners
+  // Add touch event listeners
   useEffect(() => {
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove)
@@ -208,25 +208,69 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
             gap: '12px', 
             borderBottom: '3px solid #0047ab', 
             paddingBottom: '12px',
-            cursor: 'grab',
-            userSelect: 'none',
-            touchAction: 'none'
+            position: 'relative'
           }}
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleTouchStart}
         >
-          <Icons.Circle size={32} strokeWidth={2.5} style={{ color: '#0047ab', flexShrink: 0 }} />
-          <h3 className="popover-title" style={{ 
-            margin: 0, 
-            border: 'none', 
-            padding: 0, 
-            fontSize: '1.4rem',
-            color: '#002868',
-            fontFamily: 'Merriweather, Georgia, serif',
-            fontWeight: 700
-          }}>
-            {node.title}
-          </h3>
+          {/* Draggable header area */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              flex: 1,
+              cursor: 'grab',
+              userSelect: 'none',
+              touchAction: 'none'
+            }}
+            onMouseDown={handleMouseDown}
+            onTouchStart={handleTouchStart}
+          >
+            <Icons.Circle size={32} strokeWidth={2.5} style={{ color: '#0047ab', flexShrink: 0 }} />
+            <h3 className="popover-title" style={{ 
+              margin: 0, 
+              border: 'none', 
+              padding: 0, 
+              fontSize: '1.4rem',
+              color: '#002868',
+              fontFamily: 'Merriweather, Georgia, serif',
+              fontWeight: 700
+            }}>
+              {node.title}
+            </h3>
+          </div>
+
+          {/* Close button */}
+          {onClose && (
+            <button
+              onClick={onClose}
+              style={{
+                position: 'absolute',
+                right: 0,
+                top: 0,
+                background: 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '4px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '6px',
+                transition: 'all 0.2s ease',
+                color: '#0047ab'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(0, 71, 171, 0.1)'
+                e.currentTarget.style.color = '#002868'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent'
+                e.currentTarget.style.color = '#0047ab'
+              }}
+              aria-label="Close popover"
+            >
+              <Icons.X size={24} strokeWidth={2.5} />
+            </button>
+          )}
         </div>
 
         {node.detail && <p className="popover-detail" style={{

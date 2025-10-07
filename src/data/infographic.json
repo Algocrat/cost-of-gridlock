@@ -1,12 +1,12 @@
 {
   "infographic_title": "The Cost of Gridlock",
-  "subtitle": "Federal government spending equals approximately 22–23% of GDP. Shutdown halts approximately 6% of discretionary spending.",
+  "subtitle": "Federal outlays equal about 22\u201323% of GDP. During a lapse in appropriations, many activities funded by annual discretionary spending (about 6% of GDP) are suspended (as of Oct 2025).",
   "sections": {
     "economic_loss": {
-      "banner": "Each week of shutdown costs $7–15B in economic activity"
+      "banner": "Forecasters estimate a 0.1\u20130.2 percentage point reduction in annualized quarterly GDP growth per week of shutdown (most recovers after reopening) (as of Oct 2025)."
     },
     "header": {
-      "title": "The Slice of GDP That Stops",
+      "title": "Discretionary outlays as a share of GDP (context for affected activities)",
       "chart_type": "pie"
     },
     "trust_confidence": {
@@ -19,17 +19,17 @@
       "items": [
         {
           "title": "Federal workers unpaid",
-          "detail": "Approximately 900,000 employees furloughed; approximately 700,000 working without pay.",
+          "detail": "Hundreds of thousands of employees are furloughed; many essential personnel continue working with pay delayed until appropriations resume (as of Oct 2025).",
           "icon": "UserX"
         },
         {
           "title": "Contractors miss payments",
-          "detail": "Most contractors do not receive back pay.",
+          "detail": "Federal contractors generally are not guaranteed back pay for time lost during a shutdown (as of Oct 2025).",
           "icon": "Briefcase"
         },
         {
           "title": "Services halted",
-          "detail": "Passports, permits, IRS processing, national parks operations slowed or paused.",
+          "detail": "Selected services pause or slow, including some passport and visa processing, certain IRS operations, and some national park access (as of Oct 2025).",
           "icon": "Clock"
         }
       ]
@@ -40,24 +40,24 @@
       "items": [
         {
           "title": "Household spending declines",
-          "detail": "Retail, dining, and travel demand decreases.",
+          "detail": "Household discretionary purchases may be reduced in affected areas (as of Oct 2025).",
           "icon": "ShoppingCart"
         },
         {
           "title": "Business activity deferred",
-          "detail": "Hiring and capital projects postponed.",
+          "detail": "Some hiring, permits, reviews, and projects are postponed while agencies are limited (as of Oct 2025).",
           "icon": "UserMinus"
         },
         {
           "title": "Market volatility increases",
-          "detail": "IPOs and ETF launches delayed; volatility rises.",
+          "detail": "IPO and ETF approvals can be delayed when agency operations are limited; financial volatility can increase (as of Oct 2025).",
           "icon": "Activity"
         }
       ]
     },
     "timeline_2025": {
       "title": "Political Timeline: 2025 Shutdown",
-      "events": "[Use corrected timeline.json above]"
+      "events": "See timeline.json for verified chronology (as of Oct 2025)."
     },
     "consumer_confidence": {
       "title": "Consumer Confidence Index (CCI): 2025 Shutdown",
@@ -70,7 +70,7 @@
         },
         {
           "month": "Aug 2025",
-          "cci": 97.8,
+          "cci": 97.4,
           "label": "Pre-Shutdown"
         },
         {
@@ -81,13 +81,13 @@
         {
           "month": "Oct 2025",
           "cci": 92,
-          "label": "Shutdown Effect (est.)",
+          "label": "Projection placeholder",
           "projected": true
         },
         {
           "month": "Nov 2025",
           "cci": 89,
-          "label": "Continued Impact (proj.)",
+          "label": "Projection placeholder",
           "projected": true
         }
       ]
@@ -98,7 +98,7 @@
       "items": [
         {
           "title": "Tourism operations reduced",
-          "detail": "National parks, museums, and monuments reduce operations.",
+          "detail": "National parks, museums, and monuments may reduce operations during a lapse (as of Oct 2025).",
           "icon": "Landmark"
         }
       ]
@@ -109,7 +109,7 @@
       "items": [
         {
           "title": "Economic releases suspended",
-          "detail": "Jobs reports, GDP data, and inflation statistics delayed.",
+          "detail": "Some federal statistical releases, including labor market and inflation reports, can be delayed during agency closures (as of Oct 2025).",
           "icon": "BarChart3"
         }
       ]
@@ -120,12 +120,12 @@
       "items": [
         {
           "title": "Credit rating review possible",
-          "detail": "Extended shutdown increases sovereign credit review risk.",
+          "detail": "Rating agencies note that shutdowns are a negative governance factor; extended lapses can prompt review commentary (as of Oct 2025).",
           "icon": "TrendingDown"
         },
         {
           "title": "Debt ceiling considerations",
-          "detail": "Concurrent fiscal policy disputes could compound uncertainty.",
+          "detail": "Shutdowns are distinct from the debt limit, but overlapping fiscal disputes can add uncertainty (as of Oct 2025).",
           "icon": "AlertTriangle"
         }
       ]
@@ -136,7 +136,7 @@
       "items": [
         {
           "title": "Assistance program disruptions",
-          "detail": "Housing, childcare, and nutrition programs face delays or suspensions.",
+          "detail": "Some housing, childcare, and nutrition program operations can face interruptions depending on available balances and state execution (as of Oct 2025).",
           "icon": "LifeBuoy"
         }
       ]
@@ -147,7 +147,7 @@
       "items": [
         {
           "title": "Private sector employment effects",
-          "detail": "Extended shutdown could result in private-sector workforce reductions.",
+          "detail": "Past shutdowns produced temporary employment disruptions; limited lasting effects were noted after reopening (as of Oct 2025).",
           "icon": "UserMinus"
         }
       ]
@@ -158,17 +158,17 @@
       "items": [
         {
           "title": "Contractor payment delays",
-          "detail": "Halted payments create cash flow challenges.",
+          "detail": "Contractor invoices may be delayed, creating cash\u2011flow strain (as of Oct 2025).",
           "icon": "Store"
         },
         {
           "title": "Regional economic effects",
-          "detail": "Local businesses near federal facilities experience revenue declines.",
+          "detail": "Businesses near federal facilities often report lower foot traffic during shutdowns (as of Oct 2025).",
           "icon": "Building2"
         },
         {
           "title": "Limited compensation options",
-          "detail": "Most small contractors ineligible for back pay.",
+          "detail": "Most small contractors are not eligible for back pay enacted for federal employees (as of Oct 2025).",
           "icon": "ShieldAlert"
         }
       ]
@@ -179,17 +179,17 @@
       "items": [
         {
           "title": "Investor monitoring",
-          "detail": "International investors observe U.S. fiscal policy developments.",
+          "detail": "International investors monitor U.S. fiscal developments during shutdowns (as of Oct 2025).",
           "icon": "Globe"
         },
         {
           "title": "Trade negotiations",
-          "detail": "International partners may defer agreements during uncertainty.",
+          "detail": "Some partners may adjust negotiation timelines amid uncertainty (as of Oct 2025).",
           "icon": "Handshake"
         },
         {
           "title": "Geopolitical observations",
-          "detail": "Competing nations reference governance challenges in diplomatic contexts.",
+          "detail": "Rating agencies cite governance considerations when assessing sovereign outlooks (as of Oct 2025).",
           "icon": "Megaphone"
         }
       ]

@@ -8,18 +8,18 @@
       "children": [
         {
           "title": "Economic Loss",
-          "detail": "Each week of shutdown costs $7-15B GDP",
+          "detail": "Each week of shutdown is estimated to reduce annualized quarterly GDP growth by about 0.1\u20130.2 percentage point; most activity rebounds after reopening (as of Oct 2025).",
           "visualization": {
             "type": "text",
             "data": {
-              "content": "The 2025 shutdown halts ~6% of discretionary federal spending, creating ripple effects throughout the economy. Each week costs approximately $7-15 billion in GDP loss, with $50B+ if exceeding 4 weeks.",
+              "content": "A shutdown pauses many discretionary activities (~6% of GDP in outlays). Forecasters estimate a 0.1\u20130.2 percentage point reduction in annualized quarterly GDP growth per week (as of Oct 2025).",
               "icon": "DollarSign"
             }
           }
         },
         {
           "title": "GDP Breakdown",
-          "detail": "Discretionary spending represents 5-6% of GDP, creating ripple effects throughout the economy.",
+          "detail": "Discretionary outlays represent roughly 6% of GDP, providing context for activities affected during a lapse (as of Oct 2025).",
           "visualization": {
             "type": "pie",
             "data": {
@@ -31,7 +31,7 @@
         },
         {
           "title": "Consumer Confidence",
-          "detail": "CCI dropped from 97.8 (Aug) to 94.2 (Sept), with 92 estimated for Oct. Low consumer confidence leads families and businesses to postpone major spending decisions.",
+          "detail": "The CCI was 97.2 (Jul), 97.4 (Aug), and 94.2 (Sep) 2025; Oct/Nov values are projected values.",
           "visualization": {
             "type": "lineChart",
             "data": [
@@ -49,7 +49,7 @@
               },
               {
                 "month": "Aug",
-                "cci": 97.8
+                "cci": 97.4
               },
               {
                 "month": "Sep",
@@ -62,33 +62,29 @@
               {
                 "month": "Nov",
                 "cci": 89
-              },
-              {
-                "month": "Dec",
-                "cci": 85
               }
             ]
           }
         },
         {
           "title": "Financial Market Risks",
-          "detail": "Market volatility, potential downgrades, delayed IPOs/ETFs",
+          "detail": "Market volatility can rise; ratings commentary may reference governance risks; IPO processing may be delayed when agencies limit operations (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "Stock volatility",
-                "detail": "S&P 500 uncertainty increases 15-20%",
+                "detail": "Some volatility indicators have risen during past lapses (as of Oct 2025).",
                 "icon": "TrendingDown"
               },
               {
                 "title": "Credit rating risk",
-                "detail": "Moody's warns of potential downgrade",
+                "detail": "Rating agencies have cited shutdowns as a negative governance factor (as of Oct 2025).",
                 "icon": "AlertTriangle"
               },
               {
                 "title": "IPO delays",
-                "detail": "$5B+ in planned offerings postponed",
+                "detail": "Offerings and approvals may be delayed while SEC operations are limited (as of Oct 2025).",
                 "icon": "Clock"
               }
             ]
@@ -96,23 +92,23 @@
         },
         {
           "title": "Data & Reporting Delays",
-          "detail": "Critical economic indicators suspended",
+          "detail": "Selected federal indicators can be delayed during a lapse (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "Economic releases suspended",
-                "detail": "Jobs, GDP, inflation reports delayed",
+                "detail": "Jobs, GDP, and inflation reports may be delayed (as of Oct 2025).",
                 "icon": "BarChart"
               },
               {
                 "title": "Census operations halted",
-                "detail": "Population surveys, economic census suspended",
+                "detail": "Some surveys may pause, depending on funding (as of Oct 2025).",
                 "icon": "Users"
               },
               {
                 "title": "Trade data missing",
-                "detail": "Import/export statistics delayed, affecting policy",
+                "detail": "Import/export statistics can be delayed (as of Oct 2025).",
                 "icon": "TrendingUp"
               }
             ]
@@ -122,27 +118,27 @@
     },
     {
       "title": "Direct and Indirect Effects",
-      "detail": "Federal workers, families, and businesses impacted",
+      "detail": "Operational and market impacts linked to agency slowdowns (as of Oct 2025).",
       "children": [
         {
           "title": "Direct Effects",
-          "detail": "Immediate impacts on workers, contractors, and services",
+          "detail": "Immediate impacts on workers, contractors, and certain services (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "Federal workers unpaid",
-                "detail": "~750-800k employees furloughed or working without pay",
+                "detail": "Hundreds of thousands of employees are furloughed; many essential personnel work with pay delayed (as of Oct 2025).",
                 "icon": "UserX"
               },
               {
                 "title": "Contractors miss payments",
-                "detail": "Most contractors do not receive back pay",
+                "detail": "Back pay typically applies to federal employees, not contractors (as of Oct 2025).",
                 "icon": "Briefcase"
               },
               {
                 "title": "Services halted",
-                "detail": "Passports, permits, IRS audits, national parks closed",
+                "detail": "Passports, some IRS operations, and park access can be paused or slowed (as of Oct 2025).",
                 "icon": "XCircle"
               }
             ]
@@ -150,23 +146,23 @@
         },
         {
           "title": "Indirect Effects",
-          "detail": "Ripple effects through households and businesses",
+          "detail": "Operational and market impacts linked to agency slowdowns (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "Household spending cuts",
-                "detail": "Families reduce discretionary purchases",
+                "detail": "Families may reduce discretionary purchases (as of Oct 2025).",
                 "icon": "ShoppingCart"
               },
               {
                 "title": "Business uncertainty",
-                "detail": "Companies delay hiring and investment",
+                "detail": "Some hiring and investment decisions are delayed (as of Oct 2025).",
                 "icon": "Building"
               },
               {
                 "title": "Tourism losses",
-                "detail": "National parks closed, local economies suffer",
+                "detail": "Access changes at national parks can affect nearby economies (as of Oct 2025).",
                 "icon": "MapPin"
               }
             ]
@@ -174,23 +170,23 @@
         },
         {
           "title": "Small Business Stress",
-          "detail": "Contractors and local businesses hit hardest",
+          "detail": "Contractors and local businesses experience cash\u2011flow pressure (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "Contractor cash crunch",
-                "detail": "Halted payments force cuts or closures",
+                "detail": "Delayed invoices can force spending cuts (as of Oct 2025).",
                 "icon": "Store"
               },
               {
                 "title": "Community ripple effects",
-                "detail": "Local shops near federal hubs lose revenue",
+                "detail": "Reduced foot traffic near federal hubs (as of Oct 2025).",
                 "icon": "Building"
               },
               {
                 "title": "No safety net",
-                "detail": "No back pay for most small firms",
+                "detail": "Most small firms lack back pay eligibility (as of Oct 2025).",
                 "icon": "Shield"
               }
             ]
@@ -200,7 +196,7 @@
     },
     {
       "title": "Political Context",
-      "detail": "Congressional gridlock and negotiation breakdown",
+      "detail": "Congressional negotiations and procedural hurdles (as of Oct 2025).",
       "children": [
         {
           "title": "Negotiation Timeline",
@@ -353,49 +349,51 @@
       "children": [
         {
           "title": "Vulnerable Populations",
-          "detail": "Low-income families, seniors, disabled communities at risk",
+          "detail": "Potential strain on nutrition and housing programs during a lapse (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "WIC program suspended",
-                "detail": "9M mothers/children lose nutrition benefits within weeks",
+                "detail": "States report potential interruptions if balances are exhausted (as of Oct 2025).",
                 "icon": "Heart"
               },
               {
                 "title": "Housing assistance delayed",
-                "detail": "Section 8 vouchers and rental aid delayed",
+                "detail": "Some new commitments and processing can be delayed (as of Oct 2025).",
                 "icon": "Home"
               },
               {
                 "title": "Disability services slowed",
-                "detail": "SSI processing delayed",
+                "detail": "Some processing can slow during lapses (as of Oct 2025).",
                 "icon": "Shield"
               },
               {
                 "title": "SNAP benefits at risk",
-                "detail": "42M Americans could lose food assistance after 30 days",
+                "detail": "Continuity depends on available funding authorities (as of Oct 2025).",
                 "icon": "ShoppingCart"
               },
               {
                 "title": "Head Start programs threatened",
-                "detail": "Early childhood education for 1M children at risk",
+                "detail": "Some providers could face disruptions absent new funding (as of Oct 2025).",
                 "icon": "GraduationCap"
               }
             ]
           }
         },
-        {
-          "title": "Trust Erosion",
-          "detail": "Public confidence in government institutions declines",
-          "visualization": {
-            "type": "thermometer",
-            "data": {
-              "value": 23,
-              "label": "Government Trust Index"
+          {
+            "title": "Shutdown Sentiment",
+            "detail": "Public concern over the federal shutdown (Washington Post, Oct 2025)",
+            "visualization": {
+              "type": "stackedBar",
+              "data": [
+                { "label": "Very Concerned", "value": 25, "color": "#e74c3c" },
+                { "label": "Somewhat Concerned", "value": 41, "color": "#f1c40f" },
+                { "label": "Not Concerned", "value": 34, "color": "#2ecc71" }
+              ],
+              "totalLabel": "66% Concerned Overall"
             }
-          }
-        },
+          },
         {
           "title": "Healthcare & Social Services",
           "detail": "Medical and public health services disrupted",
@@ -422,23 +420,23 @@
         },
         {
           "title": "Tourism & Cultural Impacts",
-          "detail": "Parks, museums, and cultural sites affected",
+          "detail": "Parks, museums, and cultural sites adjust operations during lapses (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "National parks closed",
-                "detail": "Parks, museums & monuments reduce operations",
+                "detail": "Operations reduced or access limited depending on conditions (as of Oct 2025).",
                 "icon": "Mountain"
               },
               {
                 "title": "Smithsonian closures",
-                "detail": "Museums, zoo closed during peak tourist season",
+                "detail": "Some museums and the zoo may close during lapses (as of Oct 2025).",
                 "icon": "Building"
               },
               {
                 "title": "Weather warnings reduced",
-                "detail": "NWS staffing reduced during severe weather season",
+                "detail": "NWS prioritizes essential warnings; some services may be limited (as of Oct 2025).",
                 "icon": "Cloud"
               }
             ]
@@ -448,7 +446,7 @@
     },
     {
       "title": "Military & Security",
-      "detail": "Defense and homeland security operations strained",
+      "detail": "Defense and security operations continue; pay is delayed during lapses (as of Oct 2025).",
       "children": [
         {
           "title": "Military Personnel",
@@ -478,7 +476,7 @@
     },
     {
       "title": "Employment Risks",
-      "detail": "Job market disruptions and unemployment concerns",
+      "detail": "Potential job market disruptions (as of Oct 2025).",
       "children": [
         {
           "title": "Job Market Impact",

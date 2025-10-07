@@ -4,79 +4,108 @@
       "date": "2025-09-19",
       "label": "Sep 19, 2025",
       "type": "political",
-      "note": "The House passes a short-term Continuing Resolution (CR). The Senate does not advance the measure due to disagreements over spending priorities.",
-      "key_names": ["House", "Senate"]
+      "note": "The House passes a short-term Continuing Resolution (CR). The Senate does not advance the measure amid disagreements over spending priorities (as of Oct 2025).",
+      "key_names": [
+        "House",
+        "Senate"
+      ]
     },
     {
       "date": "2025-09-30",
       "label": "Sep 30, 2025",
       "type": "political",
-      "note": "The Senate fails to advance both Democratic and Republican funding proposals, resulting in a lapse in federal funding at midnight.",
-      "key_names": ["Senate"]
+      "note": "The Senate does not advance competing funding proposals; a lapse in funding occurs at 12:01 a.m. EDT on Oct 1 (as of Oct 2025).",
+      "key_names": [
+        "Senate"
+      ]
     },
     {
       "date": "2025-10-01",
       "label": "Oct 1, 2025",
       "type": "shutdown",
-      "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. Approximately 900,000 employees are furloughed, and approximately 700,000 continue working without pay.",
-      "cost": "$7–15B per week",
-      "key_names": ["Federal Workforce"]
+      "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. Essential services continue; many employees are furloughed or working with pay delayed (as of Oct 2025).",
+      "cost": "See economic_loss banner for growth impact estimate (as of Oct 2025).",
+      "key_names": [
+        "Federal Workforce"
+      ]
     },
     {
       "date": "2025-10-01",
       "label": "Oct 1, 2025",
       "type": "political",
-      "note": "Senate leaders hold preliminary discussions on a shorter-term funding extension. No agreement is reached.",
-      "key_names": ["Senate"]
+      "note": "Senate leaders discuss options for shorter-term funding; no agreement announced (as of Oct 2025).",
+      "key_names": [
+        "Senate"
+      ]
     },
     {
       "date": "2025-10-01",
       "label": "Oct 1, 2025",
       "type": "economic",
-      "note": "Financial markets respond to the shutdown. Stock futures fluctuate and gold prices reach elevated levels as investors assess potential economic impacts.",
-      "key_names": ["Markets", "Investors"]
+      "note": "Markets fluctuate as participants assess potential impacts; some haven assets rise while risk assets vary (as of Oct 2025).",
+      "key_names": [
+        "Markets",
+        "Investors"
+      ]
     },
     {
       "date": "2025-10-01",
       "label": "Oct 1, 2025",
       "type": "political",
-      "note": "The administration announces a temporary pause of approximately $26 billion in previously approved federal funds, including allocations for transit and clean-energy projects, pending budget resolution.",
-      "key_names": ["White House", "Federal Agencies", "States"]
+      "note": "Senate leaders discuss options for shorter-term funding; no agreement announced (as of Oct 2025).",
+      "key_names": [
+        "White House",
+        "Federal Agencies",
+        "States"
+      ]
     },
     {
       "date": "2025-10-02",
       "label": "Oct 2, 2025",
       "type": "shutdown",
-      "note": "The Senate does not pass funding legislation. The partial government shutdown continues.",
-      "key_names": ["Senate"]
+      "note": "The Senate does not pass funding legislation; the partial shutdown continues (as of Oct 2025).",
+      "key_names": [
+        "Senate"
+      ]
     },
     {
       "date": "2025-10-02",
       "label": "Oct 2, 2025",
       "type": "political",
-      "note": "Department of Education initiates an internal review following employee reports regarding modified automated out-of-office messages.",
-      "key_names": ["Department of Education"]
+      "note": "The Department of Education reviews concerns regarding modified automated out-of-office messages (as of Oct 2025).",
+      "key_names": [
+        "Department of Education"
+      ]
     },
     {
       "date": "2025-10-03",
       "label": "Oct 3, 2025",
       "type": "shutdown",
-      "note": "Speaker Mike Johnson extends the House recess as negotiations between congressional leaders continue.",
-      "key_names": ["House", "Speaker Mike Johnson"]
+      "note": "The House remains in recess while negotiations continue (as of Oct 2025).",
+      "key_names": [
+        "House",
+        "Speaker Mike Johnson"
+      ]
     },
     {
       "date": "2025-10-05",
       "label": "Oct 5, 2025",
       "type": "shutdown",
-      "note": "The federal government remains partially closed for a fifth day. Agencies continue limited operations while essential services remain active.",
-      "key_names": ["Federal Government"]
+      "note": "Day 5 of the shutdown; limited operations continue where authorized (as of Oct 2025).",
+      "key_names": [
+        "Federal Government"
+      ]
     },
     {
       "date": "2025-10-06",
       "label": "Oct 6, 2025",
       "type": "shutdown",
-      "note": "The Senate does not advance another stopgap funding bill requiring 60 votes. The President and White House issue statements calling for a bipartisan agreement to restore federal operations.",
-      "key_names": ["Senate", "President", "White House"]
+      "note": "The Senate does not advance a stopgap funding bill requiring 60 votes; the White House calls for a bipartisan agreement (as of Oct 2025).",
+      "key_names": [
+        "Senate",
+        "President",
+        "White House"
+      ]
     }
   ]
 }
