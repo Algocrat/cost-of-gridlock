@@ -5,6 +5,8 @@ import GDPInsetPie from './GDPInsetPie'
 import Thermometer from './Thermometer'
 import CCILineChart from './CCILineChart'
 import EventsTable from './EventsTable'
+import StackedBarChart from './StackedBarChart'
+
 
 export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave, onClose }) {
   const [isDragging, setIsDragging] = useState(false)
@@ -35,6 +37,9 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
 
       case 'lineChart':
         return <CCILineChart data={viz.data} />
+
+      case 'stackedBar':
+        return <StackedBarChart data={viz.data} totalLabel={viz.totalLabel} />
 
       case 'text':
         const IconComponent = viz.data.icon ? Icons[viz.data.icon] : null
