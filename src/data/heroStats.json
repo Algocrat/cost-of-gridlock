@@ -31,8 +31,8 @@
   },
   {
     "icon": "AlertTriangle",
-    "value": "33%",
-    "label": "Public trust in federal government (as of Oct 2025)",
-    "source": "Partnership for Public Service, 2025 Trust Dashboard"
+    "value": "66%",
+    "label": "Americans concerned about federal shutdown (as of Oct 2025)",
+    "source": "Washington Post poll, Oct 2025"
   }
 ]
