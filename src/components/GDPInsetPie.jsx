@@ -1,89 +1,95 @@
 import React from 'react'
 import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from 'recharts'
 
-const tooltipStyle = {
-  backgroundColor: 'rgba(30, 41, 59, 0.98)',
-  border: '2px solid #3B82F6',
-  borderRadius: 12,
-  color: '#fff',
-  padding: '12px 16px',
-  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25)'
+// Custom Tooltip with light background
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload
+    return (
+      <div style={{
+        backgroundColor: '#ffffff',
+        border: '2px solid #0047AB',
+        borderRadius: '12px',
+        padding: '12px 16px',
+        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25)'
+      }}>
+        <div style={{ 
+          fontWeight: '700', 
+          fontSize: '15px', 
+          color: '#002868',
+          marginBottom: '4px'
+        }}>
+          {data.name}
+        </div>
+        <div style={{ 
+          fontSize: '14px', 
+          color: '#003366',
+          marginBottom: '2px'
+        }}>
+          {data.value}%
+        </div>
+        <div style={{ 
+          fontSize: '13px', 
+          color: '#64748B',
+          fontStyle: 'italic'
+        }}>
+          {data.info}
+        </div>
+      </div>
+    )
+  }
+  return null
 }
 
 export default function GDPInsetPie() {
   const data = [
-    { 
-      name: 'Non-Federal Economy', 
-      value: 78, 
+    {
+      name: 'Non-Federal Economy',
+      value: 78,
       color: '#06B6D4',
-      info: 'Private/state/local activity' 
+      info: 'Private/state/local activity'
     },
-    { 
-      name: 'Mandatory & Interest', 
-      value: 16, 
+    {
+      name: 'Mandatory & Interest',
+      value: 16,
       color: '#3B82F6',
-      info: 'Continues during shutdown' 
+      info: 'Continues during shutdown'
     },
-    { 
-      name: 'Discretionary at Risk', 
-      value: 6, 
+    {
+      name: 'Discretionary at Risk',
+      value: 6,
       color: '#F97316',
-      info: 'Paused during shutdown' 
+      info: 'Paused during shutdown'
     }
   ]
 
   return (
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>
-        <defs>
-          <linearGradient id="grad-0" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#06B6D4" />
-            <stop offset="100%" stopColor="#0891B2" />
-          </linearGradient>
-          <linearGradient id="grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3B82F6" />
-            <stop offset="100%" stopColor="#2563EB" />
-          </linearGradient>
-          <linearGradient id="grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#F97316" />
-            <stop offset="100%" stopColor="#EA580C" />
-          </linearGradient>
-        </defs>
-
         <Pie
           data={data}
           cx="50%"
           cy="50%"
           innerRadius={60}
-          outerRadius={90}
+          outerRadius={100}
+          paddingAngle={2}
           dataKey="value"
-          paddingAngle={3}
-          stroke="#fff"
-          strokeWidth={3}
+          label={({ name, value }) => `${value}%`}
+          labelLine={false}
         >
           {data.map((entry, index) => (
-            <Cell 
-              key={`cell-${index}`}
-              fill={`url(#grad-${index})`}
-            />
+            <Cell key={`cell-${index}`} fill={entry.color} />
           ))}
         </Pie>
-
-        <Tooltip 
-          contentStyle={tooltipStyle}
-          formatter={(value, name, props) => [value + '%', props.payload.info]} 
-        />
-
+        <Tooltip content={<CustomTooltip />} />
         <Legend 
-          verticalAlign="bottom"
-          height={60}
-          iconType="circle"
-          iconSize={12}
-          wrapperStyle={{
-            paddingTop: '20px',
-            fontSize: '14px',
-            fontWeight: '600'
-          }}
+          verticalAlign="bottom" 
+          height={36}
+          formatter={(value, entry) => (
+            <span style={{ color: '#003366', fontSize: '14px' }}>
+              {value}
+            </span>
+          )}
         />
       </PieChart>
     </ResponsiveContainer>
