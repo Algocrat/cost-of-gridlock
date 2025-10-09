@@ -12,7 +12,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
   const isMouseOverPopoverRef = useRef(false)
   const currentNodeRef = useRef(null)
 
-  //  NEW: Function to scroll tree section to top
+  // Function to scroll tree section to top
   const scrollToTree = () => {
     const treeSection = document.querySelector('.tree-section')
     if (treeSection) {
@@ -50,8 +50,27 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
     if (!containerRef.current) return
 
     const container = containerRef.current
-    const width = container.clientWidth
-    const height = container.clientHeight || 600
+    const width = container.clientWidth || 1200
+    const height = Math.max(container.clientHeight, 700)
+    // RESPONSIVE SCALING: Detect screen size and adjust tree parameters
+    const isMobile = width < 768
+    const isTablet = width >= 768 && width < 1024
+
+    // Scale factors based on screen size
+    const nodeSpacingX = isMobile ? 100 : isTablet ? 120 : 140
+    const nodeSpacingY = isMobile ? 140 : isTablet ? 160 : 180
+    const nodeBaseRadius = isMobile ? 14 : isTablet ? 18 : 24
+    const nodeDepthBonus = isMobile ? 2 : isTablet ? 3 : 5
+    const baseFontSize = isMobile ? 12 : isTablet ? 14 : 17
+    const rootFontSize = isMobile ? 14 : isTablet ? 16 : 20
+    const labelSpacing = isMobile ? 30 : isTablet ? 35 : 45
+    const maxLabelWidth = isMobile ? 100 : isTablet ? 140 : 180
+    const rootMaxLabelWidth = isMobile ? 140 : isTablet ? 180 : 220
+    const lineHeight = isMobile ? 16 : isTablet ? 18 : 22
+    const rootLineHeight = isMobile ? 18 : isTablet ? 20 : 24
+    const linkStrokeWidth = isMobile ? 8 : isTablet ? 10 : 12
+    const linkOverlayWidth = isMobile ? 5 : isTablet ? 6 : 8
+    const strokeWidth = isMobile ? 2 : 3
 
     const svg = d3.select(svgRef.current)
     svg.selectAll("*").remove()
@@ -62,7 +81,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("preserveAspectRatio", "xMidYMid meet")
       .append("g")
-      .attr("transform", `translate(${width / 2}, 100)`)
+      .attr("transform", `translate(${width / 2}, 50)`)
 
     const zoom = d3.zoom()
       .scaleExtent([0.3, 3])
@@ -79,7 +98,8 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
 
     if (root.children) root.children.forEach(collapse)
 
-    const treeLayout = d3.tree().nodeSize([180, 250])
+    // RESPONSIVE: Use scaled nodeSize
+    const treeLayout = d3.tree().nodeSize([nodeSpacingX, nodeSpacingY])
 
     function update(source) {
       const duration = 750
@@ -87,17 +107,19 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       const nodes = treeData.descendants()
       const links = treeData.links()
 
-      nodes.forEach((d) => (d.y = d.depth * 250))
+      // RESPONSIVE: Scale depth spacing
+      nodes.forEach((d) => (d.y = d.depth * nodeSpacingY))
 
       const link = g.selectAll(".link").data(links, (d) => d.target.data.title)
 
       const linkEnter = link.enter().insert("g", "g").attr("class", "link")
 
+      // Updated link colors for vintage palette with responsive widths
       linkEnter.append("path")
         .attr("class", "link-base")
         .attr("fill", "none")
-        .attr("stroke", "#8d6e63")
-        .attr("stroke-width", 12)
+        .attr("stroke", "#A4B6C1")
+        .attr("stroke-width", linkStrokeWidth)
         .attr("opacity", 0.6)
         .attr("stroke-linecap", "round")
         .attr("d", diagonal)
@@ -105,9 +127,9 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       linkEnter.append("path")
         .attr("class", "link-overlay")
         .attr("fill", "none")
-        .attr("stroke", "#d7ccc8")
-        .attr("stroke-width", 8)
-        .attr("opacity", 0.7)
+        .attr("stroke", "#2E598F")
+        .attr("stroke-width", linkOverlayWidth)
+        .attr("opacity", 0.5)
         .attr("stroke-linecap", "round")
         .attr("d", diagonal)
 
@@ -127,8 +149,6 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         })
         .on("click", (event, d) => {
           event.stopPropagation()
-
-          //  NEW: Scroll to tree section on ANY click
           scrollToTree()
 
           if (hoverTimeoutRef.current) {
@@ -139,11 +159,11 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           if (d.data.visualization) {
             const circle = d3.select(event.currentTarget).select("circle").node()
             const rect = circle.getBoundingClientRect()
-            
+
             if (popover.visible && popover.node?.title === d.data.title) {
               setPopover({ visible: false, node: null, x: 0, y: 0 })
               currentNodeRef.current = null
-              
+
               if (d.parent) {
                 d.parent.children?.forEach((child) => {
                   if (child !== d) collapse(child)
@@ -171,7 +191,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           } else {
             setPopover({ visible: false, node: null, x: 0, y: 0 })
             currentNodeRef.current = null
-            
+
             if (d.parent) {
               d.parent.children?.forEach((child) => {
                 if (child !== d) collapse(child)
@@ -227,17 +247,18 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           }, 300)
         })
 
+      // Pulse ring for root node (first time)
       nodeEnter.each(function(d) {
         if (d.depth === 0 && firstTime) {
           const nodeGroup = d3.select(this)
-          const radius = 20 + Math.max(0, 3 - d.depth) * 4
+          const radius = nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus
 
           nodeGroup.append("circle")
             .attr("class", "root-pulse-ring")
             .attr("r", radius + 10)
             .attr("fill", "none")
-            .attr("stroke", "#ff6b6b")
-            .attr("stroke-width", 3)
+            .attr("stroke", "#940F15")
+            .attr("stroke-width", strokeWidth)
             .attr("opacity", 0)
             .style("pointer-events", "none")
 
@@ -245,7 +266,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
             nodeGroup.select(".root-pulse-ring")
               .transition()
               .duration(1500)
-              .attr("r", radius + 30)
+              .attr("r", radius + 35)
               .attr("opacity", 0.8)
               .transition()
               .duration(1500)
@@ -258,18 +279,20 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         }
       })
 
+      // RESPONSIVE: Scaled node circles
       nodeEnter.append("circle")
-        .attr("r", (d) => 20 + Math.max(0, 3 - d.depth) * 4)
-        .attr("fill", (d) => d._children ? "#2e7d32" : "#388e3c")
-        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#ff6b6b" : "#14532d")
-        .attr("stroke-width", (d) => d.depth === 0 && firstTime ? 5 : 3)
+        .attr("r", (d) => nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus)
+        .attr("fill", (d) => d._children ? "#2E598F" : "#2E598F")
+        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#940F15" : "#0C2141")
+        .attr("stroke-width", (d) => d.depth === 0 && firstTime ? strokeWidth + 2 : strokeWidth)
         .style("cursor", "pointer")
-        .style("filter", (d) => d.depth === 0 && firstTime ? "drop-shadow(0 0 10px #ff6b6b)" : "none")
+        .style("filter", (d) => d.depth === 0 && firstTime ? "drop-shadow(0 0 10px #940F15)" : "none")
 
+      // Expand indicator (+)
       nodeEnter.each(function(d) {
         if (d._children) {
           const nodeGroup = d3.select(this)
-          const radius = 20 + Math.max(0, 3 - d.depth) * 4
+          const radius = nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus
 
           nodeGroup.append("text")
             .attr("class", "expand-indicator")
@@ -277,25 +300,28 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
             .attr("dominant-baseline", "middle")
             .attr("font-size", `${radius * 1.2}px`)
             .attr("font-weight", "bold")
-            .attr("fill", "#1b5e20")
+            .attr("fill", "#EBEAD9")
             .attr("pointer-events", "none")
             .text("+")
         }
       })
 
+      // RESPONSIVE: Scaled node labels
       nodeEnter.each(function(d) {
         const nodeGroup = d3.select(this)
-        const radius = 20 + Math.max(0, 3 - d.depth) * 4
-        const labelY = radius + 40
-        const maxWidth = d.depth === 0 ? 200 : 160
+        const radius = nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus
+        const labelY = radius + labelSpacing
+        const maxWidth = d.depth === 0 ? rootMaxLabelWidth : maxLabelWidth
+        const fontSize = d.depth === 0 ? rootFontSize : baseFontSize
+        const currentLineHeight = d.depth === 0 ? rootLineHeight : lineHeight
 
         const words = d.data.title.split(/\s+/)
         const lines = []
         let currentLine = words[0]
 
         const tempText = nodeGroup.append("text")
-          .attr("font-family", "Inter, Poppins, Montserrat, system-ui, sans-serif")
-          .attr("font-size", d.depth === 0 ? "18px" : "16px")
+          .attr("font-family", "Montserrat, system-ui, sans-serif")
+          .attr("font-size", `${fontSize}px`)
           .attr("font-weight", d.depth === 0 ? "700" : "600")
           .style("visibility", "hidden")
 
@@ -314,40 +340,41 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         lines.push(currentLine)
         tempText.remove()
 
-        const lineHeight = d.depth === 0 ? 22 : 20
         const textGroup = nodeGroup.append("g").attr("class", "node-label")
 
         lines.forEach((line, i) => {
-          const yOffset = labelY + (i * lineHeight)
+          const yOffset = labelY + (i * currentLineHeight)
           const text = textGroup.append("text")
             .attr("x", 0)
             .attr("y", yOffset)
             .attr("text-anchor", "middle")
-            .attr("font-family", "Inter, Poppins, Montserrat, system-ui, sans-serif")
-            .attr("font-size", d.depth === 0 ? "18px" : "16px")
+            .attr("font-family", "Montserrat, system-ui, sans-serif")
+            .attr("font-size", `${fontSize}px`)
             .attr("font-weight", d.depth === 0 ? "700" : "600")
-            .attr("fill", "#1b5e20")
+            .attr("fill", "#0C2141")
             .attr("opacity", 0.95)
             .style("pointer-events", "none")
             .text(line)
 
           text.style("paint-order", "stroke")
-            .style("stroke", "#ffffff")
-            .style("stroke-width", "4px")
+            .style("stroke", "#EBEAD9")
+            .style("stroke-width", isMobile ? "2px" : "4px")
             .style("stroke-linecap", "round")
             .style("stroke-linejoin", "round")
         })
 
+        // "Click here" hint for first-time users
         if (d.depth === 0 && firstTime) {
+          const hintFontSize = isMobile ? 12 : isTablet ? 14 : 18
           const clickHereText = textGroup.append("text")
             .attr("class", "click-here-hint")
             .attr("x", 0)
-            .attr("y", labelY + (lines.length * lineHeight) + 30)
+            .attr("y", labelY + (lines.length * currentLineHeight) + 35)
             .attr("text-anchor", "middle")
-            .attr("font-family", "Inter, system-ui, sans-serif")
-            .attr("font-size", "16px")
+            .attr("font-family", "Roboto, system-ui, sans-serif")
+            .attr("font-size", `${hintFontSize}px`)
             .attr("font-weight", "700")
-            .attr("fill", "#ff6b6b")
+            .attr("fill", "#940F15")
             .style("pointer-events", "none")
             .text("↑ Click here to explore")
 
@@ -373,16 +400,16 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       })
 
       nodeUpdate.select("circle")
-        .attr("fill", (d) => d._children ? "#2e7d32" : "#388e3c")
-        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#ff6b6b" : "#14532d")
-        .attr("stroke-width", (d) => d.depth === 0 && firstTime ? 5 : 3)
+        .attr("fill", (d) => d._children ? "#2E598F" : "#2E598F")
+        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#940F15" : "#0C2141")
+        .attr("stroke-width", (d) => d.depth === 0 && firstTime ? strokeWidth + 2 : strokeWidth)
 
       nodeUpdate.select(".expand-indicator").remove()
 
       nodeUpdate.each(function(d) {
         if (d._children) {
           const nodeGroup = d3.select(this)
-          const radius = 20 + Math.max(0, 3 - d.depth) * 4
+          const radius = nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus
 
           nodeGroup.append("text")
             .attr("class", "expand-indicator")
@@ -390,7 +417,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
             .attr("dominant-baseline", "middle")
             .attr("font-size", `${radius * 1.2}px`)
             .attr("font-weight", "bold")
-            .attr("fill", "#1b5e20")
+            .attr("fill", "#EBEAD9")
             .attr("pointer-events", "none")
             .text("+")
         }
@@ -456,7 +483,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           y={popover.y}
           onMouseEnter={handlePopoverMouseEnter}
           onMouseLeave={handlePopoverMouseLeave}
-          onClose={handleClosePopover}  // ADD THIS LINE
+          onClose={handleClosePopover}
         />
       )}
     </div>
