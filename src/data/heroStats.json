@@ -19,9 +19,10 @@
   },
   {
     "icon": "Clock",
-    "value": "6 Days",
-    "label": "Shutdown duration (as of Oct 6, 2025)",
-    "source": "Major outlets and congressional coverage, Oct 6, 2025"
+    "value": "2025-10-01",
+    "label": "Shutdown duration",
+    "source": "Major outlets and congressional coverage, Oct 6, 2025",
+    "isDate": true
   },
   {
     "icon": "Shield",

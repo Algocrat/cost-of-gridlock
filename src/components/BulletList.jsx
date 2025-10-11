@@ -8,8 +8,8 @@ export default function BulletList({ items = [] }) {
     <div style={{ 
       display: 'flex', 
       flexDirection: 'column', 
-      gap: '20px',
-      padding: '10px 0' 
+      gap: '12px',
+      padding: '6px 0' 
     }}>
       {items.map((item, index) => {
         const IconComponent = Icons[item.icon] || Fallback
@@ -20,30 +20,30 @@ export default function BulletList({ items = [] }) {
             style={{ 
               display: 'flex', 
               alignItems: 'flex-start',
-              gap: '16px'
+              gap: '10px'
             }}
           >
-            {/* Large Icon as Bullet */}
+            {/* Icon with proper padding inside circle */}
             <div style={{
               flexShrink: 0,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              width: '48px',
-              height: '48px',
+              width: '28px',
+              height: '28px',
               borderRadius: '50%',
               background: 'linear-gradient(135deg, #8d6e63, #a1887f)',
               color: '#fff',
-              boxShadow: '0 4px 12px rgba(141, 110, 99, 0.3)'
+              boxShadow: '0 1px 4px rgba(141, 110, 99, 0.2)'
             }}>
-              <IconComponent size={28} strokeWidth={2.5} />
+              <IconComponent size={14} strokeWidth={2} />
             </div>
 
             {/* Content */}
-            <div style={{ flex: 1 }}>
+            <div style={{ flex: 1, paddingTop: '1px' }}>
               <h4 style={{ 
-                margin: '0 0 6px 0',
-                fontSize: '1.1rem',
+                margin: '0 0 3px 0',
+                fontSize: '1.0rem',
                 fontWeight: '700',
                 color: '#3e2723',
                 lineHeight: '1.3'
@@ -52,7 +52,7 @@ export default function BulletList({ items = [] }) {
               </h4>
               <p style={{ 
                 margin: 0,
-                fontSize: '0.95rem',
+                fontSize: '0.9rem',
                 color: '#5d4037',
                 lineHeight: '1.6'
               }}>

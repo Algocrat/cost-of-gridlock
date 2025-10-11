@@ -145,7 +145,7 @@ body {
 
 .timeline-section {
   background: var(--cream);
-  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem; /* Reduced bottom padding */
   border-bottom: 2px solid var(--blue-gray);
   overflow: visible;
   position: relative;
@@ -154,11 +154,14 @@ body {
 
 .timeline-section .section-title {
   color: var(--dark-navy) !important;
+  margin-bottom: 0.5rem; /* Space between title and subtitle */
 }
 
 .timeline-section .section-intro {
   color: var(--deep-blue) !important;
+  margin-bottom: 0.5rem; /* Minimal gap to visual */
 }
+
 
 /* =========================
    TREE SECTION - TRANSPARENT BACKGROUND

@@ -45,16 +45,16 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
         const IconComponent = viz.data.icon ? Icons[viz.data.icon] : null
 
         return (
-          <div style={{ display: 'flex', gap: '18px', alignItems: 'flex-start', padding: '10px 0' }}>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', padding: '10px 0' }}>
             {IconComponent && (
               <div style={{
                 flexShrink: 0,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: '56px',
-                height: '56px',
-                borderRadius: '14px',
+                width: '36px',
+                height: '36px',
+                borderRadius: '10px',
                 background: 'linear-gradient(135deg, #002868 0%, #0047ab 100%)',
                 color: '#fff',
                 boxShadow: '0 8px 20px rgba(0, 40, 104, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15)',
@@ -70,7 +70,7 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
                   background: 'linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 60%)',
                   pointerEvents: 'none'
                 }} />
-                <IconComponent size={28} strokeWidth={2.2} style={{ position: 'relative', zIndex: 1 }} />
+                <IconComponent size={18} strokeWidth={2} style={{ position: 'relative', zIndex: 1 }} />
               </div>
             )}
             <div style={{ flex: 1, paddingTop: '6px', fontSize: '0.96rem', lineHeight: '1.7', color: '#003366', letterSpacing: '0.002em' }}>
@@ -190,7 +190,7 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
         width: 'auto',
         minWidth: isTable ? '500px' : '400px',
         maxWidth: `${popoverWidth}px`,
-        height: 'auto',
+        height: `${popoverHeight}px`,
         minHeight: '250px',
         maxHeight: `${popoverHeight}px`,
         overflow: 'hidden',
@@ -230,7 +230,6 @@ export default function EnhancedPopover({ node, x, y, onMouseEnter, onMouseLeave
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
           >
-            <Icons.Circle size={32} strokeWidth={2.5} style={{ color: '#0047ab', flexShrink: 0 }} />
             <h3 className="popover-title" style={{ 
               margin: 0, 
               border: 'none', 

@@ -57,10 +57,10 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
     const isTablet = width >= 768 && width < 1024
 
     // Scale factors based on screen size
-    const nodeSpacingX = isMobile ? 100 : isTablet ? 120 : 140
-    const nodeSpacingY = isMobile ? 140 : isTablet ? 160 : 180
-    const nodeBaseRadius = isMobile ? 14 : isTablet ? 18 : 24
-    const nodeDepthBonus = isMobile ? 2 : isTablet ? 3 : 5
+    const nodeSpacingX = isMobile ? 140 : isTablet ? 180 : 220  // INCREASED
+    const nodeSpacingY = isMobile ? 140 : isTablet ? 160 : 180  // Same
+    const nodeBaseRadius = isMobile ? 10.5 : isTablet ? 13.5 : 18
+    const nodeDepthBonus = isMobile ? 1.5 : isTablet ? 2.25 : 3.75
     const baseFontSize = isMobile ? 12 : isTablet ? 14 : 17
     const rootFontSize = isMobile ? 14 : isTablet ? 16 : 20
     const labelSpacing = isMobile ? 30 : isTablet ? 35 : 45
@@ -68,8 +68,8 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
     const rootMaxLabelWidth = isMobile ? 140 : isTablet ? 180 : 220
     const lineHeight = isMobile ? 16 : isTablet ? 18 : 22
     const rootLineHeight = isMobile ? 18 : isTablet ? 20 : 24
-    const linkStrokeWidth = isMobile ? 8 : isTablet ? 10 : 12
-    const linkOverlayWidth = isMobile ? 5 : isTablet ? 6 : 8
+    const linkStrokeWidth = isMobile ? 16 : isTablet ? 20 : 24
+    const linkOverlayWidth = isMobile ? 10 : isTablet ? 12 : 16
     const strokeWidth = isMobile ? 2 : 3
 
     const svg = d3.select(svgRef.current)
@@ -81,7 +81,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("preserveAspectRatio", "xMidYMid meet")
       .append("g")
-      .attr("transform", `translate(${width / 2}, 50)`)
+      .attr("transform", `translate(${width / 2}, 75  )`)
 
     const zoom = d3.zoom()
       .scaleExtent([0.3, 3])
