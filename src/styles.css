@@ -203,22 +203,23 @@ body {
   z-index: 1;
 }
 
-/* OPTIMIZED TREE CONTAINER */
+/* OPTIMIZED TREE CONTAINER - TRANSPARENT CARD */
 .tree-container {
   width: 100%;
   max-width: 1600px;
   min-height: 500px;
   height: 65vh;
   max-height: 700px;
-  background: #ffffff;
-  border: 2px solid var(--blue-gray);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(12, 33, 65, 0.15);
-  overflow: hidden;
+  background: transparent; /* CHANGED from #ffffff */
+  border: none; /* CHANGED from 2px solid */
+  border-radius: 0; /* CHANGED from 16px */
+  box-shadow: none; /* CHANGED from shadow */
+  overflow: visible; /* CHANGED from hidden */
   position: relative;
   padding: 20px;
-  margin-top: 2rem; /* INCREASED from 1rem to 2rem */
+  margin-top: 2rem;
 }
+
 
 .tree-container svg {
   width: 100%;

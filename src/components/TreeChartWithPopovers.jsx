@@ -127,7 +127,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       linkEnter.append("path")
         .attr("class", "link-overlay")
         .attr("fill", "none")
-        .attr("stroke", "#2E598F")
+        .attr("stroke", "#4A7AB8")
         .attr("stroke-width", linkOverlayWidth)
         .attr("opacity", 0.5)
         .attr("stroke-linecap", "round")
@@ -282,8 +282,8 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       // RESPONSIVE: Scaled node circles
       nodeEnter.append("circle")
         .attr("r", (d) => nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus)
-        .attr("fill", (d) => d._children ? "#2E598F" : "#2E598F")
-        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#940F15" : "#0C2141")
+        .attr("fill", (d) => d._children ? "#4A7AB8" : "#4A7AB8")
+        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#940F15" : "#2E598F")
         .attr("stroke-width", (d) => d.depth === 0 && firstTime ? strokeWidth + 2 : strokeWidth)
         .style("cursor", "pointer")
         .style("filter", (d) => d.depth === 0 && firstTime ? "drop-shadow(0 0 10px #940F15)" : "none")
@@ -351,7 +351,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
             .attr("font-family", "Montserrat, system-ui, sans-serif")
             .attr("font-size", `${fontSize}px`)
             .attr("font-weight", d.depth === 0 ? "700" : "600")
-            .attr("fill", "#0C2141")
+            .attr("fill", "#2E598F")
             .attr("opacity", 0.95)
             .style("pointer-events", "none")
             .text(line)
@@ -400,8 +400,8 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
       })
 
       nodeUpdate.select("circle")
-        .attr("fill", (d) => d._children ? "#2E598F" : "#2E598F")
-        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#940F15" : "#0C2141")
+        .attr("fill", (d) => d._children ? "#4A7AB8" : "#4A7AB8")
+        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#940F15" : "#2E598F")
         .attr("stroke-width", (d) => d.depth === 0 && firstTime ? strokeWidth + 2 : strokeWidth)
 
       nodeUpdate.select(".expand-indicator").remove()
@@ -470,7 +470,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
     hoverTimeoutRef.current = setTimeout(() => {
       setPopover({ visible: false, node: null, x: 0, y: 0 })
       currentNodeRef.current = null
-    }, 300)
+    }, 1500)
   }
 
   return (

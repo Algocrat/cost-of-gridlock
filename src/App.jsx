@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import BeautifulTimeline from './components/BeautifulTimeline'
 import UShapedFlowLine from './components/UShapedFlowLine'
 import TreeChartWithPopovers from './components/TreeChartWithPopovers'
 import timelineData from './data/timeline.json'
