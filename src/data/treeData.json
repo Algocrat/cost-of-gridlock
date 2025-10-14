@@ -8,11 +8,11 @@
       "children": [
         {
           "title": "Economic Loss",
-          "detail": "Each week of shutdown is estimated to reduce annualized quarterly GDP growth by about 0.1\u20130.2 percentage point; most activity rebounds after reopening (as of Oct 2025).",
+          "detail": "Each week of shutdown is estimated to reduce annualized quarterly GDP growth by about 0.1–0.2 percentage point; most activity rebounds after reopening (as of Oct 2025).",
           "visualization": {
             "type": "text",
             "data": {
-              "content": "A shutdown pauses many discretionary activities (~6% of GDP in outlays). Forecasters estimate a 0.1\u20130.2 percentage point reduction in annualized quarterly GDP growth per week (as of Oct 2025).",
+              "content": "A shutdown pauses many discretionary activities (~6% of GDP in outlays). Forecasters estimate a 0.1–0.2 percentage point reduction in annualized quarterly GDP growth per week (as of Oct 2025).",
               "icon": "DollarSign"
             }
           }
@@ -170,7 +170,7 @@
         },
         {
           "title": "Small Business Stress",
-          "detail": "Contractors and local businesses experience cash\u2011flow pressure (as of Oct 2025).",
+          "detail": "Contractors and local businesses experience cash‑flow pressure (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
@@ -205,116 +205,91 @@
             "type": "table",
             "component": "EventsTable",
             "data": {
-              "events": [
-                {
-                  "date": "2025-09-19",
-                  "label": "Sep 19, 2025",
-                  "type": "political",
-                  "note": "The House passes a short-term Continuing Resolution (CR) aimed at averting a government shutdown. The Senate does not take up the measure amid ongoing partisan divisions over spending priorities.",
-                  "key_names": [
-                    "House",
-                    "Senate"
-                  ]
-                },
-                {
-                  "date": "2025-09-30",
-                  "label": "Sep 30, 2025",
-                  "type": "political",
-                  "note": "The Senate fails to advance both Democratic and Republican funding proposals, setting the stage for a lapse in federal funding at midnight.",
-                  "key_names": [
-                    "Senate"
-                  ]
-                },
-                {
-                  "date": "2025-10-01",
-                  "label": "Oct 1, 2025",
-                  "type": "shutdown",
-                  "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. Approximately 900,000 employees are furloughed, and about 700,000 continue working without pay.",
-                  "cost": "$7\u201315B per week",
-                  "key_names": [
-                    "Federal Workforce"
-                  ]
-                },
-                {
-                  "date": "2025-10-01",
-                  "label": "Oct 1, 2025",
-                  "type": "political",
-                  "note": "Senate leaders hold preliminary discussions on a shorter-term funding extension described as 'productive,' though no agreement is reached.",
-                  "key_names": [
-                    "Senate"
-                  ]
-                },
-                {
-                  "date": "2025-10-01",
-                  "label": "Oct 1, 2025",
-                  "type": "economic",
-                  "note": "Financial markets show mixed reactions to the shutdown. Stock futures fluctuate and gold prices reach record levels as investors weigh potential economic impacts.",
-                  "key_names": [
-                    "Markets",
-                    "Investors"
-                  ]
-                },
-                {
-                  "date": "2025-10-01",
-                  "label": "Oct 1, 2025",
-                  "type": "political",
-                  "note": "The administration announces a temporary freeze of approximately $26 billion in previously approved federal funds, including allocations for transit and clean-energy projects in several states, pending budget resolution.",
-                  "key_names": [
-                    "White House",
-                    "Federal Agencies",
-                    "States"
-                  ]
-                },
-                {
-                  "date": "2025-10-02",
-                  "label": "Oct 2, 2025",
-                  "type": "shutdown",
-                  "note": "The Senate again fails to pass funding legislation. The partial government shutdown continues with no bipartisan deal in place.",
-                  "key_names": [
-                    "Senate"
-                  ]
-                },
-                {
-                  "date": "2025-10-02",
-                  "label": "Oct 2, 2025",
-                  "type": "political",
-                  "note": "Department of Education employees report that automated out-of-office messages were modified to include political statements. The department initiates an internal review.",
-                  "key_names": [
-                    "Department of Education"
-                  ]
-                },
-                {
-                  "date": "2025-10-03",
-                  "label": "Oct 3, 2025",
-                  "type": "shutdown",
-                  "note": "Speaker Mike Johnson extends the House recess into the following week as negotiations between congressional leaders remain at an impasse.",
-                  "key_names": [
-                    "House",
-                    "Speaker Mike Johnson"
-                  ]
-                },
-                {
-                  "date": "2025-10-05",
-                  "label": "Oct 5, 2025",
-                  "type": "shutdown",
-                  "note": "The federal government remains partially closed for a fifth day. Agencies continue limited operations while essential services remain active.",
-                  "key_names": [
-                    "Federal Government"
-                  ]
-                },
-                {
-                  "date": "2025-10-06",
-                  "label": "Oct 6, 2025",
-                  "type": "shutdown",
-                  "note": "The Senate fails to advance another stopgap funding bill requiring 60 votes. The President and White House renew calls for a bipartisan agreement to restore federal operations.",
-                  "key_names": [
-                    "Senate",
-                    "President",
-                    "White House"
-                  ]
-                }
-              ]
-            }
+  "events": [
+    {
+      "date": "2025-09-19",
+      "label": "Sep 19, 2025",
+      "type": "political",
+      "note": "The House passes a 'clean' Continuing Resolution (CR). Senate Democrats oppose it, demanding inclusion of ACA tax credit extensions (as of Oct 2025).",
+      "key_names": ["House", "Senate Democrats", "Speaker Mike Johnson"]
+    },
+    {
+      "date": "2025-09-30",
+      "label": "Sep 30, 2025",
+      "type": "political",
+      "note": "The Senate fails to advance competing funding proposals; a lapse in funding is expected at 12:01 a.m. EDT on Oct 1. House Speaker keeps House out of session (as of Oct 2025).",
+      "key_names": ["Senate"]
+    },
+    {
+      "date": "2025-10-01",
+      "label": "Oct 1, 2025 (12:01 am EDT)",
+      "type": "shutdown",
+      "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. About 750,000 employees furloughed, 700,000 working without pay (as of Oct 14, 2025).",
+      "cost": "~750K furloughed; shutdown begins",
+      "key_names": ["Congress"]
+    },
+    {
+      "date": "2025-10-01",
+      "label": "Oct 1, 2025",
+      "type": "political",
+      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55–45 and 47–53). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
+      "key_names": ["Senate Republicans", "Senate Democrats"]
+    },
+    {
+      "date": "2025-10-02",
+      "label": "Oct 2, 2025",
+      "type": "political",
+      "note": "Department of Education staff report manipulated out-of-office emails blaming Democrats for shutdown, potential Hatch Act violation alleged (as of Oct 2025).",
+      "key_names": ["Department of Education"]
+    },
+    {
+      "date": "2025-10-03",
+      "label": "Oct 3, 2025",
+      "type": "political",
+      "note": "Senate holds fourth failed vote (54–44). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
+      "key_names": ["Speaker Mike Johnson", "Senate"]
+    },
+    {
+      "date": "2025-10-06",
+      "label": "Oct 6, 2025",
+      "type": "political",
+      "note": "Senate holds fifth and sixth votes on competing proposals. Both fail again (45–55 and 52–42). President Trump claims talks underway; Senate Majority Leader Schumer denies (as of Oct 2025).",
+      "key_names": ["Senate", "President Trump", "Leader Schumer"]
+    },
+    {
+      "date": "2025-10-08",
+      "label": "Oct 8, 2025",
+      "type": "shutdown",
+      "note": "Shutdown extends to one week. Economic impacts begin accumulating. Smithsonian museums and National Zoo prepare for closure (as of Oct 2025).",
+      "cost": "Week 1 economic impact accumulating"
+    },
+    {
+      "date": "2025-10-10",
+      "label": "Oct 10, 2025",
+      "type": "shutdown",
+      "note": "Mass layoffs begin: At least 4,000 federal employees receive reduction-in-force (RIF) notices across seven agencies. Treasury, HHS, and Education most affected (as of Oct 2025).",
+      "cost": "4,000+ federal employees terminated",
+      "key_names": ["Treasury", "HHS", "Education Department"]
+    },
+    {
+      "date": "2025-10-13",
+      "label": "Oct 13, 2025 (Day 13)",
+      "type": "shutdown",
+      "note": "Shutdown reaches Day 13. Smithsonian museums, research centers, and National Zoo close. Speaker Johnson warns this could become longest shutdown in U.S. history (as of Oct 2025).",
+      "cost": "Cultural institutions closed; economic damage escalating",
+      "key_names": ["Speaker Mike Johnson", "Smithsonian"]
+    },
+    {
+      "date": "2025-10-14",
+      "label": "Oct 14, 2025 (Day 14)",
+      "type": "political",
+      "note": "Senate returns for eighth vote on funding bill at 5:30 PM ET. Expected to fail again without 60-vote threshold. House Democratic Leader Hakeem Jeffries calls evening meeting to explore solutions. President Trump directs Pentagon to pay troops; Coast Guard also to receive paychecks. Other federal workers await shutdown resolution (as of Oct 14, 2025).",
+      "cost": "Day 14; approaching longest shutdown record (35 days)",
+      "key_names": ["Senate", "Leader Jeffries", "President Trump"]
+    }
+  ]
+}
+
           }
         },
         {
@@ -335,7 +310,7 @@
               },
               {
                 "title": "House Leadership",
-                "detail": "Speaker Mike Johnson (R-LA), along with House Majority Leader Steve Scalise (R-LA), manage a narrow Republican majority and navigate spending disputes, legislative scheduling, and internal party cohesion.",
+                "detail": "Speaker Mike Johnson (R-LA) and House Majority Leader Steve Scalise (R-LA) manage a narrow Republican majority. House Democratic Leader Hakeem Jeffries (D-NY) leads opposition efforts to resolve shutdown through bipartisan negotiations (as of Oct 14, 2025).",
                 "icon": "Users"
               }
             ]
@@ -381,19 +356,31 @@
             ]
           }
         },
-          {
-            "title": "Shutdown Sentiment",
-            "detail": "Public concern over the federal shutdown (Washington Post, Oct 2025)",
-            "visualization": {
-              "type": "stackedBar",
-              "data": [
-                { "label": "Very Concerned", "value": 25, "color": "#e74c3c" },
-                { "label": "Somewhat Concerned", "value": 41, "color": "#f1c40f" },
-                { "label": "Not Concerned", "value": 34, "color": "#2ecc71" }
-              ],
-              "totalLabel": "66% Concerned Overall"
-            }
-          },
+        {
+          "title": "Shutdown Sentiment",
+          "detail": "Public concern over the federal shutdown (Washington Post, Oct 2025)",
+          "visualization": {
+            "type": "stackedBar",
+            "data": [
+              {
+                "label": "Very Concerned",
+                "value": 25,
+                "color": "#e74c3c"
+              },
+              {
+                "label": "Somewhat Concerned",
+                "value": 41,
+                "color": "#f1c40f"
+              },
+              {
+                "label": "Not Concerned",
+                "value": 34,
+                "color": "#2ecc71"
+              }
+            ],
+            "totalLabel": "66% Concerned Overall"
+          }
+        },
         {
           "title": "Healthcare & Social Services",
           "detail": "Medical and public health services disrupted",
@@ -485,7 +472,7 @@
             "type": "list",
             "data": [
               {
-                "title": "Temporary \u2192 permanent job losses",
+                "title": "Temporary → permanent job losses",
                 "detail": "Private-sector layoffs if cuts persist, 43,000 additional unemployed",
                 "icon": "UserMinus"
               },

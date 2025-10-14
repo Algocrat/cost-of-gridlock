@@ -1,15 +1,15 @@
 [
   {
     "icon": "DollarSign",
-    "value": "0.1\u20130.2%",
+    "value": "0.1–0.2%",
     "label": "GDP loss per week (annualized growth, est., as of Oct 2025)",
     "source": "S&P Global; Goldman Sachs Research, Oct 2025"
   },
   {
     "icon": "Users",
-    "value": "620K+",
-    "label": "Federal employees currently furloughed (as of Oct 7, 2025)",
-    "source": "Government Executive, Oct 7 2025"
+    "value": "750K+",
+    "label": "Federal employees currently furloughed (as of Oct 14, 2025)",
+    "source": "CBS News, Oct 14 2025"
   },
   {
     "icon": "TrendingDown",
@@ -21,19 +21,19 @@
     "icon": "Clock",
     "value": "2025-10-01",
     "label": "Shutdown duration",
-    "source": "Major outlets and congressional coverage, Oct 6, 2025",
+    "source": "Major outlets and congressional coverage, Oct 14, 2025",
     "isDate": true
   },
   {
     "icon": "Shield",
-    "value": "1.3M",
-    "label": "Active-duty military pay delayed during lapse (as of Oct 2025)",
-    "source": "Department of Defense guidance; major outlets, Oct 2025"
+    "value": "700K",
+    "label": "Federal workers working without pay during lapse (as of Oct 2025)",
+    "source": "Wikipedia; major outlets, Oct 2025"
   },
   {
     "icon": "AlertTriangle",
-    "value": "66%",
-    "label": "Americans concerned about federal shutdown (as of Oct 2025)",
-    "source": "Washington Post poll, Oct 2025"
+    "value": "8th",
+    "label": "Senate vote attempt to reopen government (as of Oct 14, 2025)",
+    "source": "CBS News, USA Today, Oct 14 2025"
   }
 ]

@@ -78,6 +78,7 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
     const g = svg
       .attr("width", width)
       .attr("height", height)
+      .style("touch-action", "none")  // Enable touch panning on mobile
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("preserveAspectRatio", "xMidYMid meet")
       .append("g")

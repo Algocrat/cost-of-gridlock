@@ -41,6 +41,49 @@ const CustomTooltip = ({ active, payload }) => {
   return null
 }
 
+// Custom Legend Component
+const CustomLegend = ({ payload }) => {
+  return (
+    <div style={{ 
+      display: 'flex', 
+      justifyContent: 'center', 
+      gap: '24px',
+      flexWrap: 'wrap',
+      marginTop: '8px',
+      padding: '0 12px'
+    }}>
+      {payload.map((entry, index) => (
+        <div 
+          key={`legend-${index}`}
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '8px' 
+          }}
+        >
+          <div
+            style={{
+              width: '16px',
+              height: '16px',
+              backgroundColor: entry.color,
+              borderRadius: '3px',
+              flexShrink: 0
+            }}
+          />
+          <span style={{ 
+            color: '#1E293B', 
+            fontSize: '13px',
+            fontWeight: '600',
+            whiteSpace: 'nowrap'
+          }}>
+            {entry.value}
+          </span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function GDPInsetPie() {
   const data = [
     {
@@ -64,34 +107,33 @@ export default function GDPInsetPie() {
   ]
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <PieChart>
-        <Pie
-          data={data}
-          cx="50%"
-          cy="50%"
-          innerRadius={60}
-          outerRadius={100}
-          paddingAngle={2}
-          dataKey="value"
-          label={({ name, value }) => `${value}%`}
-          labelLine={false}
-        >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={entry.color} />
-          ))}
-        </Pie>
-        <Tooltip content={<CustomTooltip />} />
-        <Legend 
-          verticalAlign="bottom" 
-          height={36}
-          formatter={(value, entry) => (
-            <span style={{ color: '#003366', fontSize: '14px' }}>
-              {value}
-            </span>
-          )}
-        />
-      </PieChart>
-    </ResponsiveContainer>
+    <div style={{ width: '100%', height: '340px', paddingTop: '20px' }}>
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="48%"
+            innerRadius={60}
+            outerRadius={95}
+            paddingAngle={2}
+            dataKey="value"
+            label={({ value }) => `${value}%`}
+            labelLine={false}
+            startAngle={90}
+            endAngle={-270}
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={entry.color} />
+            ))}
+          </Pie>
+          <Tooltip content={<CustomTooltip />} />
+          <Legend 
+            content={<CustomLegend />}
+            wrapperStyle={{ paddingTop: '12px' }}
+          />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
   )
 }
