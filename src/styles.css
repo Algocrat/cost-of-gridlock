@@ -26,6 +26,28 @@ box-sizing: border-box;
 }
 
 body {
+  position: relative;
+  background-color: #EBEAD9; /* Your current background */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.05; /* Very subtle */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 526"><rect fill="%23B22234" width="1000" height="526"/><path fill="%23fff" d="M0 40h1000v40H0zm0 80h1000v40H0zm0 80h1000v40H0zm0 80h1000v40H0zm0 80h1000v40H0zm0 80h1000v40H0z"/><rect fill="%233C3B6E" width="400" height="266"/></svg>');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px); /* Soft blur effect */
+  pointer-events: none;
+}
+
+body {
 font-family: 'Roboto', 'Montserrat', system-ui, -apple-system, sans-serif;
 background: var(--cream);
 color: var(--dark-navy);
