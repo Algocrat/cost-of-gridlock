@@ -10,7 +10,7 @@
         "Senate Democrats",
         "Speaker Mike Johnson"
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025"
     },
     {
       "date": "2025-09-30",
@@ -20,7 +20,7 @@
       "key_names": [
         "Senate"
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025"
     },
     {
       "date": "2025-10-01",
@@ -42,12 +42,12 @@
       "date": "2025-10-01",
       "label": "Oct 1, 2025",
       "type": "political",
-      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55–45 and 47–53). Preliminary negotiations described as 'preliminary discussion' (as of Oct 2025).",
+      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55\u201345 and 47\u201353). Preliminary negotiations described as 'preliminary discussion' (as of Oct 2025).",
       "key_names": [
         "Senate Republicans",
         "Senate Democrats"
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025"
     },
     {
       "date": "2025-10-02",
@@ -57,18 +57,18 @@
       "key_names": [
         "Department of Education"
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025"
     },
     {
       "date": "2025-10-03",
       "label": "Oct 3, 2025",
       "type": "political",
-      "note": "Senate holds fourth vote that did not meet the threshold (54–44). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
+      "note": "Senate holds fourth vote that did not meet the threshold (54\u201344). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
       "key_names": [
         "Speaker Mike Johnson",
         "Senate"
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025"
     },
     {
       "date": "2025-10-06",
@@ -152,8 +152,8 @@
         "Kristi Noem",
         "CDC"
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025",
-      "source_cost": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025",
+      "source_cost": "Congressional records and major outlets, Sep\u2013Oct 2025"
     },
     {
       "date": "2025-10-15",
@@ -175,8 +175,8 @@
         "Mike Johnson",
         "NATCA"
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025",
-      "source_cost": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025",
+      "source_cost": "Congressional records and major outlets, Sep\u2013Oct 2025"
     }
   ]
 }

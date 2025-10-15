@@ -1,20 +1,20 @@
 [
   {
     "icon": "DollarSign",
-    "value": "0.1–0.2%",
-    "label": "GDP loss per week (annualized growth, est., as of Oct 2025)",
+    "value": "0.1\u20130.2%",
+    "label": "Estimated weekly GDP loss (annualized, S&P Global & Goldman Sachs, Oct 2025)",
     "source": "S&P Global; Goldman Sachs Research, Oct 2025"
   },
   {
     "icon": "Users",
     "value": "750K+",
-    "label": "Federal employees currently furloughed (as of Oct 15, 2025)",
+    "label": "Federal employees currently furloughed (approximate, as of Oct 15 2025)",
     "source": "CBS News; USA Today, Oct 15 2025"
   },
   {
     "icon": "TrendingDown",
     "value": "94.2",
-    "label": "Consumer Confidence Index (Sep 2025)",
+    "label": "Consumer Confidence Index (Conference Board, Sep 2025)",
     "source": "The Conference Board, Sept 2025"
   },
   {
@@ -27,7 +27,7 @@
   {
     "icon": "Shield",
     "value": "700K",
-    "label": "Federal workers working without pay (military/Coast Guard paid Oct 15)",
+    "label": "Federal personnel working without pay (military/Coast Guard paid Oct 15)",
     "source": "Major outlets, Oct 15 2025"
   },
   {
@@ -51,7 +51,7 @@
   {
     "icon": "Plane",
     "value": "6,000+",
-    "label": "Daily flight delays nationwide (nearly 2x October average, as of Oct 15)",
+    "label": "Daily flight delays (estimated, FAA and media reports, Oct 15 2025)",
     "source": "The Verge, ABC News, Fox5DC, Oct 15 2025"
   }
 ]

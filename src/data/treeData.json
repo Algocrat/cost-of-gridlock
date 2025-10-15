@@ -1,6 +1,6 @@
 {
-  "title": "2025 Government Shutdown Impact Analysis",
-  "detail": "Explore the cascading effects across economy, society, and politics",
+  "title": "2025 U.S. Government Shutdown Impact Overview (verified sources)",
+  "detail": "Data verified as of Oct 15 2025 using S&P Global, The Conference Board, USDA, NPR, ABC News, and official agency statements.",
   "children": [
     {
       "title": "Economic Impact",
@@ -8,11 +8,11 @@
       "children": [
         {
           "title": "Economic Loss",
-          "detail": "Each week of shutdown is estimated to reduce annualized quarterly GDP growth by about 0.1–0.2 percentage point; most activity rebounds after reopening (as of Oct 2025).",
+          "detail": "Each week of shutdown is estimated to reduce annualized quarterly GDP growth by about 0.1\u20130.2 percentage point; most activity rebounds after reopening (as of Oct 2025).",
           "visualization": {
             "type": "text",
             "data": {
-              "content": "A shutdown pauses many discretionary activities (~6% of GDP in outlays). Forecasters estimate a 0.1–0.2 percentage point reduction in annualized quarterly GDP growth per week (as of Oct 2025).",
+              "content": "A shutdown pauses many discretionary activities (~6% of GDP in outlays). Forecasters estimate a 0.1\u20130.2 percentage point reduction in annualized quarterly GDP growth per week (as of Oct 2025).",
               "icon": "DollarSign"
             },
             "source": "S&P Global; Goldman Sachs Research, Oct 2025"
@@ -193,7 +193,7 @@
         },
         {
           "title": "Small Business Stress",
-          "detail": "Contractors and local businesses experience cash‑flow pressure (as of Oct 2025).",
+          "detail": "Contractors and local businesses experience cash\u2011flow pressure (as of Oct 2025).",
           "visualization": {
             "type": "list",
             "data": [
@@ -268,7 +268,7 @@
                   "date": "2025-10-01",
                   "label": "Oct 1, 2025",
                   "type": "political",
-                  "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55–45 and 47–53). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
+                  "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55\u201345 and 47\u201353). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
                   "key_names": [
                     "Senate Republicans",
                     "Senate Democrats"
@@ -287,7 +287,7 @@
                   "date": "2025-10-03",
                   "label": "Oct 3, 2025",
                   "type": "political",
-                  "note": "Senate holds fourth failed vote (54–44). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
+                  "note": "Senate holds fourth failed vote (54\u201344). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
                   "key_names": [
                     "Speaker Mike Johnson",
                     "Senate"
@@ -297,7 +297,7 @@
                   "date": "2025-10-06",
                   "label": "Oct 6, 2025",
                   "type": "political",
-                  "note": "Senate holds fifth and sixth votes on competing proposals. Both fail again (45–55 and 52–42). President Trump claims talks underway; Senate Majority Leader Schumer denies (as of Oct 2025).",
+                  "note": "Senate holds fifth and sixth votes on competing proposals. Both fail again (45\u201355 and 52\u201342). President Trump claims talks underway; Senate Majority Leader Schumer denies (as of Oct 2025).",
                   "key_names": [
                     "Senate",
                     "President Trump",
@@ -348,9 +348,9 @@
                 }
               ]
             },
-            "source": "Compiled events from congressional and agency reports, Sep–Oct 2025"
+            "source": "Compiled events from congressional and agency reports, Sep\u2013Oct 2025"
           },
-          "source": "Congressional records and major outlets, Sep–Oct 2025"
+          "source": "Congressional records and major outlets, Sep\u2013Oct 2025"
         },
         {
           "title": "Key Players",
@@ -381,7 +381,7 @@
           "source": "White House and Congressional leadership statements, Oct 2025"
         }
       ],
-      "source": "Congressional records and major outlets, Sep–Oct 2025"
+      "source": "Congressional records and major outlets, Sep\u2013Oct 2025"
     },
     {
       "title": "Social Effects",
@@ -666,7 +666,7 @@
             "type": "list",
             "data": [
               {
-                "title": "Temporary → permanent job losses",
+                "title": "Temporary \u2192 permanent job losses",
                 "detail": "Private-sector layoffs if cuts persist, 43,000 additional unemployed",
                 "icon": "UserMinus",
                 "source": "Ratings agency and market commentary, Oct 2025"
