@@ -5,81 +5,161 @@
       "label": "Sep 19, 2025",
       "type": "political",
       "note": "The House passes a 'clean' Continuing Resolution (CR). Senate Democrats oppose it, demanding inclusion of ACA tax credit extensions (as of Oct 2025).",
-      "key_names": ["House", "Senate Democrats", "Speaker Mike Johnson"]
+      "key_names": [
+        "House",
+        "Senate Democrats",
+        "Speaker Mike Johnson"
+      ]
     },
     {
       "date": "2025-09-30",
       "label": "Sep 30, 2025",
       "type": "political",
       "note": "The Senate fails to advance competing funding proposals; a lapse in funding is expected at 12:01 a.m. EDT on Oct 1. House Speaker keeps House out of session (as of Oct 2025).",
-      "key_names": ["Senate"]
+      "key_names": [
+        "Senate"
+      ]
     },
     {
       "date": "2025-10-01",
       "label": "Oct 1, 2025 (12:01 am EDT)",
       "type": "shutdown",
-      "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. About 750,000 employees furloughed, 700,000 working without pay (as of Oct 14, 2025).",
+      "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown.",
+      "bullets": [
+        "About 750,000 employees furloughed",
+        "700,000 working without pay (as of Oct 14, 2025)"
+      ],
       "cost": "~750K furloughed; shutdown begins",
-      "key_names": ["Congress"]
+      "key_names": [
+        "Congress"
+      ]
     },
     {
       "date": "2025-10-01",
       "label": "Oct 1, 2025",
       "type": "political",
-      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55–45 and 47–53). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
-      "key_names": ["Senate Republicans", "Senate Democrats"]
+      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55\u201345 and 47\u201353). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
+      "key_names": [
+        "Senate Republicans",
+        "Senate Democrats"
+      ]
     },
     {
       "date": "2025-10-02",
       "label": "Oct 2, 2025",
       "type": "political",
       "note": "Department of Education staff report manipulated out-of-office emails blaming Democrats for shutdown, potential Hatch Act violation alleged (as of Oct 2025).",
-      "key_names": ["Department of Education"]
+      "key_names": [
+        "Department of Education"
+      ]
     },
     {
       "date": "2025-10-03",
       "label": "Oct 3, 2025",
       "type": "political",
-      "note": "Senate holds fourth failed vote (54–44). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
-      "key_names": ["Speaker Mike Johnson", "Senate"]
+      "note": "Senate holds fourth failed vote (54\u201344). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
+      "key_names": [
+        "Speaker Mike Johnson",
+        "Senate"
+      ]
     },
     {
       "date": "2025-10-06",
-      "label": "Oct 6, 2025",
-      "type": "political",
-      "note": "Senate holds fifth and sixth votes on competing proposals. Both fail again (45–55 and 52–42). President Trump claims talks underway; Senate Majority Leader Schumer denies (as of Oct 2025).",
-      "key_names": ["Senate", "President Trump", "Leader Schumer"]
-    },
-    {
-      "date": "2025-10-08",
-      "label": "Oct 8, 2025",
+      "label": "Oct 6, 2025 (Day 6)",
       "type": "shutdown",
-      "note": "Shutdown extends to one week. Economic impacts begin accumulating. Smithsonian museums and National Zoo prepare for closure (as of Oct 2025).",
-      "cost": "Week 1 economic impact accumulating"
+      "note": "First major aviation disruptions due to air traffic controller staffing shortages.",
+      "bullets": [
+        "Hollywood Burbank Airport control tower closes for almost 6 hours, forcing pilots to coordinate movements themselves",
+        "Flight delays average 2.5 hours",
+        "FAA reports controller shortages in Boston, Philadelphia, Atlanta, Houston",
+        "Delays spread to Nashville, Dallas, Newark",
+        "TSA reports increase in unscheduled absences among security screeners"
+      ],
+      "cost": "First major aviation disruptions; 6-hour ATC closure",
+      "key_names": [
+        "FAA",
+        "TSA"
+      ]
     },
     {
       "date": "2025-10-10",
-      "label": "Oct 10, 2025",
+      "label": "Oct 10, 2025 (Day 10)",
       "type": "shutdown",
-      "note": "Mass layoffs begin: At least 4,000 federal employees receive reduction-in-force (RIF) notices across seven agencies. Treasury, HHS, and Education most affected (as of Oct 2025).",
-      "cost": "4,000+ federal employees terminated",
-      "key_names": ["Treasury", "HHS", "Education Department"]
+      "note": "Aviation crisis escalates and mass federal layoffs begin.",
+      "bullets": [
+        "USDA announces $300 million in tariff revenue to temporarily fund WIC program through October",
+        "FAA reports 12 facilities short-staffed",
+        "Transportation Sec. Sean Duffy confirms air traffic controllers calling out sick",
+        "Over 6,000 flights per day facing delays (nearly double October historical average)",
+        "TSA stops updating real-time checkpoint information on MyTSA app",
+        "At least 4,200 federal employees receive permanent RIF notices across seven agencies"
+      ],
+      "cost": "6,000+ daily flight delays; WIC temporary funding; 4,200+ RIF notices",
+      "key_names": [
+        "USDA",
+        "FAA",
+        "TSA",
+        "Sean Duffy"
+      ]
     },
     {
-      "date": "2025-10-13",
-      "label": "Oct 13, 2025 (Day 13)",
+      "date": "2025-10-12",
+      "label": "Oct 12, 2025 (Day 12)",
       "type": "shutdown",
-      "note": "Shutdown reaches Day 13. Smithsonian museums, research centers, and National Zoo close. Speaker Johnson warns this could become longest shutdown in U.S. history (as of Oct 2025).",
-      "cost": "Cultural institutions closed; economic damage escalating",
-      "key_names": ["Speaker Mike Johnson", "Smithsonian"]
+      "note": "Major cultural institutions close and aviation delays persist.",
+      "bullets": [
+        "All 21 Smithsonian museums, research centers, and National Zoo close after exhausting prior-year funds",
+        "Affects nearly 17 million annual visitors",
+        "National Gallery of Art and U.S. Capitol Visitor Center also close",
+        "Air traffic running average 30 minutes behind schedule nationwide",
+        "Speaker Johnson warns shutdown approaching longest in American history"
+      ],
+      "cost": "All Smithsonian institutions closed; sustained flight delays",
+      "key_names": [
+        "Smithsonian Institution",
+        "Mike Johnson"
+      ]
     },
     {
       "date": "2025-10-14",
       "label": "Oct 14, 2025 (Day 14)",
       "type": "political",
-      "note": "Senate returns for eighth vote on funding bill at 5:30 PM ET. Expected to fail again without 60-vote threshold. House Democratic Leader Hakeem Jeffries calls evening meeting to explore solutions. President Trump directs Pentagon to pay troops; Coast Guard also to receive paychecks. Other federal workers await shutdown resolution (as of Oct 14, 2025).",
-      "cost": "Day 14; approaching longest shutdown record (35 days)",
-      "key_names": ["Senate", "Leader Jeffries", "President Trump"]
+      "note": "Eighth Senate vote fails as President announces military pay workaround.",
+      "bullets": [
+        "Senate holds eighth vote on funding bill at 5:30 PM ET, fails without 60-vote threshold (56-44)",
+        "President Trump announces $8 billion reallocation from prior-year Pentagon R&D funds to pay military personnel on Oct 15",
+        "DHS Sec. Kristi Noem separately pays Coast Guard",
+        "CDC fires approximately 600 employees (1,300 initially notified, 700 reinstated due to data errors)",
+        "Multiple major airports refuse to display Noem's video blaming Democrats for shutdown"
+      ],
+      "cost": "Day 14; 600 CDC employees terminated; 8th Senate vote fails",
+      "key_names": [
+        "Senate",
+        "Donald Trump",
+        "Kristi Noem",
+        "CDC"
+      ]
+    },
+    {
+      "date": "2025-10-15",
+      "label": "Oct 15, 2025 (Day 15)",
+      "type": "political",
+      "note": "Senate prepares for ninth vote as federal workers miss first paychecks.",
+      "bullets": [
+        "Senate prepares for ninth vote on House-passed continuing resolution, expected to fail again",
+        "Military personnel (1.3M active duty + 750K+ Guard/Reserve) and Coast Guard receive paychecks from reallocated funds",
+        "Other 750,000+ federal workers miss first regular paychecks",
+        "House Republicans cancel all votes for the week",
+        "Over 13,000 air traffic controllers face financial strain; NATCA union warns of increased safety risks",
+        "Aviation system continues experiencing 6,000+ daily flight delays"
+      ],
+      "cost": "Day 15; first missed paychecks for 750K+ workers; aviation crisis continues",
+      "key_names": [
+        "Senate",
+        "House Republicans",
+        "Mike Johnson",
+        "NATCA"
+      ]
     }
   ]
 }

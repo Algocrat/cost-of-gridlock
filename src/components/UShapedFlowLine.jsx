@@ -14,14 +14,16 @@ const UShapedFlowLine = ({ config = {} }) => {
   const events = config.events || [];
 
   // Function to format date as Mon-DD (e.g., "Sep-19", "Oct-01")
+  // Replace the formatDate function in UShapedFlowLine.jsx
   const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const month = months[date.getMonth()];
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${month}-${day}`;
+    // Split the date string to avoid timezone issues
+    const [year, month, day] = dateString.split('-').map(Number);
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const monthName = months[month - 1]; // month is 1-indexed in the string
+    const dayFormatted = String(day).padStart(2, '0');
+    return `${monthName}-${dayFormatted}`;
   };
+
 
   useEffect(() => {
     const updateDimensions = () => {

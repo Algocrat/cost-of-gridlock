@@ -1,15 +1,15 @@
 [
   {
     "icon": "DollarSign",
-    "value": "0.1–0.2%",
+    "value": "0.1\u20130.2%",
     "label": "GDP loss per week (annualized growth, est., as of Oct 2025)",
     "source": "S&P Global; Goldman Sachs Research, Oct 2025"
   },
   {
     "icon": "Users",
     "value": "750K+",
-    "label": "Federal employees currently furloughed (as of Oct 14, 2025)",
-    "source": "CBS News, Oct 14 2025"
+    "label": "Federal employees currently furloughed (as of Oct 15, 2025)",
+    "source": "CBS News; USA Today, Oct 15 2025"
   },
   {
     "icon": "TrendingDown",
@@ -20,20 +20,38 @@
   {
     "icon": "Clock",
     "value": "2025-10-01",
-    "label": "Shutdown duration",
-    "source": "Major outlets and congressional coverage, Oct 14, 2025",
+    "label": "Shutdown duration (Day 15 as of Oct 15)",
+    "source": "Major outlets and congressional coverage, Oct 15, 2025",
     "isDate": true
   },
   {
     "icon": "Shield",
     "value": "700K",
-    "label": "Federal workers working without pay during lapse (as of Oct 2025)",
-    "source": "Wikipedia; major outlets, Oct 2025"
+    "label": "Federal workers working without pay (military/Coast Guard paid Oct 15)",
+    "source": "Major outlets, Oct 15 2025"
   },
   {
     "icon": "AlertTriangle",
-    "value": "8th",
-    "label": "Senate vote attempt to reopen government (as of Oct 14, 2025)",
-    "source": "CBS News, USA Today, Oct 14 2025"
+    "value": "9th",
+    "label": "Senate vote attempt to reopen government (as of Oct 15, 2025)",
+    "source": "CBS News, USA Today, Oct 15 2025"
+  },
+  {
+    "icon": "Briefcase",
+    "value": "4,800+",
+    "label": "Federal employees receiving permanent RIF notices (4,200 + 600 CDC)",
+    "source": "NPR, CNN, Nature, Oct 10-14 2025"
+  },
+  {
+    "icon": "Building",
+    "value": "21",
+    "label": "Smithsonian museums/facilities closed since Oct 12, 2025",
+    "source": "ABC News, New York Times, Oct 12 2025"
+  },
+  {
+    "icon": "Plane",
+    "value": "6,000+",
+    "label": "Daily flight delays nationwide (nearly 2x October average, as of Oct 15)",
+    "source": "The Verge, ABC News, Fox5DC, Oct 15 2025"
   }
 ]
