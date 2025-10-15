@@ -19,11 +19,9 @@ const TimelinePopover = ({ node, x, y, onMouseEnter, onMouseLeave }) => {
       if (x + rect.width / 2 > viewportWidth - 20) {
         adjustedX = viewportWidth - rect.width / 2 - 20;
       }
-
       if (x - rect.width / 2 < 20) {
         adjustedX = rect.width / 2 + 20;
       }
-
       if (y - rect.height - 10 < 20) {
         adjustedY = y + 30;
       }
@@ -63,8 +61,8 @@ const TimelinePopover = ({ node, x, y, onMouseEnter, onMouseLeave }) => {
     top: `${adjustedPosition.y - 10}px`,
     transform: 'translate(-50%, -100%)',
     zIndex: 10000,
-    maxWidth: '380px',
-    minWidth: '280px',
+    maxWidth: '420px',
+    minWidth: '320px',
     backgroundColor: 'white',
     border: '1px solid #94A3B8',
     borderRadius: '8px',
@@ -121,7 +119,8 @@ const TimelinePopover = ({ node, x, y, onMouseEnter, onMouseLeave }) => {
     padding: '6px 12px',
     backgroundColor: '#F8FAFC',
     borderBottom: '1px solid #E5E7EB',
-    fontSize: '12px'
+    fontSize: '12px',
+    flexWrap: 'wrap'
   };
 
   const playerIconStyle = {
@@ -148,37 +147,87 @@ const TimelinePopover = ({ node, x, y, onMouseEnter, onMouseLeave }) => {
     color: '#475569'
   };
 
+  const bulletsContainerStyle = {
+    padding: '8px 12px 10px',
+    borderTop: '1px solid #E5E7EB',
+    backgroundColor: '#FAFAFA'
+  };
+
+  const bulletListStyle = {
+    margin: '0',
+    paddingLeft: '20px',
+    fontSize: '12px',
+    lineHeight: '1.6',
+    color: '#475569'
+  };
+
+  const bulletItemStyle = {
+    marginBottom: '6px'
+  };
+
+  const costSectionStyle = {
+    padding: '8px 12px',
+    backgroundColor: '#FEF3C7',
+    borderTop: '1px solid #E5E7EB',
+    fontSize: '11px',
+    fontWeight: '600',
+    color: '#92400E',
+    lineHeight: '1.4'
+  };
+
   return (
-    <div 
+    <div
       ref={popoverRef}
       style={popoverStyle}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {/* Header with date, icon, and type badge */}
+      {/* Header with date and type badge */}
       <div style={headerStyle}>
         <div style={dateContainerStyle}>
           <Calendar style={calendarIconStyle} />
-          <span>{node.date}</span>
+          <span>{node.label || node.date}</span>
         </div>
         <Icon style={iconStyle} />
-        <span style={badgeStyle}>{typeStyle.label}</span>
+        <div style={badgeStyle}>{typeStyle.label}</div>
       </div>
 
-      {/* Key players section */}
+      {/* Key Players Section */}
       {node.key_names && node.key_names.length > 0 && (
         <div style={playersStyle}>
           <Users style={playerIconStyle} />
-          {node.key_names.map((player, idx) => (
-            <span key={idx} style={playerPillStyle}>{player}</span>
+          {node.key_names.map((name, idx) => (
+            <div key={idx} style={playerPillStyle}>
+              {name}
+            </div>
           ))}
         </div>
       )}
 
-      {/* Description */}
+      {/* Main Description */}
       <div style={descriptionStyle}>
-        {node.description}
+        {node.note}
       </div>
+
+      {/* Bullets Section - NEW */}
+      {node.bullets && node.bullets.length > 0 && (
+        <div style={bulletsContainerStyle}>
+          <ul style={bulletListStyle}>
+            {node.bullets.map((bullet, idx) => (
+              <li key={idx} style={bulletItemStyle}>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Cost Summary - NEW */}
+      {node.cost && (
+        <div style={costSectionStyle}>
+          💰 {node.cost}
+        </div>
+      )}
     </div>
   );
 };

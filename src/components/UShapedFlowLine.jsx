@@ -206,10 +206,12 @@ const UShapedFlowLine = ({ config = {} }) => {
         visible: true,
         node: {
           date: formatDate(d.event.date),
-          name: d.event.label,
-          description: d.event.note,
+          label: d.event.label,           // Changed from 'name'
+          note: d.event.note,              // Changed from 'description'
           type: d.event.type,
-          key_names: d.event.key_names || []
+          key_names: d.event.key_names || [],
+          bullets: d.event.bullets || [],  // ADDED
+          cost: d.event.cost || null       // ADDED
         },
         x: rect.left + rect.width / 2,
         y: rect.top

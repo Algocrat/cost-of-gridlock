@@ -14,8 +14,10 @@
             "data": {
               "content": "A shutdown pauses many discretionary activities (~6% of GDP in outlays). Forecasters estimate a 0.1–0.2 percentage point reduction in annualized quarterly GDP growth per week (as of Oct 2025).",
               "icon": "DollarSign"
-            }
-          }
+            },
+            "source": "S&P Global; Goldman Sachs Research, Oct 2025"
+          },
+          "source": "S&P Global; Goldman Sachs Research, Oct 2025"
         },
         {
           "title": "GDP Breakdown",
@@ -26,8 +28,10 @@
               "affected": 6,
               "unaffected": 94,
               "label": "% of GDP Affected by Shutdown"
-            }
-          }
+            },
+            "source": "OMB historical tables; CBO background, Oct 2025"
+          },
+          "source": "OMB historical tables; CBO background, Oct 2025"
         },
         {
           "title": "Consumer Confidence",
@@ -63,8 +67,10 @@
                 "month": "Nov",
                 "cci": 89
               }
-            ]
-          }
+            ],
+            "source": "The Conference Board, 2025"
+          },
+          "source": "The Conference Board, Sep 2025"
         },
         {
           "title": "Financial Market Risks",
@@ -75,20 +81,24 @@
               {
                 "title": "Stock volatility",
                 "detail": "Some volatility indicators have risen during past lapses (as of Oct 2025).",
-                "icon": "TrendingDown"
+                "icon": "TrendingDown",
+                "source": "Ratings agency and market commentary, Oct 2025"
               },
               {
                 "title": "Credit rating risk",
                 "detail": "Rating agencies have cited shutdowns as a negative governance factor (as of Oct 2025).",
-                "icon": "AlertTriangle"
+                "icon": "AlertTriangle",
+                "source": "Ratings agency and market commentary, Oct 2025"
               },
               {
                 "title": "IPO delays",
                 "detail": "Offerings and approvals may be delayed while SEC operations are limited (as of Oct 2025).",
-                "icon": "Clock"
+                "icon": "Clock",
+                "source": "Ratings agency and market commentary, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "Ratings agency and market commentary, Oct 2025"
         },
         {
           "title": "Data & Reporting Delays",
@@ -99,22 +109,27 @@
               {
                 "title": "Economic releases suspended",
                 "detail": "Jobs, GDP, and inflation reports may be delayed (as of Oct 2025).",
-                "icon": "BarChart"
+                "icon": "BarChart",
+                "source": "Agency contingency plans and prior shutdown precedents, Oct 2025"
               },
               {
                 "title": "Census operations halted",
                 "detail": "Some surveys may pause, depending on funding (as of Oct 2025).",
-                "icon": "Users"
+                "icon": "Users",
+                "source": "Agency contingency plans and prior shutdown precedents, Oct 2025"
               },
               {
                 "title": "Trade data missing",
                 "detail": "Import/export statistics can be delayed (as of Oct 2025).",
-                "icon": "TrendingUp"
+                "icon": "TrendingUp",
+                "source": "Agency contingency plans and prior shutdown precedents, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "Agency contingency plans and prior shutdown precedents, Oct 2025"
         }
-      ]
+      ],
+      "source": "S&P Global; Goldman Sachs Research, Oct 2025"
     },
     {
       "title": "Direct and Indirect Effects",
@@ -129,20 +144,24 @@
               {
                 "title": "Federal workers unpaid",
                 "detail": "Hundreds of thousands of employees are furloughed; many essential personnel work with pay delayed (as of Oct 2025).",
-                "icon": "UserX"
+                "icon": "UserX",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               },
               {
                 "title": "Contractors miss payments",
                 "detail": "Back pay typically applies to federal employees, not contractors (as of Oct 2025).",
-                "icon": "Briefcase"
+                "icon": "Briefcase",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               },
               {
                 "title": "Services halted",
                 "detail": "Passports, some IRS operations, and park access can be paused or slowed (as of Oct 2025).",
-                "icon": "XCircle"
+                "icon": "XCircle",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "Agency guidance; small business advocacy analyses, Oct 2025"
         },
         {
           "title": "Indirect Effects",
@@ -153,20 +172,24 @@
               {
                 "title": "Household spending cuts",
                 "detail": "Families may reduce discretionary purchases (as of Oct 2025).",
-                "icon": "ShoppingCart"
+                "icon": "ShoppingCart",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               },
               {
                 "title": "Business uncertainty",
                 "detail": "Some hiring and investment decisions are delayed (as of Oct 2025).",
-                "icon": "Building"
+                "icon": "Building",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               },
               {
                 "title": "Tourism losses",
                 "detail": "Access changes at national parks can affect nearby economies (as of Oct 2025).",
-                "icon": "MapPin"
+                "icon": "MapPin",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "Agency guidance; small business advocacy analyses, Oct 2025"
         },
         {
           "title": "Small Business Stress",
@@ -177,22 +200,27 @@
               {
                 "title": "Contractor cash crunch",
                 "detail": "Delayed invoices can force spending cuts (as of Oct 2025).",
-                "icon": "Store"
+                "icon": "Store",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               },
               {
                 "title": "Community ripple effects",
                 "detail": "Reduced foot traffic near federal hubs (as of Oct 2025).",
-                "icon": "Building"
+                "icon": "Building",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               },
               {
                 "title": "No safety net",
                 "detail": "Most small firms lack back pay eligibility (as of Oct 2025).",
-                "icon": "Shield"
+                "icon": "Shield",
+                "source": "Agency guidance; small business advocacy analyses, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "Agency guidance; small business advocacy analyses, Oct 2025"
         }
-      ]
+      ],
+      "source": "Agency guidance; small business advocacy analyses, Oct 2025"
     },
     {
       "title": "Political Context",
@@ -205,92 +233,124 @@
             "type": "table",
             "component": "EventsTable",
             "data": {
-  "events": [
-    {
-      "date": "2025-09-19",
-      "label": "Sep 19, 2025",
-      "type": "political",
-      "note": "The House passes a 'clean' Continuing Resolution (CR). Senate Democrats oppose it, demanding inclusion of ACA tax credit extensions (as of Oct 2025).",
-      "key_names": ["House", "Senate Democrats", "Speaker Mike Johnson"]
-    },
-    {
-      "date": "2025-09-30",
-      "label": "Sep 30, 2025",
-      "type": "political",
-      "note": "The Senate fails to advance competing funding proposals; a lapse in funding is expected at 12:01 a.m. EDT on Oct 1. House Speaker keeps House out of session (as of Oct 2025).",
-      "key_names": ["Senate"]
-    },
-    {
-      "date": "2025-10-01",
-      "label": "Oct 1, 2025 (12:01 am EDT)",
-      "type": "shutdown",
-      "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. About 750,000 employees furloughed, 700,000 working without pay (as of Oct 14, 2025).",
-      "cost": "~750K furloughed; shutdown begins",
-      "key_names": ["Congress"]
-    },
-    {
-      "date": "2025-10-01",
-      "label": "Oct 1, 2025",
-      "type": "political",
-      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55–45 and 47–53). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
-      "key_names": ["Senate Republicans", "Senate Democrats"]
-    },
-    {
-      "date": "2025-10-02",
-      "label": "Oct 2, 2025",
-      "type": "political",
-      "note": "Department of Education staff report manipulated out-of-office emails blaming Democrats for shutdown, potential Hatch Act violation alleged (as of Oct 2025).",
-      "key_names": ["Department of Education"]
-    },
-    {
-      "date": "2025-10-03",
-      "label": "Oct 3, 2025",
-      "type": "political",
-      "note": "Senate holds fourth failed vote (54–44). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
-      "key_names": ["Speaker Mike Johnson", "Senate"]
-    },
-    {
-      "date": "2025-10-06",
-      "label": "Oct 6, 2025",
-      "type": "political",
-      "note": "Senate holds fifth and sixth votes on competing proposals. Both fail again (45–55 and 52–42). President Trump claims talks underway; Senate Majority Leader Schumer denies (as of Oct 2025).",
-      "key_names": ["Senate", "President Trump", "Leader Schumer"]
-    },
-    {
-      "date": "2025-10-08",
-      "label": "Oct 8, 2025",
-      "type": "shutdown",
-      "note": "Shutdown extends to one week. Economic impacts begin accumulating. Smithsonian museums and National Zoo prepare for closure (as of Oct 2025).",
-      "cost": "Week 1 economic impact accumulating"
-    },
-    {
-      "date": "2025-10-10",
-      "label": "Oct 10, 2025",
-      "type": "shutdown",
-      "note": "Mass layoffs begin: At least 4,000 federal employees receive reduction-in-force (RIF) notices across seven agencies. Treasury, HHS, and Education most affected (as of Oct 2025).",
-      "cost": "4,000+ federal employees terminated",
-      "key_names": ["Treasury", "HHS", "Education Department"]
-    },
-    {
-      "date": "2025-10-13",
-      "label": "Oct 13, 2025 (Day 13)",
-      "type": "shutdown",
-      "note": "Shutdown reaches Day 13. Smithsonian museums, research centers, and National Zoo close. Speaker Johnson warns this could become longest shutdown in U.S. history (as of Oct 2025).",
-      "cost": "Cultural institutions closed; economic damage escalating",
-      "key_names": ["Speaker Mike Johnson", "Smithsonian"]
-    },
-    {
-      "date": "2025-10-14",
-      "label": "Oct 14, 2025 (Day 14)",
-      "type": "political",
-      "note": "Senate returns for eighth vote on funding bill at 5:30 PM ET. Expected to fail again without 60-vote threshold. House Democratic Leader Hakeem Jeffries calls evening meeting to explore solutions. President Trump directs Pentagon to pay troops; Coast Guard also to receive paychecks. Other federal workers await shutdown resolution (as of Oct 14, 2025).",
-      "cost": "Day 14; approaching longest shutdown record (35 days)",
-      "key_names": ["Senate", "Leader Jeffries", "President Trump"]
-    }
-  ]
-}
-
-          }
+              "events": [
+                {
+                  "date": "2025-09-19",
+                  "label": "Sep 19, 2025",
+                  "type": "political",
+                  "note": "The House passes a 'clean' Continuing Resolution (CR). Senate Democrats oppose it, demanding inclusion of ACA tax credit extensions (as of Oct 2025).",
+                  "key_names": [
+                    "House",
+                    "Senate Democrats",
+                    "Speaker Mike Johnson"
+                  ]
+                },
+                {
+                  "date": "2025-09-30",
+                  "label": "Sep 30, 2025",
+                  "type": "political",
+                  "note": "The Senate fails to advance competing funding proposals; a lapse in funding is expected at 12:01 a.m. EDT on Oct 1. House Speaker keeps House out of session (as of Oct 2025).",
+                  "key_names": [
+                    "Senate"
+                  ]
+                },
+                {
+                  "date": "2025-10-01",
+                  "label": "Oct 1, 2025 (12:01 am EDT)",
+                  "type": "shutdown",
+                  "note": "Federal funding expires at 12:01 a.m. EDT, triggering a partial government shutdown. About 750,000 employees furloughed, 700,000 working without pay (as of Oct 14, 2025).",
+                  "cost": "~750K furloughed; shutdown begins",
+                  "key_names": [
+                    "Congress"
+                  ]
+                },
+                {
+                  "date": "2025-10-01",
+                  "label": "Oct 1, 2025",
+                  "type": "political",
+                  "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55–45 and 47–53). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
+                  "key_names": [
+                    "Senate Republicans",
+                    "Senate Democrats"
+                  ]
+                },
+                {
+                  "date": "2025-10-02",
+                  "label": "Oct 2, 2025",
+                  "type": "political",
+                  "note": "Department of Education staff report manipulated out-of-office emails blaming Democrats for shutdown, potential Hatch Act violation alleged (as of Oct 2025).",
+                  "key_names": [
+                    "Department of Education"
+                  ]
+                },
+                {
+                  "date": "2025-10-03",
+                  "label": "Oct 3, 2025",
+                  "type": "political",
+                  "note": "Senate holds fourth failed vote (54–44). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
+                  "key_names": [
+                    "Speaker Mike Johnson",
+                    "Senate"
+                  ]
+                },
+                {
+                  "date": "2025-10-06",
+                  "label": "Oct 6, 2025",
+                  "type": "political",
+                  "note": "Senate holds fifth and sixth votes on competing proposals. Both fail again (45–55 and 52–42). President Trump claims talks underway; Senate Majority Leader Schumer denies (as of Oct 2025).",
+                  "key_names": [
+                    "Senate",
+                    "President Trump",
+                    "Leader Schumer"
+                  ]
+                },
+                {
+                  "date": "2025-10-08",
+                  "label": "Oct 8, 2025",
+                  "type": "shutdown",
+                  "note": "Shutdown extends to one week. Economic impacts begin accumulating. Smithsonian museums and National Zoo prepare for closure (as of Oct 2025).",
+                  "cost": "Week 1 economic impact accumulating"
+                },
+                {
+                  "date": "2025-10-10",
+                  "label": "Oct 10, 2025",
+                  "type": "shutdown",
+                  "note": "Mass layoffs begin: At least 4,000 federal employees receive reduction-in-force (RIF) notices across seven agencies. Treasury, HHS, and Education most affected (as of Oct 2025).",
+                  "cost": "4,000+ federal employees terminated",
+                  "key_names": [
+                    "Treasury",
+                    "HHS",
+                    "Education Department"
+                  ]
+                },
+                {
+                  "date": "2025-10-13",
+                  "label": "Oct 13, 2025 (Day 13)",
+                  "type": "shutdown",
+                  "note": "Shutdown reaches Day 13. Smithsonian museums, research centers, and National Zoo close. Speaker Johnson warns this could become longest shutdown in U.S. history (as of Oct 2025).",
+                  "cost": "Cultural institutions closed; economic damage escalating",
+                  "key_names": [
+                    "Speaker Mike Johnson",
+                    "Smithsonian"
+                  ]
+                },
+                {
+                  "date": "2025-10-14",
+                  "label": "Oct 14, 2025 (Day 14)",
+                  "type": "political",
+                  "note": "Senate returns for eighth vote on funding bill at 5:30 PM ET. Expected to fail again without 60-vote threshold. House Democratic Leader Hakeem Jeffries calls evening meeting to explore solutions. President Trump directs Pentagon to pay troops; Coast Guard also to receive paychecks. Other federal workers await shutdown resolution (as of Oct 14, 2025).",
+                  "cost": "Day 14; approaching longest shutdown record (35 days)",
+                  "key_names": [
+                    "Senate",
+                    "Leader Jeffries",
+                    "President Trump"
+                  ]
+                }
+              ]
+            },
+            "source": "Compiled events from congressional and agency reports, Sep–Oct 2025"
+          },
+          "source": "Congressional records and major outlets, Sep–Oct 2025"
         },
         {
           "title": "Key Players",
@@ -301,60 +361,179 @@
               {
                 "title": "President Trump",
                 "detail": "Directs executive priorities, negotiates funding, and drives immigration and budget policy.",
-                "icon": "User"
+                "icon": "User",
+                "source": "White House and Congressional leadership statements, Oct 2025"
               },
               {
                 "title": "Senate Leadership",
                 "detail": "Majority Leader John Thune (R-SD) and Minority Leader Chuck Schumer (D-NY) steer Senate negotiations, debate, and major policy divisions.",
-                "icon": "Users"
+                "icon": "Users",
+                "source": "White House and Congressional leadership statements, Oct 2025"
               },
               {
                 "title": "House Leadership",
                 "detail": "Speaker Mike Johnson (R-LA) and House Majority Leader Steve Scalise (R-LA) manage a narrow Republican majority. House Democratic Leader Hakeem Jeffries (D-NY) leads opposition efforts to resolve shutdown through bipartisan negotiations (as of Oct 14, 2025).",
-                "icon": "Users"
+                "icon": "Users",
+                "source": "White House and Congressional leadership statements, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "White House and Congressional leadership statements, Oct 2025"
         }
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025"
     },
     {
       "title": "Social Effects",
       "detail": "Vulnerable populations and community services disrupted",
       "children": [
         {
-          "title": "Vulnerable Populations",
-          "detail": "Potential strain on nutrition and housing programs during a lapse (as of Oct 2025).",
+          "title": "Nutrition & Food Security",
+          "detail": "6.7M+ at risk from WIC disruption; food assistance programs strained (as of Oct 15, 2025)",
           "visualization": {
             "type": "list",
             "data": [
               {
-                "title": "WIC program suspended",
-                "detail": "States report potential interruptions if balances are exhausted (as of Oct 2025).",
-                "icon": "Heart"
+                "title": "WIC program at risk",
+                "detail": "Serves 6.7 million pregnant women, mothers, and children under 5. USDA using $300 million tariff revenue for temporary funding through October, but long-term stability uncertain. Mississippi waitlisting new families; some tribal WIC programs exhausting funds (as of Oct 15, 2025).",
+                "icon": "Heart",
+                "source": "USDA, National WIC Association, PBS NewsHour, Politico, Oct 6-14 2025"
               },
               {
-                "title": "Housing assistance delayed",
-                "detail": "Some new commitments and processing can be delayed (as of Oct 2025).",
-                "icon": "Home"
+                "title": "SNAP benefits continue for now",
+                "detail": "Food stamp benefits continue through existing funding authorities. Program operates as entitlement with mandatory funding, less affected by shutdown than WIC (as of Oct 15, 2025).",
+                "icon": "ShoppingCart",
+                "source": "FRAC, USDA, Food Research & Action Center, Oct 2025"
               },
               {
-                "title": "Disability services slowed",
-                "detail": "Some processing can slow during lapses (as of Oct 2025).",
-                "icon": "Shield"
-              },
-              {
-                "title": "SNAP benefits at risk",
-                "detail": "Continuity depends on available funding authorities (as of Oct 2025).",
-                "icon": "ShoppingCart"
-              },
-              {
-                "title": "Head Start programs threatened",
-                "detail": "Some providers could face disruptions absent new funding (as of Oct 2025).",
-                "icon": "GraduationCap"
+                "title": "School lunch programs at risk",
+                "detail": "USDA Food and Nutrition Service operating with limited staff. National School Lunch Program and School Breakfast Program continue via mandatory funding but administrative support reduced. USDA's Food Distribution Program on Indian Reservations facing disruptions (as of Oct 15, 2025).",
+                "icon": "Utensils",
+                "source": "USDA, FRAC, tribal advocacy organizations, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "USDA, National WIC Association, FRAC, PBS NewsHour, Oct 6-15 2025"
+        },
+        {
+          "title": "Veterans & Military Families",
+          "detail": "15,000 VA staff furloughed; key services suspended (as of Oct 14, 2025)",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "VA services partially disrupted",
+                "detail": "15,000 of 460,000+ VA staff furloughed. Healthcare, disability, and pension payments continue via advance appropriations. Suspended: Transition Assistance Program, GI Bill Hotline (888-GIBILL-1), regional benefits offices, Native American Veterans Direct Loan Program, outreach services (as of Oct 14, 2025).",
+                "icon": "Flag",
+                "source": "Department of Veterans Affairs, USA Today, The American Legion, Oct 14 2025"
+              }
+            ]
+          },
+          "source": "Department of Veterans Affairs, USA Today, The American Legion, Oct 14 2025"
+        },
+        {
+          "title": "Tribal Communities",
+          "detail": "574 federally recognized tribes face treaty obligation violations (as of Oct 15, 2025)",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Tribal services severely impacted",
+                "detail": "Federal shutdown violates trust and treaty obligations to 574 federally recognized tribes. Pyramid Lake Paiute Tribe furloughed 25+ employees, closed museum and higher education dept. Tribes using scarce resources to fill federal gaps, straining budgets. Indian Health Services has advance appropriations but other tribal programs lack protection (as of Oct 15, 2025).",
+                "icon": "Users",
+                "source": "NCAI, ABC News, Marketplace, Oct 2-13 2025"
+              }
+            ]
+          },
+          "source": "NCAI, ABC News, Marketplace, Oct 2-13 2025"
+        },
+        {
+          "title": "Children & Early Learning",
+          "detail": "Head Start programs threatened; child care subsidies stable short-term (as of Oct 15, 2025)",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Head Start programs threatened",
+                "detail": "Early learning programs serving low-income children ages 0-5. Over 100 programs scheduled to receive grants Nov 1; disruption likely if shutdown continues. Programs using reserves or reducing services (as of Oct 15, 2025).",
+                "icon": "GraduationCap",
+                "source": "HHS Office of Head Start, First Five Years Fund, Oct 13 2025"
+              },
+              {
+                "title": "Child care subsidies stable short-term",
+                "detail": "Child Care Development Block Grant forward-funded for FY2025, providing short-term protection. States have flexibility with 2-year obligation window. Federal workers struggle to afford care without paychecks; new bill proposes reimbursement for furloughed workers (as of Oct 13, 2025).",
+                "icon": "Baby",
+                "source": "Action for Children, First Five Years Fund, WJLA, Oct 13 2025"
+              }
+            ]
+          },
+          "source": "HHS Office of Head Start, First Five Years Fund, Action for Children, Oct 13-15 2025"
+        },
+        {
+          "title": "Housing & Energy Assistance",
+          "detail": "Housing vouchers delayed; winter heating aid at risk (as of Oct 15, 2025)",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Housing assistance delayed",
+                "detail": "HUD processing of new commitments and vouchers delayed. Section 8 and public housing operations continue but administrative functions slowed (as of Oct 15, 2025).",
+                "icon": "Home",
+                "source": "HUD contingency plans, major outlets, Oct 2025"
+              },
+              {
+                "title": "Low-income energy assistance delayed",
+                "detail": "LIHEAP (Low Income Home Energy Assistance Program) processing and new applications delayed as winter heating season approaches. Vulnerable households face disconnections without federal aid (as of Oct 15, 2025).",
+                "icon": "Zap",
+                "source": "HHS contingency plans, state agencies, Oct 2025"
+              }
+            ]
+          },
+          "source": "HUD, HHS contingency plans, state agencies, Oct 2025"
+        },
+        {
+          "title": "Disability & Healthcare Access",
+          "detail": "SSA processing delayed; Medicaid enrollments slowed (as of Oct 15, 2025)",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Disability services slowed",
+                "detail": "SSA continues disability payments but new application processing delayed. State agencies face staffing constraints affecting reviews and hearings (as of Oct 15, 2025).",
+                "icon": "Shield",
+                "source": "AAPD, SSA statements, Oct 2025"
+              },
+              {
+                "title": "Medicaid processing slowed",
+                "detail": "Medicaid payments continue as mandatory spending, but new enrollments, redeterminations, and state technical assistance from CMS delayed. Particularly impacts children's coverage transitions (as of Oct 15, 2025).",
+                "icon": "Activity",
+                "source": "CMS, state Medicaid agencies, Oct 2025"
+              }
+            ]
+          },
+          "source": "AAPD, SSA, CMS, state agencies, Oct 2025"
+        },
+        {
+          "title": "Legal Aid & Rural Programs",
+          "detail": "Civil legal assistance suspended; rural infrastructure projects halted (as of Oct 15, 2025)",
+          "visualization": {
+            "type": "list",
+            "data": [
+              {
+                "title": "Legal aid services suspended",
+                "detail": "Legal Services Corporation (independent nonprofit funded by Congress) facing funding delays. Low-income individuals lose access to civil legal assistance for housing, domestic violence, and family law matters (as of Oct 15, 2025).",
+                "icon": "Scale",
+                "source": "Legal Services Corporation, advocacy organizations, Oct 2025"
+              },
+              {
+                "title": "Rural development programs halted",
+                "detail": "USDA Rural Development loans and grants for housing, water systems, and community facilities suspended. Affects low-income rural communities waiting for infrastructure improvements (as of Oct 15, 2025).",
+                "icon": "Tractor",
+                "source": "USDA Rural Development contingency plans, Oct 2025"
+              }
+            ]
+          },
+          "source": "Legal Services Corporation, USDA Rural Development, Oct 2025"
         },
         {
           "title": "Shutdown Sentiment",
@@ -378,58 +557,68 @@
                 "color": "#2ecc71"
               }
             ],
-            "totalLabel": "66% Concerned Overall"
+            "totalLabel": "66% Concerned Overall",
+            "source": "Major outlets, Oct 2025"
           }
         },
         {
-          "title": "Healthcare & Social Services",
-          "detail": "Medical and public health services disrupted",
+          "title": "Healthcare & Public Health",
+          "detail": "Medical and public health services disrupted (as of Oct 15, 2025)",
           "visualization": {
             "type": "list",
             "data": [
               {
-                "title": "CDC monitoring halted",
-                "detail": "Disease surveillance, food safety inspections stopped",
-                "icon": "Shield"
+                "title": "CDC monitoring reduced",
+                "detail": "Approximately 600 CDC employees terminated. Disease surveillance and health communication programs hobbled. Some divisions report 'nobody to answer the phone' (as of Oct 14, 2025).",
+                "icon": "Shield",
+                "source": "NPR, CNN, Nature, Oct 14 2025"
               },
               {
                 "title": "NIH research paused",
-                "detail": "Clinical trials delayed, patient enrollment suspended",
-                "icon": "Microscope"
+                "detail": "Clinical trials delayed, patient enrollment suspended during shutdown (as of Oct 15, 2025).",
+                "icon": "Microscope",
+                "source": "HHS statements, major outlets, Oct 2025"
               },
               {
                 "title": "Medicare delays",
-                "detail": "50% of CMS personnel furloughed, longer wait times",
-                "icon": "Clock"
+                "detail": "50% of CMS personnel furloughed, longer wait times for beneficiary services (as of Oct 15, 2025).",
+                "icon": "Clock",
+                "source": "CMS contingency plans, major outlets, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "NPR, CNN, HHS, CMS, Oct 14-15 2025"
         },
         {
           "title": "Tourism & Cultural Impacts",
-          "detail": "Parks, museums, and cultural sites adjust operations during lapses (as of Oct 2025).",
+          "detail": "Parks, museums, and cultural sites closed (as of Oct 15, 2025)",
           "visualization": {
             "type": "list",
             "data": [
               {
                 "title": "National parks closed",
-                "detail": "Operations reduced or access limited depending on conditions (as of Oct 2025).",
-                "icon": "Mountain"
+                "detail": "Operations reduced or access limited. Popular destinations closed affecting tourism-dependent communities (as of Oct 15, 2025).",
+                "icon": "Mountain",
+                "source": "National Park Service statements, major outlets, Oct 2025"
               },
               {
                 "title": "Smithsonian closures",
-                "detail": "Some museums and the zoo may close during lapses (as of Oct 2025).",
-                "icon": "Building"
+                "detail": "All 21 Smithsonian museums, research centers, and National Zoo closed Oct 12 after exhausting prior-year funds. Affects nearly 17 million annual visitors. National Gallery of Art also closed (as of Oct 15, 2025).",
+                "icon": "Building",
+                "source": "ABC News, New York Times, Smithsonian Institution, Oct 12 2025"
               },
               {
                 "title": "Weather warnings reduced",
-                "detail": "NWS prioritizes essential warnings; some services may be limited (as of Oct 2025).",
-                "icon": "Cloud"
+                "detail": "NWS prioritizes essential warnings; some services may be limited during shutdown (as of Oct 15, 2025).",
+                "icon": "Cloud",
+                "source": "NOAA statements, major outlets, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "NPS, Smithsonian, NOAA, ABC News, New York Times, Oct 12-15 2025"
         }
-      ]
+      ],
+      "source": "USDA, HHS, VA, NCAI, Smithsonian, major outlets, Oct 1-15 2025"
     },
     {
       "title": "Military & Security",
@@ -444,22 +633,27 @@
               {
                 "title": "Active duty unpaid",
                 "detail": "1.3M military personnel work without paychecks",
-                "icon": "Shield"
+                "icon": "Shield",
+                "source": "DoD; DHS; FAA statements, Oct 2025"
               },
               {
                 "title": "Air traffic control stress",
                 "detail": "Controllers work mandatory overtime unpaid",
-                "icon": "Plane"
+                "icon": "Plane",
+                "source": "DoD; DHS; FAA statements, Oct 2025"
               },
               {
                 "title": "Border security gaps",
                 "detail": "CBP agents, Coast Guard operate at reduced capacity",
-                "icon": "AlertTriangle"
+                "icon": "AlertTriangle",
+                "source": "DoD; DHS; FAA statements, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "DoD; DHS; FAA statements, Oct 2025"
         }
-      ]
+      ],
+      "source": "DoD; DHS; FAA statements, Oct 2025"
     },
     {
       "title": "Employment Risks",
@@ -474,22 +668,27 @@
               {
                 "title": "Temporary → permanent job losses",
                 "detail": "Private-sector layoffs if cuts persist, 43,000 additional unemployed",
-                "icon": "UserMinus"
+                "icon": "UserMinus",
+                "source": "Ratings agency and market commentary, Oct 2025"
               },
               {
                 "title": "Federal contractor layoffs",
                 "detail": "No back pay eligibility creates lasting income losses",
-                "icon": "Briefcase"
+                "icon": "Briefcase",
+                "source": "Ratings agency and market commentary, Oct 2025"
               },
               {
                 "title": "Consumer spending drops",
                 "detail": "$30B reduction in monthly consumer spending nationwide",
-                "icon": "DollarSign"
+                "icon": "DollarSign",
+                "source": "Ratings agency and market commentary, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "Ratings agency and market commentary, Oct 2025"
         }
-      ]
+      ],
+      "source": "Labor market analyses; forecasts as of Oct 2025"
     },
     {
       "title": "Global Perception",
@@ -503,8 +702,10 @@
             "data": {
               "content": "European and Asian allies question U.S. stability. IMF warns of spillover effects to global economy.",
               "icon": "Globe"
-            }
-          }
+            },
+            "source": "IMF commentary; market reports, Oct 2025"
+          },
+          "source": "IMF commentary; market reports, Oct 2025"
         },
         {
           "title": "Currency Impact",
@@ -515,15 +716,18 @@
               {
                 "title": "Dollar index falls",
                 "detail": "2.5% decline vs major currencies",
-                "icon": "TrendingDown"
+                "icon": "TrendingDown",
+                "source": "IMF commentary; market reports, Oct 2025"
               },
               {
                 "title": "Treasury yields spike",
                 "detail": "10-year yields up 15 basis points",
-                "icon": "ArrowUp"
+                "icon": "ArrowUp",
+                "source": "IMF commentary; market reports, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "IMF commentary; market reports, Oct 2025"
         },
         {
           "title": "Geopolitical Effects",
@@ -534,17 +738,21 @@
               {
                 "title": "Trade negotiations stalled",
                 "detail": "Allies delay agreements amid uncertainty",
-                "icon": "Handshake"
+                "icon": "Handshake",
+                "source": "IMF commentary; market reports, Oct 2025"
               },
               {
                 "title": "Market confidence shaken",
                 "detail": "International investors eye U.S. instability",
-                "icon": "Globe"
+                "icon": "Globe",
+                "source": "IMF commentary; market reports, Oct 2025"
               }
             ]
-          }
+          },
+          "source": "IMF commentary; market reports, Oct 2025"
         }
-      ]
+      ],
+      "source": "IMF commentary; market reports, Oct 2025"
     }
   ]
 }

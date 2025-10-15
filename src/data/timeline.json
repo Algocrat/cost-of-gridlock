@@ -9,16 +9,18 @@
         "House",
         "Senate Democrats",
         "Speaker Mike Johnson"
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025"
     },
     {
       "date": "2025-09-30",
       "label": "Sep 30, 2025",
       "type": "political",
-      "note": "The Senate fails to advance competing funding proposals; a lapse in funding is expected at 12:01 a.m. EDT on Oct 1. House Speaker keeps House out of session (as of Oct 2025).",
+      "note": "The Senate does not obtain required votes to advance competing funding proposals; a lapse in funding is expected at 12:01 a.m. EDT on Oct 1. House Speaker keeps House out of session (as of Oct 2025).",
       "key_names": [
         "Senate"
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025"
     },
     {
       "date": "2025-10-01",
@@ -32,36 +34,41 @@
       "cost": "~750K furloughed; shutdown begins",
       "key_names": [
         "Congress"
-      ]
+      ],
+      "source": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025",
+      "source_cost": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025"
     },
     {
       "date": "2025-10-01",
       "label": "Oct 1, 2025",
       "type": "political",
-      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55\u201345 and 47\u201353). Preliminary negotiations described as 'productive discussion' (as of Oct 2025).",
+      "note": "Senate holds third vote on funding measures. Both Democratic and Republican versions fail (55–45 and 47–53). Preliminary negotiations described as 'preliminary discussion' (as of Oct 2025).",
       "key_names": [
         "Senate Republicans",
         "Senate Democrats"
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025"
     },
     {
       "date": "2025-10-02",
       "label": "Oct 2, 2025",
       "type": "political",
-      "note": "Department of Education staff report manipulated out-of-office emails blaming Democrats for shutdown, potential Hatch Act violation alleged (as of Oct 2025).",
+      "note": "Department of Education staff report modified out-of-office emails attributing responsibility to Democrats for shutdown, potential Hatch Act violation alleged (as of Oct 2025).",
       "key_names": [
         "Department of Education"
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025"
     },
     {
       "date": "2025-10-03",
       "label": "Oct 3, 2025",
       "type": "political",
-      "note": "Senate holds fourth failed vote (54\u201344). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
+      "note": "Senate holds fourth vote that did not meet the threshold (54–44). Speaker Johnson extends House recess for another week, delaying Representative-elect swearing in (as of Oct 2025).",
       "key_names": [
         "Speaker Mike Johnson",
         "Senate"
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025"
     },
     {
       "date": "2025-10-06",
@@ -79,13 +86,15 @@
       "key_names": [
         "FAA",
         "TSA"
-      ]
+      ],
+      "source": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025",
+      "source_cost": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025"
     },
     {
       "date": "2025-10-10",
       "label": "Oct 10, 2025 (Day 10)",
       "type": "shutdown",
-      "note": "Aviation crisis escalates and mass federal layoffs begin.",
+      "note": "Aviation disruptions escalates and mass federal layoffs begin.",
       "bullets": [
         "USDA announces $300 million in tariff revenue to temporarily fund WIC program through October",
         "FAA reports 12 facilities short-staffed",
@@ -100,7 +109,9 @@
         "FAA",
         "TSA",
         "Sean Duffy"
-      ]
+      ],
+      "source": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025",
+      "source_cost": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025"
     },
     {
       "date": "2025-10-12",
@@ -118,13 +129,15 @@
       "key_names": [
         "Smithsonian Institution",
         "Mike Johnson"
-      ]
+      ],
+      "source": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025",
+      "source_cost": "Major outlets; agency statements (FAA, TSA, Smithsonian), Oct 2025"
     },
     {
       "date": "2025-10-14",
       "label": "Oct 14, 2025 (Day 14)",
       "type": "political",
-      "note": "Eighth Senate vote fails as President announces military pay workaround.",
+      "note": "Eighth Senate vote does not obtain required votes as President announces military pay workaround.",
       "bullets": [
         "Senate holds eighth vote on funding bill at 5:30 PM ET, fails without 60-vote threshold (56-44)",
         "President Trump announces $8 billion reallocation from prior-year Pentagon R&D funds to pay military personnel on Oct 15",
@@ -138,7 +151,9 @@
         "Donald Trump",
         "Kristi Noem",
         "CDC"
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025",
+      "source_cost": "Congressional records and major outlets, Sep–Oct 2025"
     },
     {
       "date": "2025-10-15",
@@ -159,7 +174,9 @@
         "House Republicans",
         "Mike Johnson",
         "NATCA"
-      ]
+      ],
+      "source": "Congressional records and major outlets, Sep–Oct 2025",
+      "source_cost": "Congressional records and major outlets, Sep–Oct 2025"
     }
   ]
 }
