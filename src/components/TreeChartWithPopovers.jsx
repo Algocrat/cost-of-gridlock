@@ -280,12 +280,12 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
         }
       })
 
-      // RESPONSIVE: Scaled node circles
+      // RESPONSIVE: Scaled node circles (main node - no stroke, outer ring provides border)
       nodeEnter.append("circle")
         .attr("r", (d) => nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus)
         .attr("fill", (d) => d._children ? "#4A7AB8" : "#4A7AB8")
-        .attr("stroke", (d) => d.depth === 0 && firstTime ? "#940F15" : "#2E598F")
-        .attr("stroke-width", (d) => d.depth === 0 && firstTime ? strokeWidth + 2 : strokeWidth)
+        .attr("stroke", "none") // No stroke - outer ring provides the border
+        .attr("stroke-width", "0")
         .style("cursor", "pointer")
         .style("filter", (d) => d.depth === 0 && firstTime ? "drop-shadow(0 0 10px #940F15)" : "none")
 
@@ -295,15 +295,13 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           const nodeGroup = d3.select(this)
           const radius = nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus
 
-          nodeGroup.append("text")
+          nodeGroup.append("circle")
             .attr("class", "expand-indicator")
-            .attr("text-anchor", "middle")
-            .attr("dominant-baseline", "middle")
-            .attr("font-size", `${radius * 1.2}px`)
-            .attr("font-weight", "bold")
-            .attr("fill", "#EBEAD9")
+            .attr("r", radius * 0.35) // Hollow ring indicator
+            .attr("fill", "none") // Transparent fill
+            .attr("stroke", "#7FA8D8") // Light blue ring
+            .attr("stroke-width", "4px")
             .attr("pointer-events", "none")
-            .text("+")
         }
       })
 
@@ -412,15 +410,13 @@ const TreeChartWithPopovers = ({ onInteraction }) => {
           const nodeGroup = d3.select(this)
           const radius = nodeBaseRadius + Math.max(0, 3 - d.depth) * nodeDepthBonus
 
-          nodeGroup.append("text")
+          nodeGroup.append("circle")
             .attr("class", "expand-indicator")
-            .attr("text-anchor", "middle")
-            .attr("dominant-baseline", "middle")
-            .attr("font-size", `${radius * 1.2}px`)
-            .attr("font-weight", "bold")
-            .attr("fill", "#EBEAD9")
+            .attr("r", radius * 0.35) // Hollow ring indicator
+            .attr("fill", "none") // Transparent fill
+            .attr("stroke", "#7FA8D8") // Light blue ring
+            .attr("stroke-width", "4px")
             .attr("pointer-events", "none")
-            .text("+")
         }
       })
 
